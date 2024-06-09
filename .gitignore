@@ -53,6 +53,6 @@ MANIFEST
 .conda*/
 .python-version
 
+# Jupyter
 .virtual_documents
-
 .ipynb_checkpoints
