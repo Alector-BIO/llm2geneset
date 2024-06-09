@@ -14,3 +14,7 @@ except PackageNotFoundError:  # pragma: no cover
     __version__ = "unknown"
 finally:
     del version, PackageNotFoundError
+
+from .llm2geneset import GSEAAI
+
+__all__ = ["GSEAAI"]
