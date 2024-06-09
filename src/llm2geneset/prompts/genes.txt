@@ -1,0 +1,22 @@
+List genes involved in the following biological process or pathway: {bp_or_pathway}.
+Use the following JSON schema:
+{{
+    "type": "array",
+    "items": {{
+        "type": "object",
+        "properties": {{
+            "gene": {{
+                "type": "string",
+            }},
+            "involved": {{
+                "type": "string",
+            }}
+        }},
+        "required": ["gene", "involved"]
+    }}
+}}
+The field "gene" is a gene involved in {bp_or_pathway}.
+The field "involved" is a sentence describing how the gene in involved the following biological
+process or pathway: {bp_or_pathway}.
+Use the HUGO Gene Nomenclature Committee (HGNC) gene abbreviations.
+List at least 30 genes. Do not wrap the output in a code block.

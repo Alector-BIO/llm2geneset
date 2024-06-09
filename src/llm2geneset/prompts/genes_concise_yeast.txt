@@ -1,0 +1,19 @@
+List all the known genes directly and indirectly involved in the following biological process or pathway: {descr} in yeast (Saccharomyces cerevisiae).
+Use the following JSON schema:
+```json
+{{
+    "type": "array",
+    "items": {{
+        "type": "object",
+        "properties": {{
+            "gene": {{
+                "type": "string",
+            }},
+        }},
+        "required": ["gene"]
+    }}
+}}
+```
+The field `gene` is a gene involved in the biological process or pathway: {descr}.
+Use the Saccharomyces cerevisiae genome database (SGD) gene symbol nomenclature.
+Place the output in a JSON code block. Do not add any comments in the JSON code block.

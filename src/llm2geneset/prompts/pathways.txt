@@ -1,0 +1,21 @@
+List at least {n} biological pathways or biological processes that are likely to have a majority of genes that are more highly expressed in {cond1} than in {cond2}. Also provide the reason they might be associated with a pathway or process.
+Use the following JSON schema:
+```json
+{{
+    "type": "array",
+    "items": {{
+        "type": "object",
+        "properties": {{
+            "p": {{
+                "type": "string",
+            }},
+            "r": {{
+                "type": "string",
+
+            }}
+        }},
+        "required": ["p", "r"]
+    }}
+}}
+```
+The field `p` is a biological pathway or biological process that might have genes that are more highly expressed in {cond1} than in {cond2}. The field `r` is a reason why the biological pathway or biological process might be enriched in genes more highly expressed in {cond1} than in {cond2}. Do not repeat the same biological process or pathway name.
