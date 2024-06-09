@@ -15,6 +15,7 @@ dependencies:
   - tiktoken
   - pyscaffold>=4.5         # pyscaffold
   - pyscaffoldext-markdown  # pyscaffold
+  - pre_commit              # pyscaffold
   - twine                   # pyscaffold-markdown
   - linkify-it-py           # pyscaffold-markdown
   - jupyterlab
