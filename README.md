@@ -16,7 +16,78 @@
 
 > llm2geneset
 
-A longer description of your project goes here...
+This project enables generation of gene sets using natural language descriptions
+of biological pathways and processes.
+
+## Usage
+
+Please read
+[OpenAI's best practicies for API key safety](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety)
+and make sure you have your OpenAI API key setup as
+environment variables e.g.:
+
+```bash
+export OPENAI_API_ORG="org-XXXX"
+export OPENAI_API_KEY="XXXXX"
+```
+
+It is also recommended you obtain an [NCBI API Key](https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/)
+and add it to your environment.
+
+```bash
+export NCBI_API_KEY="x"
+```
+
+```python
+import llm2geneset
+
+# New interface is TBD.
+```
+
+## Installation using micromamba
+
+Create an environment using micromamba and work on this
+package in editable mode. Here's how to install micromamba:
+
+```bash
+cd ~
+# Linux x86_64
+curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba
+# M1 Mac Silicon
+curl -Ls https://micro.mamba.pm/api/micromamba/osx-arm64/latest | tar -xvj bin/micromamba
+```
+
+In your .bashrc add `bin` to your path:
+
+```bash
+export PATH="$HOME/bin:${PATH}"
+```
+
+Then run the following to setup a location for all of the micromamba environments.
+
+```bash
+micromamba shell init -s bash -p ~/micromamba
+```
+
+**NOTE: The rust compiler is only for GSEApy which is in the environment. We
+may or may not keep this dependency.**
+
+Install the main environment. Note that you need `rustc` the
+rust compiler installed. You can install `rustc` by running
+`curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+Then, add `. "$HOME/.cargo/env"` to your .bashrc.
+
+```bash
+micromamba env create -f llm2geneset.yml
+micromamba activate llm2geneset
+```
+
+Install the package in editable mode.
+
+```bash
+cd llm2geneset
+pip install -e .
+```
 
 
 <!-- pyscaffold-notes -->

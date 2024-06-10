@@ -15,6 +15,6 @@ except PackageNotFoundError:  # pragma: no cover
 finally:
     del version, PackageNotFoundError
 
-from .llm2geneset import GSEAAI
+from .llm2geneset import get_genes, read_gmt
 
-__all__ = ["GSEAAI"]
+__all__ = ["read_gmt", "get_genes"]
