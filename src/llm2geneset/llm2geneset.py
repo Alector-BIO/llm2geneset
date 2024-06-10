@@ -1,9 +1,7 @@
 """llm2geneset: using LLMs to generate gene sets."""
 
-import itertools
 import re
 from importlib import resources
-from typing import List
 
 import json_repair
 import tqdm.asyncio
@@ -11,54 +9,29 @@ from asynciolimiter import Limiter
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-def extract_last_code_block(markdown_text):
-    """Extract last code block in output."""
-    # Regular expression to find code blocks enclosed in triple backticks
-    pattern = r"```(?:[\w]*\n)?([\s\S]*?)```"
-    code_blocks = re.findall(pattern, markdown_text)
-    # Return the last code block, if any
-    return code_blocks[-1] if code_blocks else None
-
-
-def read_gmt(gmt_file: str, background_genes: List[str] = [], verbose=False):
+def read_gmt(gmt_file: str):
     """
     Load a GMT file.
 
-    Adapted from
-    https://github.com/MaayanLab/blitzgsea/blob/87c9b62c1239df1a9005c8ee2d9d2c1eea9b55ca/blitzgsea/enrichr.py#L50
-
     Args:
-       gmt_file:
-
+       gmt_file: a gene set file in Broad GMT format
+    Returns:
+       (descr, genes): tuple of descriptions and list of genes
     """
     with open(gmt_file, "r") as file:
         lines = file.readlines()
-    library = {}
-    background_set = {}
-    if len(background_genes) > 1:
-        background_genes = [x.upper() for x in background_genes]
-        background_set = set(background_genes)
+
+    descr = []
+    genes = []
     for line in lines:
         sp = line.strip().split("\t")
         sp2 = [re.sub(",.*", "", value) for value in sp[2:]]
         sp2 = [x.upper() for x in sp2 if x]
-        if len(background_genes) > 2:
-            geneset = list(set(sp2).intersection(background_set))
-            if len(geneset) > 0:
-                library[sp[0]] = geneset
-        else:
-            if len(sp2) > 0:
-                library[sp[0]] = sp2
-    ugenes = list(set(list(itertools.chain.from_iterable(library.values()))))
-    if verbose:
-        print(
-            "Library loaded. Library contains "
-            + str(len(library))
-            + " gene sets. "
-            + str(len(ugenes))
-            + " unique genes found."
-        )
-    return library
+        if len(sp2) > 0:
+            descr.append(sp[0])
+            genes.append(sp2)
+
+    return (descr, genes)
 
 
 def get_embeddings(client, text_list, model="text-embedding-3-large"):
@@ -130,76 +103,51 @@ def get_csim(
         return (csim1, None)
 
 
+def extract_last_code_block(markdown_text):
+    """Extract last code block in output."""
+    # Regular expression to find code blocks enclosed in triple backticks
+    pattern = r"```(?:[\w]*\n)?([\s\S]*?)```"
+    code_blocks = re.findall(pattern, markdown_text)
+    # Return the last code block, if any
+    return code_blocks[-1] if code_blocks else None
+
+
 async def get_genes(aclient, descr, modelg="gpt-4-turbo", species="human", n_retry=3):
     """Get genes for given descriptions using asyncio."""
-    if n_retry == 0:
-        print("retry limit reached")
-        return {}
-
-    if len(descr) == 0:
-        return {}
+    # TODO: Need to add the ability to count tokens.
 
     with resources.open_text("llm2geneset.prompts", "genes_concise.txt") as file:
         prompt = file.read()
 
     sys_msg = "You are a skilled assistant to a molecular biologist."
 
-    if species == "yeast":
-        # seems to work in principle (needs more testing)
-        with resources.open_text(
-            "llm2geneset.prompts", "genes_concise_yeast.txt"
-        ) as file:
-            prompt = file.read()
-
     prompts = [prompt.format(descr=d) for d in descr]
 
+    # TODO: Make this rate limit a parameter.
     rate_limiter = Limiter(0.9 * 10000.0 / 60.0)
 
-    async def query(p):
+    async def complete(p):
         await rate_limiter.wait()
-        return await aclient.chat.completions.create(
-            model=modelg,
-            messages=[
-                {"role": "system", "content": sys_msg},
-                {"role": "user", "content": p},
-            ],
-        )
+        for attempt in range(n_retry):
+            r = await aclient.chat.completions.create(
+                model=modelg,
+                messages=[
+                    {"role": "system", "content": sys_msg},
+                    {"role": "user", "content": p},
+                ],
+            )
+            resp = r.choices[0].message.content
+            genes = []
+            try:
+                genes = json_repair.loads(extract_last_code_block(resp))
+                genes = [g["gene"] for g in genes]
+                genes = list(set(genes))
+                return genes
+            except Exception:
+                print("retrying")
+                print(p)
+                if attempt == n_retry - 1:
+                    return None
 
-    bres = await tqdm.asyncio.tqdm.gather(*(query(p) for p in prompts))
-
-    # Extract pathway/bp and json responses.
-    try:
-        pathway_or_process_list = descr
-        gene_response = [r.choices[0].message.content for r in bres]
-    except Exception:
-        pathway_or_process_list = []
-        gene_response = []
-
-    # Create library by converting gene list from json.
-    lib = {}
-    success_pathways = set()
-    for p, genes_json in zip(pathway_or_process_list, gene_response):
-        try:
-            genes = json_repair.loads(extract_last_code_block(genes_json))
-            genes = [g["gene"] for g in genes]
-        except Exception as err:
-            # Error in the json. Queue this up for retrying.
-            print(err)
-            print(p)
-            print(genes_json)
-        else:
-            lib[p] = list(set(genes))
-            if len(lib[p]) != len(genes):
-                print("warning: genes in " + p + " are not unique")
-            success_pathways.add(p)
-
-    # Retry based on failed pathways. This also handles the case where
-    # an API request times out.
-    failed_descr = {d for d in descr if d not in success_pathways}
-    if len(failed_descr) > 0:
-        print("failed pathways")
-        print(failed_descr)
-
-    failed = get_genes(aclient, failed_descr, modelg, n_retry=n_retry - 1)
-
-    return {**lib, **failed}
+    res = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in prompts))
+    return res
