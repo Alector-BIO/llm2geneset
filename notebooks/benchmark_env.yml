@@ -18,5 +18,6 @@ dependencies:
   - bioconductor-limma
   - bioconductor-org.hs.eg.db
   - bioconductor-gseabase
-
+  - bioconductor-annotationdbi
+  - bioconductor-go.db  
 # CONDA_SUBDIR=osx-64 micromamba env create -f benchmark_env.yml on ARM macs
