@@ -11,6 +11,7 @@ dependencies:
   - r-jsonlite
   - r-tidyverse
   - r-r.utils
+  - r-jsonlite
   - bioconductor-deseq2
   - bioconductor-edger
   - bioconductor-biomart

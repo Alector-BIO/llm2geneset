@@ -4,6 +4,7 @@ import re
 from importlib import resources
 
 import json_repair
+import tiktoken
 import tqdm.asyncio
 from asynciolimiter import Limiter
 from sklearn.metrics.pairwise import cosine_similarity
@@ -112,12 +113,22 @@ def extract_last_code_block(markdown_text):
     return code_blocks[-1] if code_blocks else None
 
 
-async def get_genes(aclient, descr, modelg="gpt-4-turbo", species="human", n_retry=3):
-    """Get genes for given descriptions using asyncio."""
-    # TODO: Need to add the ability to count tokens.
+async def get_genes(aclient, descr, model="gpt-4-turbo", n_retry=3):
+    """Get genes for given descriptions using asyncio.
 
+    Args:
+       aclient: async OpenAI client
+       descr: list of pathway/process descriptions
+       model: OpenAI model string
+       n_retry: number of times to retry
+    Returns:
+      list of a list of genes for each pathway/process in the
+      same order as the input descr list
+    """
     with resources.open_text("llm2geneset.prompts", "genes_concise.txt") as file:
         prompt = file.read()
+
+    encoding = tiktoken.encoding_for_model(model)
 
     sys_msg = "You are a skilled assistant to a molecular biologist."
 
@@ -128,26 +139,41 @@ async def get_genes(aclient, descr, modelg="gpt-4-turbo", species="human", n_ret
 
     async def complete(p):
         await rate_limiter.wait()
+        in_toks = 0
+        out_toks = 0
         for attempt in range(n_retry):
+            # Count input tokens.
+            in_toks += len(encoding.encode(sys_msg + p))
+            # LLM
             r = await aclient.chat.completions.create(
-                model=modelg,
+                model=model,
                 messages=[
                     {"role": "system", "content": sys_msg},
                     {"role": "user", "content": p},
                 ],
             )
             resp = r.choices[0].message.content
+            # Count output tokens.
+            out_toks += len(encoding.encode(resp))
+            # Extract gene names.
             genes = []
             try:
                 genes = json_repair.loads(extract_last_code_block(resp))
                 genes = [g["gene"] for g in genes]
+                # TODO: Need to count duplicated genes.
                 genes = list(set(genes))
-                return genes
-            except Exception:
+                return {
+                    "genes": genes,
+                    "in_toks": in_toks,
+                    "out_toks": out_toks,
+                    "ntries": attempt + 1,
+                }
+            except Exception as e:
                 print("retrying")
                 print(p)
                 if attempt == n_retry - 1:
-                    return None
+                    raise RuntimeError("Retries exceeded.") from e
 
+    # Run completions asynchronously.
     res = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in prompts))
     return res
