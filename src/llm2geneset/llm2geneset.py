@@ -109,17 +109,20 @@ def extract_last_code_block(markdown_text):
     # Regular expression to find code blocks enclosed in triple backticks
     pattern = r"```(?:[\w]*\n)?([\s\S]*?)```"
     code_blocks = re.findall(pattern, markdown_text)
+    if not code_blocks:
+        raise ValueError("No code blocks found")
     # Return the last code block, if any
-    return code_blocks[-1] if code_blocks else None
+    return code_blocks[-1]
 
 
-async def get_genes(aclient, descr, model="gpt-4-turbo", n_retry=3):
+async def get_genes(aclient, descr, model="gpt-4-turbo", use_sysmsg=True, n_retry=3):
     """Get genes for given descriptions using asyncio.
 
     Args:
        aclient: async OpenAI client
        descr: list of pathway/process descriptions
        model: OpenAI model string
+       use_sysmsg:
        n_retry: number of times to retry
     Returns:
       list of a list of genes for each pathway/process in the
@@ -144,33 +147,35 @@ async def get_genes(aclient, descr, model="gpt-4-turbo", n_retry=3):
         for attempt in range(n_retry):
             # Count input tokens.
             in_toks += len(encoding.encode(sys_msg + p))
+            # Prepend sys message if requested.
+            messages = [{"role": "user", "content": p}]
+            if use_sysmsg:
+                messages = [{"role": "system", "content": sys_msg}] + messages
             # LLM
-            r = await aclient.chat.completions.create(
-                model=model,
-                messages=[
-                    {"role": "system", "content": sys_msg},
-                    {"role": "user", "content": p},
-                ],
-            )
+            r = await aclient.chat.completions.create(model=model, messages=messages)
             resp = r.choices[0].message.content
             # Count output tokens.
             out_toks += len(encoding.encode(resp))
             # Extract gene names.
             genes = []
             try:
-                genes = json_repair.loads(extract_last_code_block(resp))
-                genes = [g["gene"] for g in genes]
-                # TODO: Need to count duplicated genes.
-                genes = list(set(genes))
+                json_parsed = json_repair.loads(extract_last_code_block(resp))
+                genes = [g["gene"] for g in json_parsed]
+                # conf = [g["confidence"] for g in json_parsed]
                 return {
-                    "genes": genes,
+                    "genes": list(set(genes)),
+                    "parsed_genes": genes,
+                    # "confidence": conf,
                     "in_toks": in_toks,
                     "out_toks": out_toks,
                     "ntries": attempt + 1,
                 }
             except Exception as e:
                 print("retrying")
+                print(e)
+                print(json_parsed)
                 print(p)
+                print(resp)
                 if attempt == n_retry - 1:
                     raise RuntimeError("Retries exceeded.") from e
 
