@@ -1,5 +1,6 @@
 """llm2geneset: using LLMs to generate gene sets."""
 
+import json
 import re
 from importlib import resources
 
@@ -105,7 +106,14 @@ def get_csim(
 
 
 def extract_last_code_block(markdown_text):
-    """Extract last code block in output."""
+    """Extract last code block in output.
+
+    Args:
+       markdown_text: text with markdown blocks
+    Returns:
+       Returns last code block. Raises exception if no code block
+       was found.
+    """
     # Regular expression to find code blocks enclosed in triple backticks
     pattern = r"```(?:[\w]*\n)?([\s\S]*?)```"
     code_blocks = re.findall(pattern, markdown_text)
@@ -113,6 +121,21 @@ def extract_last_code_block(markdown_text):
         raise ValueError("No code blocks found")
     # Return the last code block, if any
     return code_blocks[-1]
+
+
+def is_valid_json(json_string):
+    """Check if string is valid JSON.
+
+    Args:
+       json_string: valid or invalid JSON
+    Returns:
+       True if a valid JSON string.
+    """
+    try:
+        json.loads(json_string)
+        return True
+    except json.JSONDecodeError:
+        return False
 
 
 async def get_genes(aclient, descr, model="gpt-4-turbo", use_sysmsg=True, n_retry=3):
@@ -125,8 +148,11 @@ async def get_genes(aclient, descr, model="gpt-4-turbo", use_sysmsg=True, n_retr
        use_sysmsg:
        n_retry: number of times to retry
     Returns:
-      list of a list of genes for each pathway/process in the
-      same order as the input descr list
+      list of a list of dicts with
+      genes, unique genes in gene set
+      parsed_genes, all genes parsed, including any duplicates
+      in_toks, input token count, out_toks, output count
+      ntries, number of tries to get a gene set
     """
     with resources.open_text("llm2geneset.prompts", "genes_concise.txt") as file:
         prompt = file.read()
@@ -159,12 +185,14 @@ async def get_genes(aclient, descr, model="gpt-4-turbo", use_sysmsg=True, n_retr
             # Extract gene names.
             genes = []
             try:
-                json_parsed = json_repair.loads(extract_last_code_block(resp))
+                last_code = extract_last_code_block(resp)
+                json_parsed = json_repair.loads(last_code)
                 genes = [g["gene"] for g in json_parsed]
                 # conf = [g["confidence"] for g in json_parsed]
                 return {
                     "genes": list(set(genes)),
                     "parsed_genes": genes,
+                    "valid_json": is_valid_json(last_code),
                     # "confidence": conf,
                     "in_toks": in_toks,
                     "out_toks": out_toks,
@@ -173,7 +201,6 @@ async def get_genes(aclient, descr, model="gpt-4-turbo", use_sysmsg=True, n_retr
             except Exception as e:
                 print("retrying")
                 print(e)
-                print(json_parsed)
                 print(p)
                 print(resp)
                 if attempt == n_retry - 1:
