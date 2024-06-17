@@ -13,6 +13,7 @@ dependencies:
   - r-r.utils
   - r-jsonlite
   - r-gridextra
+  - r-hexbin
   - bioconductor-deseq2
   - bioconductor-edger
   - bioconductor-biomart
