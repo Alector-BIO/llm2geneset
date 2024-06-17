@@ -12,6 +12,7 @@ dependencies:
   - r-tidyverse
   - r-r.utils
   - r-jsonlite
+  - r-gridextra
   - bioconductor-deseq2
   - bioconductor-edger
   - bioconductor-biomart
