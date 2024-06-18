@@ -1,0 +1,13 @@
+lib_name	model	gen_time
+KEGG_2021_Human	gpt-3.5-turbo-0125	16.194093942642212
+KEGG_2021_Human	gpt-4o-2024-05-13	70.41560506820679
+Reactome_2022	gpt-3.5-turbo-0125	43.64850568771362
+Reactome_2022	gpt-4o-2024-05-13	45.66437101364136
+WikiPathway_2023_Human	gpt-3.5-turbo-0125	48.6452260017395
+WikiPathway_2023_Human	gpt-4o-2024-05-13	32.01721405982971
+GO_Biological_Process_2023	gpt-3.5-turbo-0125	85.89406108856201
+GO_Biological_Process_2023	gpt-4o-2024-05-13	73.61216163635254
+GO_Molecular_Function_2023	gpt-3.5-turbo-0125	21.93245506286621
+GO_Molecular_Function_2023	gpt-4o-2024-05-13	46.668566942214966
+GO_Cellular_Component_2023	gpt-3.5-turbo-0125	25.393876314163208
+GO_Cellular_Component_2023	gpt-4o-2024-05-13	18.5652437210083
