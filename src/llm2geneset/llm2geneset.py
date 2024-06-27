@@ -1,6 +1,5 @@
 """llm2geneset: using LLMs to generate gene sets."""
 
-import json
 import re
 from importlib import resources
 
@@ -123,48 +122,48 @@ def extract_last_code_block(markdown_text):
     return code_blocks[-1]
 
 
-def is_valid_json(json_string):
-    """Check if string is valid JSON.
-
-    Args:
-       json_string: valid or invalid JSON
-    Returns:
-       True if a valid JSON string.
-    """
-    try:
-        json.loads(json_string)
-        return True
-    except json.JSONDecodeError:
-        return False
-
-
-async def get_genes(aclient, descr, model="gpt-4-turbo", use_sysmsg=True, n_retry=3):
+async def get_genes(
+    aclient, descr, model="gpt-4o", prompt_type="basic", use_sysmsg=False, n_retry=3
+):
     """Get genes for given descriptions using asyncio.
 
     Args:
        aclient: async OpenAI client
        descr: list of pathway/process descriptions
        model: OpenAI model string
-       use_sysmsg:
+       prompt_type: "basic", standard prompt, "reason",
+                     add reasoning per gene, "conf" add confidence
+                     per gene
+       use_sysmsg: apply system message to model input
        n_retry: number of times to retry
     Returns:
       list of a list of dicts with
       genes, unique genes in gene set
       parsed_genes, all genes parsed, including any duplicates
+      reason, if requested reason gene was included in gene set, one for each
+              gene in parse_genes, otherwise an empty string
       in_toks, input token count, out_toks, output count
       ntries, number of tries to get a gene set
     """
-    with resources.open_text("llm2geneset.prompts", "genes_concise.txt") as file:
+    prompt_file = "genes_concise.txt"
+
+    # If requested, use prompts that require reasoning or confidence.
+    if prompt_type == "reason":
+        prompt_file = "genes_concise_reason.txt"
+    if prompt_type == "conf":
+        prompt_file = "genes_concise_conf.txt"
+
+    with resources.open_text("llm2geneset.prompts", prompt_file) as file:
         prompt = file.read()
 
     encoding = tiktoken.encoding_for_model(model)
 
-    sys_msg = "You are a skilled assistant to a molecular biologist."
+    sys_msg = "You are an expert in cellular and molecular biology."
 
     prompts = [prompt.format(descr=d) for d in descr]
 
     # TODO: Make this rate limit a parameter.
-    rate_limiter = Limiter(0.9 * 10000.0 / 60.0)
+    rate_limiter = Limiter(0.95 * 10000.0 / 60.0)
 
     async def complete(p):
         await rate_limiter.wait()
@@ -172,11 +171,12 @@ async def get_genes(aclient, descr, model="gpt-4-turbo", use_sysmsg=True, n_retr
         out_toks = 0
         for attempt in range(n_retry):
             # Count input tokens.
-            in_toks += len(encoding.encode(sys_msg + p))
+            in_toks += len(encoding.encode(p))
             # Prepend sys message if requested.
             messages = [{"role": "user", "content": p}]
             if use_sysmsg:
                 messages = [{"role": "system", "content": sys_msg}] + messages
+                in_toks += len(encoding.encode(sys_msg))
             # LLM
             r = await aclient.chat.completions.create(model=model, messages=messages)
             resp = r.choices[0].message.content
@@ -188,12 +188,16 @@ async def get_genes(aclient, descr, model="gpt-4-turbo", use_sysmsg=True, n_retr
                 last_code = extract_last_code_block(resp)
                 json_parsed = json_repair.loads(last_code)
                 genes = [g["gene"] for g in json_parsed]
-                # conf = [g["confidence"] for g in json_parsed]
+                reason = ["" for g in json_parsed]
+                if prompt_type == "reason":
+                    reason = [g["reason"] for g in json_parsed]
+                conf = ["" for g in json_parsed]
+                if prompt_type == "conf":
+                    conf = [g["confidence"] for g in json_parsed]
                 return {
-                    "genes": list(set(genes)),
                     "parsed_genes": genes,
-                    "valid_json": is_valid_json(last_code),
-                    # "confidence": conf,
+                    "reason": reason,
+                    "conf": conf,
                     "in_toks": in_toks,
                     "out_toks": out_toks,
                     "ntries": attempt + 1,
@@ -209,3 +213,114 @@ async def get_genes(aclient, descr, model="gpt-4-turbo", use_sysmsg=True, n_retr
     # Run completions asynchronously.
     res = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in prompts))
     return res
+
+
+def filter_items_by_threshold(list_of_lists, threshold):
+    """Find repeated items in a list of lists.
+
+    Args:
+       list_of_lists: list of lists
+       threshold: integer threshold for element
+    Returns:
+       list of unique elements that occur in threshold
+       number of lists.
+    """
+    item_count = {}
+
+    # Count the number of lists each item appears in
+    for sublist in list_of_lists:
+        unique_items = set(sublist)
+        for item in unique_items:
+            if item in item_count:
+                item_count[item] += 1
+            else:
+                item_count[item] = 1
+
+    # Filter items based on the threshold
+    result = [item for item, count in item_count.items() if count >= threshold]
+
+    return result
+
+
+def ensemble_genes(descr, gen_genes, thresh):
+    """Ensemble gene sets.
+
+    Args:
+       descr: list of gene set descriptions
+       gen_genes: output of a list of dicts from get_genes
+       thresh: integer for how many generations a gene needs to
+               appear
+    Returns:
+       Returns a dict with common genes in
+       "genes", tokens are summed along with number of tries
+       needed to generate the gene set.
+    """
+    ensembl_genes = []
+    for idx in range(len(descr)):
+        gene_lists = []
+        in_toks = 0
+        out_toks = 0
+        ntries = 0
+        for e in range(len(gen_genes)):
+            gene_lists.append(gen_genes[e][idx]["parsed_genes"])
+            in_toks += gen_genes[e][idx]["in_toks"]
+            out_toks += gen_genes[e][idx]["out_toks"]
+            ntries += gen_genes[e][idx]["ntries"]
+
+        thresh_genes = filter_items_by_threshold(gene_lists, thresh)
+        blank_list = ["" for g in thresh_genes]
+        x = {
+            "genes": thresh_genes,
+            "parsed_genes": thresh_genes,
+            "reason": blank_list,
+            "conf": blank_list,
+            "in_toks": in_toks,
+            "out_toks": out_toks,
+            "ntries": ntries,
+        }
+        ensembl_genes.append(x)
+
+    return ensembl_genes
+
+
+def sel_conf(descr, gen_genes, conf_vals):
+    """
+    Select genes based on given confidence values.
+
+    Args:
+       descr: list of gene set descriptions
+       gen_genes: output of a list of dicts from get_genes
+       thresh: integer for how many generations a gene needs to
+               appear
+    Returns:
+       Returns a dict with common genes in
+       "genes", tokens are summed along with number of tries
+       needed to generate the gene set.
+    """
+    conf_vals = set(conf_vals)
+    conf_genes = []
+    for idx in range(len(descr)):
+        genes = gen_genes[idx]["parse_genes"]
+        conf = gen_genes[idx]["conf"]
+        reason = gen_genes[idx]["reason"]
+
+        genes_sel = []
+        conf_sel = []
+        reason_sel = []
+        for g in range(len(genes)):
+            if conf[g] in conf_vals:
+                genes_sel.append(genes[g])
+                conf_sel.append(conf[g])
+                reason_sel.append(reason[g])
+
+        x = {
+            "parsed_genes": genes_sel,
+            "reason": reason_sel,
+            "conf": conf_sel,
+            "in_toks": gen_genes[idx]["in_toks"],
+            "out_toks": gen_genes[idx]["out_toks"],
+            "ntries": gen_genes[idx]["ntries"],
+        }
+        conf_genes.append(x)
+
+    return conf_genes

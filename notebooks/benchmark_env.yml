@@ -14,6 +14,7 @@ dependencies:
   - r-jsonlite
   - r-gridextra
   - r-hexbin
+  - r-gridextra
   - bioconductor-deseq2
   - bioconductor-edger
   - bioconductor-biomart
@@ -21,5 +22,5 @@ dependencies:
   - bioconductor-org.hs.eg.db
   - bioconductor-gseabase
   - bioconductor-annotationdbi
-  - bioconductor-go.db  
+  - bioconductor-go.db
 # CONDA_SUBDIR=osx-64 micromamba env create -f benchmark_env.yml on ARM macs

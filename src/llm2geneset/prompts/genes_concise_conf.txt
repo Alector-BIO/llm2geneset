@@ -1,0 +1,20 @@
+List all the known genes directly and indirectly involved in the following biological process or cellular component """{descr}""" and your confidence low, medium, or high in that they belong. Use the following JSON schema:
+```json
+{{
+    "type": "array",
+    "items": {{
+        "type": "object",
+        "properties": {{
+            "gene": {{
+                "type": "string",
+            }},
+            "confidence": {{
+                "type": "string",
+                 "enum": ["low", "medium", "high"]
+            }}
+        }},
+        "required": ["gene", "confidence"],
+    }}
+}}
+```
+The field `gene` is a gene involved in the biological process or cellular component: """{descr}""". The field `confidence` can be low, medium, or high reflecting your confidence the gene belongs to the biological process or cellular component. Use the HUGO Gene Nomenclature Committee (HGNC) gene abbreviations. Place the output in a JSON code block. Do not add any comments in the JSON code block.

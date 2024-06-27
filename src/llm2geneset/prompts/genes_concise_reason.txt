@@ -1,0 +1,19 @@
+List all the known genes directly and indirectly involved in the following biological process or cellular component """{descr}""" and a one sentence reason why they belong. Use the following JSON schema:
+```json
+{{
+    "type": "array",
+    "items": {{
+        "type": "object",
+        "properties": {{
+            "gene": {{
+                "type": "string",
+            }},
+            "reason": {{
+                "type": "string",
+            }}
+        }},
+        "required": ["gene", "reason"]
+    }}
+}}
+```
+The field `gene` is a gene involved in the following biological process or cellular component: """{descr}""". The field `reason` is a one sentence reason as to why the gene in `gene` belongs to the biological process or cellular component. Use the HUGO Gene Nomenclature Committee (HGNC) gene abbreviations. Place the output in a JSON code block. Do not add any comments in the JSON code block.
