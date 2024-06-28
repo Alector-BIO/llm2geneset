@@ -127,6 +127,9 @@ async def get_genes(
 ):
     """Get genes for given descriptions using asyncio.
 
+    Allows experiments with role prompt, different models,
+    use of confidence and model reasoning. Used also for ensembling.
+
     Args:
        aclient: async OpenAI client
        descr: list of pathway/process descriptions
@@ -187,6 +190,9 @@ async def get_genes(
             try:
                 last_code = extract_last_code_block(resp)
                 json_parsed = json_repair.loads(last_code)
+                # Address issue where sometimes other types are parsed out.
+                json_parsed = [g for g in json_parsed if isinstance(g["gene"], str)]
+                # Parse out gene, reason, and confidence.
                 genes = [g["gene"] for g in json_parsed]
                 reason = ["" for g in json_parsed]
                 if prompt_type == "reason":
@@ -245,6 +251,8 @@ def filter_items_by_threshold(list_of_lists, threshold):
 def ensemble_genes(descr, gen_genes, thresh):
     """Ensemble gene sets.
 
+    Uses multiple generations of get_genes() to create gene sets.
+
     Args:
        descr: list of gene set descriptions
        gen_genes: output of a list of dicts from get_genes
@@ -300,7 +308,7 @@ def sel_conf(descr, gen_genes, conf_vals):
     conf_vals = set(conf_vals)
     conf_genes = []
     for idx in range(len(descr)):
-        genes = gen_genes[idx]["parse_genes"]
+        genes = gen_genes[idx]["parsed_genes"]
         conf = gen_genes[idx]["conf"]
         reason = gen_genes[idx]["reason"]
 
