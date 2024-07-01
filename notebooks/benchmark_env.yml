@@ -15,6 +15,7 @@ dependencies:
   - r-gridextra
   - r-hexbin
   - r-gridextra
+  - r-ggridges
   - bioconductor-deseq2
   - bioconductor-edger
   - bioconductor-biomart
