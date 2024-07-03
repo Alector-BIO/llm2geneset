@@ -243,7 +243,8 @@ def filter_items_by_threshold(list_of_lists, threshold):
                 item_count[item] = 1
 
     # Filter items based on the threshold
-    result = [item for item, count in item_count.items() if count >= threshold]
+    res_filtered = [item for item, count in item_count.items() if count >= threshold]
+    result = sorted(res_filtered)
 
     return result
 
