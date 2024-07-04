@@ -1,5 +1,6 @@
 """eutils: Functions to call NCBI eutils API."""
 
+import asyncio
 import os
 
 import aiohttp
@@ -23,6 +24,7 @@ async def esearch_async(queries, db="pubmed", retmax=100):
     """
     url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
     ncbi_key = os.getenv("NCBI_API_KEY")
+    # requests per second set to prevent hitting NCBI API limits
     rps = 2
     if ncbi_key is not None:
         rps = 7
@@ -41,18 +43,18 @@ async def esearch_async(queries, db="pubmed", retmax=100):
             fields["api_key"] = ncbi_key
 
         post_timeout = aiohttp.ClientTimeout(total=120)
-        async with sess.post(url, data=fields, timeout=post_timeout) as resp:
-            if resp.status != 200:
-                print("res.status != 200")
-                print(resp.status)
-                print(query)
-            data = await resp.text()
-            soup = BeautifulSoup(data, "xml")
-            id_list = [id_tag.text for id_tag in soup.find_all("Id")]
-            # if len(id_list) == 0:
-            #    print("len(id_list) == 0")
-            #    print(query)
-            return id_list
+        # Try 3 times.
+        for attempt in range(3):
+            async with sess.post(url, data=fields, timeout=post_timeout) as resp:
+                if resp.status == 200:
+                    data = await resp.text()
+                    soup = BeautifulSoup(data, "xml")
+                    id_list = [id_tag.text for id_tag in soup.find_all("Id")]
+                    return id_list
+                else:
+                    wait_time = attempt**2
+                    await asyncio.sleep(wait_time)
+        raise Exception("esearch post failed after 3 retries")
 
     async with aiohttp.ClientSession() as sess:
         tasks = [esearch(sess, q) for q in queries]
@@ -166,14 +168,17 @@ async def efetch_pubmed_async(pubmed_ids):
             fields["api_key"] = ncbi_key
 
         post_timeout = aiohttp.ClientTimeout(total=120)
-        async with sess.post(url, data=fields, timeout=post_timeout) as resp:
-            if resp.status != 200:
-                print("res.status != 200")
-                print(resp.status)
-                print(pubmed_ids)
-            data = await resp.text()
-            soup = BeautifulSoup(data, "xml")
-            return get_all_abstracts(soup)
+        # Try 3 times.
+        for attempt in range(3):
+            async with sess.post(url, data=fields, timeout=post_timeout) as resp:
+                if resp.status == 200:
+                    data = await resp.text()
+                    soup = BeautifulSoup(data, "xml")
+                    return get_all_abstracts(soup)
+                else:
+                    wait_time = attempt**2
+                    await asyncio.sleep(wait_time)
+        raise Exception("efetch post failed after 3 retries")
 
     async with aiohttp.ClientSession() as sess:
         tasks = [efetch(sess, p) for p in pubmed_ids]
