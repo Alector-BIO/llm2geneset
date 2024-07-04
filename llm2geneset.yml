@@ -22,6 +22,9 @@ dependencies:
   - ipywidgets
   - matplotlib
   - seaborn
+  - beautifulsoup4
+  - lxml
+  - aiohttp
   - docopt
   - pip
   - pip:

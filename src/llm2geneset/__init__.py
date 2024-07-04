@@ -18,3 +18,12 @@ finally:
 from .llm2geneset import ensemble_genes, get_genes, read_gmt, sel_conf
 
 __all__ = ["read_gmt", "get_genes", "ensemble_genes", "sel_conf"]
+
+from .eutils import efetch_pubmed_async, efetch_pubmed_sync, esearch_async, esearch_sync
+
+__all__ += [
+    "esearch_async",
+    "esearch_sync",
+    "efetch_pubmed_async",
+    "efetch_pubmed_sync",
+]
