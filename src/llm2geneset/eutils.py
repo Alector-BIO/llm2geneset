@@ -6,6 +6,7 @@ import os
 import aiohttp
 import tqdm.asyncio
 import urllib3
+from aiohttp import ServerDisconnectedError
 from asynciolimiter import StrictLimiter
 from bs4 import BeautifulSoup
 
@@ -30,6 +31,7 @@ async def esearch_async(queries, db="pubmed", retmax=100):
         rps = 7
     limiter = StrictLimiter(rps)
 
+    # TODO: Occasionally get Server disconnect errors. How to handle?
     async def esearch(sess, query):
         await limiter.wait()
         fields = {
@@ -45,15 +47,21 @@ async def esearch_async(queries, db="pubmed", retmax=100):
         post_timeout = aiohttp.ClientTimeout(total=120)
         # Try 3 times.
         for attempt in range(3):
-            async with sess.post(url, data=fields, timeout=post_timeout) as resp:
-                if resp.status == 200:
-                    data = await resp.text()
-                    soup = BeautifulSoup(data, "xml")
-                    id_list = [id_tag.text for id_tag in soup.find_all("Id")]
-                    return id_list
-                else:
-                    wait_time = attempt**2
-                    await asyncio.sleep(wait_time)
+            try:
+                async with sess.post(url, data=fields, timeout=post_timeout) as resp:
+                    if resp.status == 200:
+                        data = await resp.text()
+                        soup = BeautifulSoup(data, "xml")
+                        id_list = [id_tag.text for id_tag in soup.find_all("Id")]
+                        return id_list
+                    else:
+                        wait_time = attempt**2
+                        await asyncio.sleep(wait_time)
+            except ServerDisconnectedError as e:
+                print(f"Attempt {attempt} failed with error: {e}")
+                wait_time = attempt**2
+                await asyncio.sleep(wait_time)
+
         raise Exception("esearch post failed after 3 retries")
 
     async with aiohttp.ClientSession() as sess:
@@ -170,14 +178,20 @@ async def efetch_pubmed_async(pubmed_ids):
         post_timeout = aiohttp.ClientTimeout(total=120)
         # Try 3 times.
         for attempt in range(3):
-            async with sess.post(url, data=fields, timeout=post_timeout) as resp:
-                if resp.status == 200:
-                    data = await resp.text()
-                    soup = BeautifulSoup(data, "xml")
-                    return get_all_abstracts(soup)
-                else:
-                    wait_time = attempt**2
-                    await asyncio.sleep(wait_time)
+            try:
+                async with sess.post(url, data=fields, timeout=post_timeout) as resp:
+                    if resp.status == 200:
+                        data = await resp.text()
+                        soup = BeautifulSoup(data, "xml")
+                        return get_all_abstracts(soup)
+                    else:
+                        wait_time = attempt**2
+                        await asyncio.sleep(wait_time)
+            except ServerDisconnectedError as e:
+                print(f"Attempt {attempt} failed with error: {e}")
+                wait_time = attempt**2
+                await asyncio.sleep(wait_time)
+
         raise Exception("efetch post failed after 3 retries")
 
     async with aiohttp.ClientSession() as sess:

@@ -15,9 +15,15 @@ except PackageNotFoundError:  # pragma: no cover
 finally:
     del version, PackageNotFoundError
 
-from .llm2geneset import ensemble_genes, get_genes, read_gmt, sel_conf
+from .llm2geneset import (
+    ensemble_genes,
+    get_genes,
+    get_genes_context,
+    read_gmt,
+    sel_conf,
+)
 
-__all__ = ["read_gmt", "get_genes", "ensemble_genes", "sel_conf"]
+__all__ = ["read_gmt", "get_genes", "ensemble_genes", "sel_conf", "get_genes_context"]
 
 from .eutils import efetch_pubmed_async, efetch_pubmed_sync, esearch_async, esearch_sync
 

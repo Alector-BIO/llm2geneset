@@ -221,6 +221,76 @@ async def get_genes(
     return res
 
 
+async def get_genes_context(aclient, context, descr, model="gpt-4o", n_retry=3):
+    """Get genes using given context."""
+    prompt_file = "genes_concise_context.txt"
+
+    with resources.open_text("llm2geneset.prompts", prompt_file) as file:
+        prompt = file.read()
+
+    prompt_file_orig = "genes_concise.txt"
+    with resources.open_text("llm2geneset.prompts", prompt_file_orig) as file:
+        prompt_orig = file.read()
+
+    encoding = tiktoken.encoding_for_model(model)
+
+    # If no context, use original prompt.
+    prompts = []
+    for c, d in zip(context, descr):
+        if len(c) == 0:
+            prompts.append(prompt_orig.format(descr=d))
+        else:
+            prompts.append(prompt.format(context=c, descr=d))
+
+    # TODO: Make this rate limit a parameter.
+    rate_limiter = Limiter(0.95 * 10000.0 / 60.0)
+
+    async def complete(p):
+        await rate_limiter.wait()
+        in_toks = 0
+        out_toks = 0
+        for attempt in range(n_retry):
+            # Count input tokens.
+            in_toks += len(encoding.encode(p))
+            # Prepend sys message if requested.
+            messages = [{"role": "user", "content": p}]
+            # LLM
+            r = await aclient.chat.completions.create(model=model, messages=messages)
+            resp = r.choices[0].message.content
+            # Count output tokens.
+            out_toks += len(encoding.encode(resp))
+            # Extract gene names.
+            genes = []
+            try:
+                last_code = extract_last_code_block(resp)
+                json_parsed = json_repair.loads(last_code)
+                # Address issue where sometimes other types are parsed out.
+                json_parsed = [g for g in json_parsed if isinstance(g["gene"], str)]
+                # Parse out gene, reason, and confidence.
+                genes = [g["gene"] for g in json_parsed]
+                reason = ["" for g in json_parsed]
+                conf = ["" for g in json_parsed]
+                return {
+                    "parsed_genes": genes,
+                    "reason": reason,
+                    "conf": conf,
+                    "in_toks": in_toks,
+                    "out_toks": out_toks,
+                    "ntries": attempt + 1,
+                }
+            except Exception as e:
+                print("retrying")
+                print(e)
+                print(p)
+                print(resp)
+                if attempt == n_retry - 1:
+                    raise RuntimeError("Retries exceeded.") from e
+
+    # Run completions asynchronously.
+    res = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in prompts))
+    return res
+
+
 def filter_items_by_threshold(list_of_lists, threshold):
     """Find repeated items in a list of lists.
 

@@ -1,0 +1,17 @@
+{context}
+You are an expert that wrote the above abstract on the biological process or cellular component """{descr}""". List all the known genes directly and indirectly involved in """{descr}""". Use the following JSON schema:
+```json
+{{
+    "type": "array",
+    "items": {{
+        "type": "object",
+        "properties": {{
+            "gene": {{
+                "type": "string",
+            }}
+        }},
+        "required": ["gene"]
+    }}
+}}
+```
+The field `gene` is a gene involved in the following biological process or cellular component: """{descr}""". Use the HUGO Gene Nomenclature Committee (HGNC) gene abbreviations. Place the output in a JSON code block. Do not add any comments in the JSON code block.
