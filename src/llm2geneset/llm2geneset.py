@@ -2,7 +2,7 @@
 
 import re
 from importlib import resources
-
+import numpy as np
 import json_repair
 import tiktoken
 import tqdm.asyncio
@@ -403,3 +403,67 @@ def sel_conf(descr, gen_genes, conf_vals):
         conf_genes.append(x)
 
     return conf_genes
+
+
+async def get_pathways(aclient, cond1, cond2, n=3, model="gpt-4o", n_retry=3, use_sysmsg=False):
+    """Return a list of candidate pathways.
+    
+    @param cond1: study design sample 1 (analogous to tissue x or disease)
+    @param cond2: study design sample 2 (tissue y or healthy control)
+    @param n: number of pathways we want LLM to produce
+    @param n_retry: if LLM fails to give JSON format, ask to try again
+    """
+    
+    sys_msg = "You are an expert in cellular and molecular biology."
+
+    prompt_file = "pathways_concise.txt"
+
+    with resources.open_text("llm2geneset.prompts", prompt_file) as file:
+        prompt = file.read()
+
+    encoding = tiktoken.encoding_for_model(model)
+
+    # Create the prompts by formatting the template
+    cond1_high_prompt = prompt.format(cond1=cond1, cond2=cond2, n=n)
+    cond2_high_prompt = prompt.format(cond1=cond2, cond2=cond1, n=n)
+
+    rate_limiter = Limiter(0.95 * 10000.0 / 60.0)
+
+    async def complete(p):
+        await rate_limiter.wait()
+        for attempt in range(n_retry):
+            messages = [{"role": "user", "content": p}]
+            if use_sysmsg:
+                messages = [{"role": "system", "content": sys_msg}] + messages
+            r = await aclient.chat.completions.create(model=model, messages=messages)
+            resp = r.choices[0].message.content
+            pathways = []
+            try:
+                last_code = extract_last_code_block(resp)
+                json_parsed = json_repair.loads(last_code)  # Use json.loads directly
+                # Ensure correct structure
+                json_parsed = [path for path in json_parsed if isinstance(path["p"], str)]
+                pathways = [path["p"] for path in json_parsed]
+                return {
+                    "parsed_pathways": pathways,
+                    "ntries": attempt + 1,
+                }
+            except Exception as e:
+                print("retrying")
+                print(e)
+                print(p)
+                print(resp)
+                if attempt == n_retry - 1:
+                    raise RuntimeError("Retries exceeded.") from e
+
+    # Prepare the list of prompts
+    cond1_high_prompts = [cond1_high_prompt]
+    cond2_high_prompts = [cond2_high_prompt]
+
+    # Run completions asynchronously.
+    res1 = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in cond1_high_prompts))
+    res2 = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in cond2_high_prompts))
+    res = res1[0]['parsed_pathways'] + res2[0]['parsed_pathways']
+    res = np.unique(res)
+
+    return res
