@@ -1,0 +1,44 @@
+Acetaldehyde metabolism		ALDH2	ADH1B	ADH1C
+Acyl-CoA metabolic process		ACAA1	ACAA2	ACADL	ACADM	ACADS	ACADVL	ACAT1
+Adenosine Receptor Signaling Pathway		ADORA1	ADORA2A	ADORA2B	ADORA3
+Aldosterone synthesis and secretion		CYP11A1	CYP11B1	CYP11B2
+Blood-brain Barrier Maintenance		CLDN5	OCLN	TJP1
+Calcium Signaling in Neurons		CAMK2A	CAMK2B	CAMK2G	CACNA1A	CACNA1B	CACNA1C	CACNA1D	CACNA1E	CACNA1F	CACNA1G	CACNA1H	CACNA1I	CACNA1S	CACNA2D1	CACNA2D2	CACNA2D3	CACNA2D4	CACNA2D1
+Central Nervous System Development		SOX2	PAX6
+Circadian Entrainment		PER1	PER2	PER3	CRY1	CRY2	CLOCK	BMAL1
+Detoxification of drugs and alcohol		ADH1B	ALDH2	CYP2E1
+Fructose and mannose metabolism		HK1	HK2	ALDOA	ALDOB	FBP1	FBP2
+Glucuronidation		UGT1A1
+Glutathione metabolism		GCLC	GCLM	GSS	GPX1	GPX4	GSTP1
+Glycogen synthesis		GYS1	GYS2
+Glyoxylate and dicarboxylate metabolism		AGXT
+Insulin-like growth factor signaling		IGF1	IGF1R	PI3K	AKT1
+Iron homeostasis		HFE	TF	TFR1	SLC11A2
+Linoleic acid metabolism		CYP2C8	CYP2C9
+Lipid droplet organization		PLIN1
+Lipoprotein particle clearance		APOE	LDLR
+Long-term Potentiation		CAMK2A	CAMK2B	CAMK2G	GRIN1	GRIN2A	GRIN2B	GRIN2C	GRIN2D
+Maintaining Neuronal Synaptic Structure		SHANK3
+Memory Formation		CREB1	BDNF
+Microsomal ethanol oxidizing system		CYP2E1	ALDH2
+Mitochondrial fatty acid beta-oxidation		ACADM	ACADS	ACADVL	ACAA2	HADHA	HADHB	ECHS1	EHHADH
+Mono-oxygenase activity		CYP1A1	CYP2C9	CYP2D6	CYP3A4
+Myelination		MAG	MBP	PLP1	MOG
+Neurofibrillary Tangle Formation		MAPT
+Neuroinflammation		IL6	TNF	IL1B
+Neuronal Action Potential		SCN1A	SCN2A	SCN8A	SCN9A
+Neuroplasticity		BDNF
+Neurotransmitter Release Cycle		SYT1	SNAP25	VAMP2	STX1A
+Neurotrophin Signaling Pathway		NTRK1	NTRK2	NTRK3	NGF	BDNF	NTF4
+Nitrogen compound metabolic process		GLUD1	GLUL	ASS1
+Oxidative deamination		DAO
+P450 pathways		CYP1A1	CYP1A2	CYP2D6	CYP3A4
+Pentose and glucuronate interconversions		G6PC	G6PC2	G6PD	G6PD2
+Phosphatidylcholine biosynthesis		PEMT	CHKA
+Primary bile acid biosynthesis		CYP7A1
+Programmed Cell Death in Neurons		BAX	BAK1	CASP3	CASP8
+Protein synthesis and degradation		UBB
+Selenocompound metabolism		SELENOP
+Serine family amino acid metabolic process		PHGDH	PSAT1	PSAT1	PHGDH
+Urea cycle		ARG1	ASS1	ASL	OTC	CPS1
+Vitamin B12 metabolism		MTR	MTRR

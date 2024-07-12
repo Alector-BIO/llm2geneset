@@ -22,9 +22,10 @@ from .llm2geneset import (
     read_gmt,
     sel_conf,
     get_pathways,
+    get_embeddings,
 )
 
-__all__ = ["read_gmt", "get_genes", "ensemble_genes", "sel_conf", "get_genes_context", "get_pathways"]
+__all__ = ["read_gmt", "get_genes", "ensemble_genes", "sel_conf", "get_genes_context", "get_pathways","get_embeddings"]
 
 from .eutils import efetch_pubmed_async, efetch_pubmed_sync, esearch_async, esearch_sync
 
