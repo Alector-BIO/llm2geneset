@@ -17,15 +17,26 @@ finally:
 
 from .llm2geneset import (
     ensemble_genes,
+    get_embeddings,
     get_genes,
     get_genes_context,
+    get_genes_list,
+    get_pathways,
     read_gmt,
     sel_conf,
-    get_pathways,
-    get_embeddings,
 )
 
-__all__ = ["read_gmt", "get_genes", "ensemble_genes", "sel_conf", "get_genes_context", "get_pathways","get_embeddings"]
+__all__ = [
+    "read_gmt",
+    "get_genes",
+    "ensemble_genes",
+    "sel_conf",
+    "get_genes_context",
+    "get_genes_list",
+    "get_pathways",
+    "get_embeddings",
+]
+
 
 from .eutils import efetch_pubmed_async, efetch_pubmed_sync, esearch_async, esearch_sync
 

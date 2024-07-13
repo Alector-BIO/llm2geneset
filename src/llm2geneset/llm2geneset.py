@@ -2,11 +2,12 @@
 
 import re
 from importlib import resources
-import numpy as np
+
 import json_repair
+import numpy as np
 import tiktoken
 import tqdm.asyncio
-from asynciolimiter import Limiter
+from asynciolimiter import StrictLimiter
 from sklearn.metrics.pairwise import cosine_similarity
 
 
@@ -166,7 +167,7 @@ async def get_genes(
     prompts = [prompt.format(descr=d) for d in descr]
 
     # TODO: Make this rate limit a parameter.
-    rate_limiter = Limiter(0.95 * 10000.0 / 60.0)
+    rate_limiter = StrictLimiter(0.95 * 10000.0 / 60.0)
 
     async def complete(p):
         await rate_limiter.wait()
@@ -243,7 +244,7 @@ async def get_genes_context(aclient, context, descr, model="gpt-4o", n_retry=3):
             prompts.append(prompt.format(context=c, descr=d))
 
     # TODO: Make this rate limit a parameter.
-    rate_limiter = Limiter(0.95 * 10000.0 / 60.0)
+    rate_limiter = StrictLimiter(0.95 * 10000.0 / 60.0)
 
     async def complete(p):
         await rate_limiter.wait()
@@ -405,15 +406,17 @@ def sel_conf(descr, gen_genes, conf_vals):
     return conf_genes
 
 
-async def get_pathways(aclient, cond1, cond2, n=3, model="gpt-4o", n_retry=3, use_sysmsg=False):
+async def get_pathways(
+    aclient, cond1, cond2, n=3, model="gpt-4o", n_retry=3, use_sysmsg=False
+):
     """Return a list of candidate pathways.
-    
+
     @param cond1: study design sample 1 (analogous to tissue x or disease)
     @param cond2: study design sample 2 (tissue y or healthy control)
     @param n: number of pathways we want LLM to produce
     @param n_retry: if LLM fails to give JSON format, ask to try again
     """
-    
+
     sys_msg = "You are an expert in cellular and molecular biology."
 
     prompt_file = "pathways_concise.txt"
@@ -421,13 +424,11 @@ async def get_pathways(aclient, cond1, cond2, n=3, model="gpt-4o", n_retry=3, us
     with resources.open_text("llm2geneset.prompts", prompt_file) as file:
         prompt = file.read()
 
-    encoding = tiktoken.encoding_for_model(model)
-
     # Create the prompts by formatting the template
     cond1_high_prompt = prompt.format(cond1=cond1, cond2=cond2, n=n)
     cond2_high_prompt = prompt.format(cond1=cond2, cond2=cond1, n=n)
 
-    rate_limiter = Limiter(0.95 * 10000.0 / 60.0)
+    rate_limiter = StrictLimiter(0.95 * 10000.0 / 60.0)
 
     async def complete(p):
         await rate_limiter.wait()
@@ -442,7 +443,9 @@ async def get_pathways(aclient, cond1, cond2, n=3, model="gpt-4o", n_retry=3, us
                 last_code = extract_last_code_block(resp)
                 json_parsed = json_repair.loads(last_code)  # Use json.loads directly
                 # Ensure correct structure
-                json_parsed = [path for path in json_parsed if isinstance(path["p"], str)]
+                json_parsed = [
+                    path for path in json_parsed if isinstance(path["p"], str)
+                ]
                 pathways = [path["p"] for path in json_parsed]
                 return {
                     "parsed_pathways": pathways,
@@ -463,7 +466,59 @@ async def get_pathways(aclient, cond1, cond2, n=3, model="gpt-4o", n_retry=3, us
     # Run completions asynchronously.
     res1 = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in cond1_high_prompts))
     res2 = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in cond2_high_prompts))
-    res = res1[0]['parsed_pathways'] + res2[0]['parsed_pathways']
+    res = res1[0]["parsed_pathways"] + res2[0]["parsed_pathways"]
     res = np.unique(res)
 
+    return res
+
+
+async def get_genes_list(aclient, genes, descr, model="gpt-4o", n_retry=3):
+    """Get genes for given descriptions using asyncio."""
+    prompt_file = "genes_single_gene.txt"
+    with resources.open_text("llm2geneset.prompts", prompt_file) as file:
+        prompt = file.read()
+
+    format_file = "genes_single_gene_format.txt"
+    with resources.open_text("llm2geneset.prompts", format_file) as file:
+        format_msg = file.read()
+
+    prompts = [prompt.format(descr=descr, gene=g) for g in genes]
+
+    # TODO: Make this rate limit a parameter.
+    rate_limiter = StrictLimiter(0.50 * 10000.0 / 60.0)
+
+    sys_msg = "You are a helpful assistant to a molecular and cellular biologist."
+
+    async def complete(p):
+        for attempt in range(n_retry):
+            await rate_limiter.wait()
+            # Count input tokens.
+            # Prepend sys message if requested.
+            messages = [
+                {"role": "system", "content": sys_msg},
+                {"role": "user", "content": p},
+            ]
+            # LLM
+            r = await aclient.chat.completions.create(model=model, messages=messages)
+            resp_gene = r.choices[0].message.content
+            messages = [
+                {"role": "system", "content": sys_msg},
+                {"role": "user", "content": p},
+                {"role": "assistant", "content": resp_gene},
+                {"role": "user", "content": format_msg},
+            ]
+            r = await aclient.chat.completions.create(model=model, messages=messages)
+            resp_format = r.choices[0].message.content
+            try:
+                last_code = extract_last_code_block(resp_format)
+                json_parsed = json_repair.loads(last_code)
+                json_parsed["response"] = resp_gene
+                return json_parsed
+            except Exception as e:
+                print(resp_format)
+                if attempt == n_retry - 1:
+                    raise RuntimeError("Retries exceeded.") from e
+
+    # Run completions asynchronously.
+    res = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in prompts))
     return res
