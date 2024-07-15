@@ -1,0 +1,20 @@
+List of genes:
+"""
+{genes}
+"""
+From the above list return the genes directly or indirectly involved in the following biological process or cellular component """{descr}""". Use the following JSON schema:
+```json
+{{
+    "type": "array",
+    "items": {{
+        "type": "object",
+        "properties": {{
+            "gene": {{
+                "type": "string",
+            }}
+        }},
+        "required": ["gene"]
+    }}
+}}
+```
+Place the output in a JSON code block. Do not add any comments in the JSON code block.

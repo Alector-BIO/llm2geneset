@@ -1,0 +1,1 @@
+Is the gene "{gene}" directly involved in the biological pathway or cellular component "{descr}"?
