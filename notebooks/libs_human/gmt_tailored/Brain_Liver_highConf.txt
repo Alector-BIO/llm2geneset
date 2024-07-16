@@ -1,44 +1,50 @@
-Acetaldehyde metabolism		ADH1B	ADH1C	ALDH2
-Acyl-CoA metabolic process		ACAA1	ACAA2	ACADL	ACADM	ACADS	ACADVL	ACAT1
-Adenosine Receptor Signaling Pathway		ADORA1	ADORA2A	ADORA2B	ADORA3
-Aldosterone synthesis and secretion		CYP11A1	CYP11B1	CYP11B2
-Blood-brain Barrier Maintenance		CLDN5	OCLN	TJP1
-Calcium Signaling in Neurons		CACNA1A	CACNA1B	CACNA1C	CACNA1D	CACNA1E	CACNA1F	CACNA1G	CACNA1H	CACNA1I	CACNA1S	CACNA2D1	CACNA2D2	CACNA2D3	CACNA2D4	CAMK2A	CAMK2B	CAMK2G
-Central Nervous System Development		PAX6	SOX2
-Circadian Entrainment		BMAL1	CLOCK	CRY1	CRY2	PER1	PER2	PER3
-Detoxification of drugs and alcohol		ADH1B	ALDH2	CYP2E1
-Fructose and mannose metabolism		ALDOA	ALDOB	FBP1	FBP2	HK1	HK2
-Glucuronidation		UGT1A1
-Glutathione metabolism		GCLC	GCLM	GPX1	GPX4	GSS	GSTP1
+Alpha Synuclein Pathway		SNCA
+Amino acid catabolism		BCAT1	BCAT2
+Amyloid Precursor Protein Metabolism		APP
+Axon Regeneration		PTEN
+Bipolar Cell Differentiation		CRX	VSX2
+Blood-Brain Barrier Integrity		CLDN5	OCLN	TJP1
+Calcium Signaling in Neurons		ATP2A2	ATP2B1	ATP2B2	ATP2B3	ATP2B4	CACNA1C	CACNA1D	CACNA1F	CACNA1G	CACNA1H	CACNA1I	CACNA1S	CACNA2D1	CACNA2D2	CACNA2D3	CACNA2D4	CACNB1	CACNB2	CACNB3	CACNB4	CACNG1	CACNG2	CACNG3	CACNG4	CACNG5	CACNG6	CACNG7	CACNG8
+Carbohydrate metabolism		FBP1	G6PC	GCK	HK1	PFK1
+Circadian Rhythm		ARNTL	CLOCK	CRY1	CRY2	NPAS2	PER1	PER2	PER3
+Coagulation cascade		F10	F13A1	F2	F5	F7	SERPINC1
+Cognitive Processes		BDNF	COMT
+Complement activation		C1QA	C1QB	C1QC	C2	C3	C4A	C4B	CFH	CFI	SERPING1
+Copper homeostasis		ATP7A	ATP7B	CTR1
+Endobiotic metabolism		CYP3A4	CYP3A5
+Endocytosis in Neuronal Cells		AP2A2	AP2B1	AP2M1	CLTA	CLTB	CLTC	DAB2	DYNC1H1
+Fatty acid oxidation		ACAA2	ACADM	ACADS	ACADVL	ACAT1	CPT1A	CPT2	HADHA	HADHB
 Glycogen synthesis		GYS1	GYS2
-Glyoxylate and dicarboxylate metabolism		AGXT
-Insulin-like growth factor signaling		AKT1	IGF1	IGF1R	PI3K
-Iron homeostasis		HFE	SLC11A2	TF	TFR1
-Linoleic acid metabolism		CYP2C8	CYP2C9
-Lipid droplet organization		PLIN1
-Lipoprotein particle clearance		APOE	LDLR
-Long-term Potentiation		CAMK2A	CAMK2B	CAMK2G	GRIN1	GRIN2A	GRIN2B	GRIN2C	GRIN2D
-Maintaining Neuronal Synaptic Structure		SHANK3
-Memory Formation		BDNF	CREB1
-Microsomal ethanol oxidizing system		ALDH2	CYP2E1
-Mitochondrial fatty acid beta-oxidation		ACAA2	ACADM	ACADS	ACADVL	ECHS1	EHHADH	HADHA	HADHB
-Mono-oxygenase activity		CYP1A1	CYP2C9	CYP2D6	CYP3A4
-Myelination		MAG	MBP	MOG	PLP1
-Neurofibrillary Tangle Formation		MAPT
-Neuroinflammation		IL1B	IL6	TNF
-Neuronal Action Potential		SCN1A	SCN2A	SCN8A	SCN9A
-Neuroplasticity		BDNF
-Neurotransmitter Release Cycle		SNAP25	STX1A	SYT1	VAMP2
-Neurotrophin Signaling Pathway		BDNF	NGF	NTF4	NTRK1	NTRK2	NTRK3
-Nitrogen compound metabolic process		ASS1	GLUD1	GLUL
-Oxidative deamination		DAO
-P450 pathways		CYP1A1	CYP1A2	CYP2D6	CYP3A4
-Pentose and glucuronate interconversions		G6PC	G6PC2	G6PD	G6PD2
-Phosphatidylcholine biosynthesis		CHKA	PEMT
-Primary bile acid biosynthesis		CYP7A1
-Programmed Cell Death in Neurons		BAK1	BAX	CASP3	CASP8
-Protein synthesis and degradation		UBB
-Selenocompound metabolism		SELENOP
-Serine family amino acid metabolic process		PHGDH	PSAT1
-Urea cycle		ARG1	ASL	ASS1	CPS1	OTC
-Vitamin B12 metabolism		MTR	MTRR
+Glycosylation		ALG1	ALG2	ALG3	ALG7
+Hippocampus Development		BDNF
+Hormone biosynthetic process		CYP11A1	CYP17A1	CYP19A1	CYP21A2	HSD3B2
+Insulin receptor signaling pathway		AKT1	GRB2	INSR	IR	IRS1	IRS2	MAPK1	MAPK3	PIK3R1	PTPN1	SHC1	SOS1
+Memory and Learning		BDNF	CREB1
+Metabolism of xenobiotics		CYP1A1	CYP1A2	CYP1B1	CYP2B6	UGT1A1
+Microglial Cell Activation		CSF1R	TREM2
+Mitochondrial Function in Neurons		ATP5A1	COX5A	CYCS	NDUFS1	SDHA
+Myelination		MBP	MPZ	PLP1	PMP22
+Neural Stem Cell Maintenance		SOX2
+Neural Tube Closure		GLI3	PTCH1	SHH
+Neuronal Action Potential		KCNQ2	KCNQ3	KCNQ5	SCN10A	SCN11A	SCN1A	SCN2A	SCN3A	SCN4A	SCN5A	SCN8A	SCN9A
+Neurotransmitter Secretion		SNAP25	STX1A	SYT1
+Notch Signaling in Neural Development		DLL1	JAG1	JAG2	NOTCH1	NOTCH2	NOTCH3	NOTCH4
+Olfactory Transduction		OR1A1	OR1D2	OR2AG1	OR2J3	OR2L13	OR2S2	OR2T10	OR4C3
+Oligodendrocyte Differentiation		OLIG1	OLIG2
+Ornithine cycle		ARG1	ARG2	ASS1	CPS1	OTC
+Pentose phosphate pathway		G6PD	PGD	RPE	RPIA	TALDO1	TKT
+Peripheral Nervous System Development		NEUROG1	SOX10
+Phase II reactions (conjugation)		GSTP1	UGT1A1
+Plasticity at Synapses		BDNF	NMDAR
+Pyrimidine metabolism		DPYD	TYMS	UMPS
+Reactive Oxygen Species Detoxification in Neurons		CAT	GPX1	SOD1
+Retinoic acid metabolism		ALDH1A1	ALDH1A2	ALDH1A3	ALDH1B1	ALDH1L1	ALDH1L2	CYP26A1	CYP26B1	CYP26C1
+Sensory Perception of Light		CRY1	CRY2	OPN1LW	OPN1MW	OPN4	RHO
+Serotonin Metabolism		DDC	MAOA	MAOB	SLC6A4	TPH1	TPH2
+Sulfation pathway		SULT1A1	SULT1A2	SULT1A3	SULT1A4	SULT1B1	SULT1C2	SULT1E1	SULT2B1
+Synapse Organization		GRIA1	GRIN1	GRIN2A	NLGN1	NLGN2	NLGN3	NLGN4X	NRXN1	NRXN2	NRXN3	PSD95	SHANK1	SHANK2	SHANK3
+Synaptic Vesicle Cycle		SYT1	SYT2
+Synthesis of apolipoproteins		APOA1	APOA2	APOA4	APOB	APOC1	APOC2	APOC3	APOC4	APOE
+Synthesis of non-essential amino acids		ASNS	ASS1	GLUD1	GLUD2	GOT1	GOT2	GPT
+Tau Protein Binding		MAPT
+Vitamin D metabolism		CYP24A1	CYP27B1	VDR
