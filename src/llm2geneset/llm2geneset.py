@@ -2,6 +2,7 @@
 
 import re
 from importlib import resources
+from typing import List
 
 import json_repair
 import numpy as np
@@ -516,6 +517,93 @@ async def get_genes_list(aclient, genes, descr, model="gpt-4o", n_retry=3):
                 return json_parsed
             except Exception as e:
                 print(resp_format)
+                if attempt == n_retry - 1:
+                    raise RuntimeError("Retries exceeded.") from e
+
+    # Run completions asynchronously.
+    res = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in prompts))
+    return res
+
+
+async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=1):
+    """Run GSAI from Ideker Lab.
+
+    Uses the prompt from: https://idekerlab.ucsd.edu/gsai/ to summarize genes.
+
+    """
+    prompt_file = "gsai_prompt.txt"
+    with resources.open_text("llm2geneset.prompts", prompt_file) as file:
+        prompt = file.read()
+
+    prompts = [prompt.format(proteins=", ".join(p)) for p in protein_lists]
+    rate_limiter = StrictLimiter(0.95 * 10000.0 / 60.0)
+    encoding = tiktoken.encoding_for_model(model)
+    sys_msg = "You are an efficient and insightful assistant to a molecular biologist."
+
+    # TODO: Make this rate limit a parameter.
+    rate_limiter = StrictLimiter(0.95 * 10000.0 / 60.0)
+
+    def parse_name(text):
+        pattern = r"Name:\s*(.+?)\n"
+        nmatch = re.search(pattern, text)
+        if nmatch:
+            return nmatch.group(1)
+        else:
+            return None
+
+    def parse_conf(text):
+        pattern = r"LLM self-assessed confidence:\s*([\d\.]+)"
+        cmatch = re.search(pattern, text)
+        if cmatch:
+            return float(cmatch.group(1))
+        else:
+            return None
+
+    def parse_list(text):
+        pattern_skip_confidence = r"LLM self-assessed confidence: \d+\.\d+\n\n"
+        relevant_text = re.split(pattern_skip_confidence, text, 1)[-1]
+        pattern_list_items = (
+            r"\d+\.\s*([A-Z0-9]+)\s*\((.*?)\)\s*(.*?)(?=\n\d+\.|\n[A-Z]|\Z)"
+        )
+        matches = re.findall(pattern_list_items, relevant_text, re.DOTALL)
+        return {match[0]: f"({match[1]}) {match[2]}".strip() for match in matches}
+
+    async def complete(p):
+        await rate_limiter.wait()
+        in_toks = 0
+        out_toks = 0
+        for attempt in range(n_retry):
+            # Count input tokens.
+            in_toks += len(encoding.encode(sys_msg))
+            in_toks += len(encoding.encode(p))
+            # Generate message.
+            messages = [
+                {"role": "system", "content": sys_msg},
+                {"role": "user", "content": p},
+            ]
+            # LLM
+            r = await aclient.chat.completions.create(model=model, messages=messages)
+            resp = r.choices[0].message.content
+            print(resp)
+            # Count output tokens.
+            out_toks += len(encoding.encode(resp))
+            try:
+                name = parse_name(resp)
+                conf = parse_conf(resp)
+                annot = parse_list(resp)
+                return {
+                    "name": name,
+                    "conf": conf,
+                    "annot": annot,
+                    "in_toks": in_toks,
+                    "out_toks": out_toks,
+                    "ntries": attempt + 1,
+                }
+            except Exception as e:
+                print("retrying")
+                print(e)
+                print(p)
+                print(resp)
                 if attempt == n_retry - 1:
                     raise RuntimeError("Retries exceeded.") from e
 
