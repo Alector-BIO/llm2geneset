@@ -32,5 +32,6 @@ dependencies:
       - json-repair
       - gseapy  # may require presense of rust compiler
       - asynciolimiter
+      - rouge-score
 
 
