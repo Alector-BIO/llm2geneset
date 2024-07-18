@@ -472,6 +472,63 @@ async def get_pathways(
 
     return res
 
+async def get_pathways_from_genes(
+    aclient, genes, model="gpt-4o", n_retry=3, use_sysmsg=False
+):
+    """Return a list of candidate pathways.
+
+    @param genes: string of list of protein coding genes joined by comma. eg.,  "ABCA1, ABCA3, ABCA4, ABCA7, ABCA12, 
+    ABCA13"
+    @param n_retry: if LLM fails to give JSON format, ask to try again
+    """
+
+    sys_msg = "You are an expert in cellular and molecular biology."
+
+    prompt_file = "pathways_from_genes.txt"
+
+    with resources.open_text("llm2geneset.prompts", prompt_file) as file:
+        prompt = file.read()
+
+    # Create the prompts by formatting the template
+    prompts = [prompt.format(genes=g) for g in genes]
+    rate_limiter = StrictLimiter(0.95 * 10000.0 / 60.0)
+
+    async def complete(p):
+        await rate_limiter.wait()
+        for attempt in range(n_retry):
+            messages = [{"role": "user", "content": p}]
+            if use_sysmsg:
+                messages = [{"role": "system", "content": sys_msg}] + messages
+            r = await aclient.chat.completions.create(model=model, messages=messages)
+            resp = r.choices[0].message.content
+
+            try:
+                last_code = extract_last_code_block(resp)
+                json_parsed = json_repair.loads(last_code)  # Use json.loads directly
+                # Ensure correct structure
+                json_parsed = [
+                    path for path in json_parsed if isinstance(path["p"], str)
+                ]
+                pathways = [path["p"] for path in json_parsed]
+                confidence = [g["confidence"] for g in json_parsed]
+                return {
+                    "parsed_pathways": pathways,
+                    "conf": confidence,
+                    "ntries": attempt + 1,
+                }
+            except Exception as e:
+                print("retrying")
+                print(e)
+                print(p)
+                print(resp)
+                if attempt == n_retry - 1:
+                    raise RuntimeError("Retries exceeded.") from e
+
+    # Prepare the list of prompts
+    res = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in prompts))
+
+    return res
+
 
 async def get_genes_list(aclient, genes, descr, model="gpt-4o", n_retry=3):
     """Get genes for given descriptions using asyncio."""
@@ -560,11 +617,13 @@ async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=
             return None
 
     def parse_list(text):
-        segments = text.split("\n\n")
-        numbered_items = [
-            segment for segment in segments if re.match(r"^\d+\.", segment.strip())
-        ]
-        return numbered_items
+        pattern_skip_confidence = r"LLM self-assessed confidence: \d+\.\d+\n\n"
+        relevant_text = re.split(pattern_skip_confidence, text, 1)[-1]
+        pattern_list_items = (
+            r"\d+\.\s*([A-Z0-9]+)\s*\((.*?)\)\s*(.*?)(?=\n\d+\.|\n[A-Z]|\Z)"
+        )
+        matches = re.findall(pattern_list_items, relevant_text, re.DOTALL)
+        return {match[0]: f"({match[1]}) {match[2]}".strip() for match in matches}
 
     async def complete(p):
         await rate_limiter.wait()
