@@ -560,13 +560,11 @@ async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=
             return None
 
     def parse_list(text):
-        pattern_skip_confidence = r"LLM self-assessed confidence: \d+\.\d+\n\n"
-        relevant_text = re.split(pattern_skip_confidence, text, 1)[-1]
-        pattern_list_items = (
-            r"\d+\.\s*([A-Z0-9]+)\s*\((.*?)\)\s*(.*?)(?=\n\d+\.|\n[A-Z]|\Z)"
-        )
-        matches = re.findall(pattern_list_items, relevant_text, re.DOTALL)
-        return {match[0]: f"({match[1]}) {match[2]}".strip() for match in matches}
+        segments = text.split("\n\n")
+        numbered_items = [
+            segment for segment in segments if re.match(r"^\d+\.", segment.strip())
+        ]
+        return numbered_items
 
     async def complete(p):
         await rate_limiter.wait()
