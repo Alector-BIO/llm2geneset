@@ -23,6 +23,7 @@ from .llm2geneset import (
     get_genes_list,
     get_pathways,
     get_pathways_from_genes,
+    gs_proposal,
     gsai,
     read_gmt,
     sel_conf,
@@ -39,6 +40,7 @@ __all__ = [
     "get_pathways_from_genes",
     "get_embeddings",
     "gsai",
+    "gs_proposal",
 ]
 
 

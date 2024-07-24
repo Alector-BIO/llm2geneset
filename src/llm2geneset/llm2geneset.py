@@ -1,5 +1,6 @@
 """llm2geneset: using LLMs to generate gene sets."""
 
+import asyncio
 import re
 from importlib import resources
 from typing import List
@@ -9,6 +10,7 @@ import numpy as np
 import tiktoken
 import tqdm.asyncio
 from asynciolimiter import StrictLimiter
+from scipy.stats import hypergeom
 from sklearn.metrics.pairwise import cosine_similarity
 
 
@@ -37,7 +39,7 @@ def read_gmt(gmt_file: str):
     return (descr, genes)
 
 
-def get_embeddings(client, text_list, model="text-embedding-3-large"):
+def get_embeddings(client, text_list: List[str], model="text-embedding-3-large"):
     """Get embeddings using OpenAI API, processing in batches of 2048.
 
     Args:
@@ -125,7 +127,13 @@ def extract_last_code_block(markdown_text):
 
 
 async def get_genes(
-    aclient, descr, model="gpt-4o", prompt_type="basic", use_sysmsg=False, n_retry=3
+    aclient,
+    descr,
+    model="gpt-4o",
+    prompt_type="basic",
+    use_sysmsg=False,
+    n_retry=3,
+    use_tqdm=True,
 ):
     """Get genes for given descriptions using asyncio.
 
@@ -219,12 +227,27 @@ async def get_genes(
                     raise RuntimeError("Retries exceeded.") from e
 
     # Run completions asynchronously.
-    res = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in prompts))
+    if use_tqdm:
+        res = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in prompts))
+    else:
+        res = await asyncio.gather(*(complete(p) for p in prompts))
     return res
 
 
-async def get_genes_context(aclient, context, descr, model="gpt-4o", n_retry=3):
-    """Get genes using given context."""
+async def get_genes_context(
+    aclient, context: List[str], descr: List[str], model="gpt-4o", n_retry=3
+):
+    """Get genes using given context.
+
+    Generates a gene set given some context text.
+
+     Args:
+       aclient: async OpenAI client
+       descr: list of natural language descriptions of a gene set
+       context: list of textual context, a string
+       model: OpenAI model name
+       n_retry: number of retries per
+    """
     prompt_file = "genes_concise_context.txt"
 
     with resources.open_text("llm2geneset.prompts", prompt_file) as file:
@@ -472,12 +495,14 @@ async def get_pathways(
 
     return res
 
+
 async def get_pathways_from_genes(
     aclient, genes, model="gpt-4o", n_retry=3, use_sysmsg=False
 ):
     """Return a list of candidate pathways.
 
-    @param genes: string of list of protein coding genes joined by comma. eg.,  "ABCA1, ABCA3, ABCA4, ABCA7, ABCA12, 
+    @param genes: string of list of protein coding genes joined by comma.
+    eg.,  "ABCA1, ABCA3, ABCA4, ABCA7, ABCA12,
     ABCA13"
     @param n_retry: if LLM fails to give JSON format, ask to try again
     """
@@ -641,7 +666,6 @@ async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=
             # LLM
             r = await aclient.chat.completions.create(model=model, messages=messages)
             resp = r.choices[0].message.content
-            print(resp)
             # Count output tokens.
             out_toks += len(encoding.encode(resp))
             try:
@@ -666,4 +690,58 @@ async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=
 
     # Run completions asynchronously.
     res = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in prompts))
+    return res
+
+
+async def bp_from_genes(aclient, model, genes):
+    """"""
+    # Generate message.
+    prompt_file = "pathways_from_genes2.txt"
+
+    with resources.open_text("llm2geneset.prompts", prompt_file) as file:
+        prompt = file.read()
+
+    # Create the prompts by formatting the template
+    p = prompt.format(genes=",".join(genes))
+
+    messages = [{"role": "user", "content": p}]
+    # LLM
+    r = await aclient.chat.completions.create(model=model, messages=messages)
+    resp = r.choices[0].message.content
+
+    last_code = extract_last_code_block(resp)
+    json_parsed = json_repair.loads(last_code)  # Use json.loads directly
+    # Ensure correct structure
+    json_parsed = [path for path in json_parsed if isinstance(path["p"], str)]
+    pathways = [path["p"] for path in json_parsed]
+    return pathways
+
+
+async def gs_proposal(
+    aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=1
+):
+    """ """
+
+    rate_limiter = StrictLimiter(0.95 * 10000.0 / 60.0)
+
+    async def gse(genes):
+        await rate_limiter.wait()
+        # 1. Examine genes and propose possible pathways and processes.
+        bio_process = await bp_from_genes(aclient, model, genes)
+
+        # 2. Generate these gene sets with and without input genes as context.
+        proposed = await get_genes(aclient, bio_process, model=model, use_tqdm=False)
+
+        p_vals = []
+        for idx in range(len(bio_process)):
+            llm_genes = proposed[idx]["parsed_genes"]
+            intersection = set(llm_genes).intersection(set(genes))
+            p_val = hypergeom.sf(
+                len(intersection) - 1, 19846 - len(genes), len(genes), len(llm_genes)
+            )
+            p_vals.append(p_val)
+
+        return list(zip(bio_process, p_vals))
+
+    res = await tqdm.asyncio.tqdm.gather(*(gse(p) for p in protein_lists))
     return res
