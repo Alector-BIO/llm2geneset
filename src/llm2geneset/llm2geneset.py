@@ -55,11 +55,16 @@ def get_embeddings(client, text_list: List[str], model="text-embedding-3-large")
             yield lst[i : i + n]
 
     # Lowercase all text entries
-    text_list = [text.lower() for text in text_list]
+    text_list_cleaned = []
+    for text in text_list:
+        try:
+            text_list_cleaned.append(text.lower())
+        except:
+            text_list_cleaned.append(" ")
 
     # Process in batches of 2048
     all_embeddings = []
-    for batch in chunks(text_list, 2048):  # for each sliding window
+    for batch in chunks(text_list_cleaned, 2048):  # for each sliding window
         # we get the response, which includes the embedding vector
         response = client.embeddings.create(model=model, input=batch).data
         # Extract embeddings for the current batch (sliding window) and append to
