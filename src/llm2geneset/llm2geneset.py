@@ -57,10 +57,7 @@ def get_embeddings(client, text_list: List[str], model="text-embedding-3-large")
     # Lowercase all text entries
     text_list_cleaned = []
     for text in text_list:
-        try:
-            text_list_cleaned.append(text.lower())
-        except:
-            text_list_cleaned.append(" ")
+        text_list_cleaned.append(text.lower())
 
     # Process in batches of 2048
     all_embeddings = []
@@ -224,10 +221,10 @@ async def get_genes(
                     "ntries": attempt + 1,
                 }
             except Exception as e:
-                print("retrying")
-                print(e)
-                print(p)
-                print(resp)
+                # print("retrying")
+                # print(e)
+                # print(p)
+                # print(resp)
                 if attempt == n_retry - 1:
                     raise RuntimeError("Retries exceeded.") from e
 
@@ -677,6 +674,12 @@ async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=
                 name = parse_name(resp)
                 conf = parse_conf(resp)
                 annot = parse_list(resp)
+                if name is None:
+                    raise ValueError("name is none")
+                if conf is None:
+                    raise ValueError("conf is none")
+                if annot is None:
+                    raise ValueError("annot is none")
                 return {
                     "name": name,
                     "conf": conf,
@@ -698,7 +701,7 @@ async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=
     return res
 
 
-async def bp_from_genes(aclient, model, genes):
+async def bp_from_genes(aclient, model, genes, n_retry=3):
     """"""
     # Generate message.
     prompt_file = "pathways_from_genes2.txt"
@@ -709,17 +712,22 @@ async def bp_from_genes(aclient, model, genes):
     # Create the prompts by formatting the template
     p = prompt.format(genes=",".join(genes))
 
-    messages = [{"role": "user", "content": p}]
-    # LLM
-    r = await aclient.chat.completions.create(model=model, messages=messages)
-    resp = r.choices[0].message.content
-
-    last_code = extract_last_code_block(resp)
-    json_parsed = json_repair.loads(last_code)  # Use json.loads directly
-    # Ensure correct structure
-    json_parsed = [path for path in json_parsed if isinstance(path["p"], str)]
-    pathways = [path["p"] for path in json_parsed]
-    return pathways
+    for attempt in range(n_retry):
+        messages = [{"role": "user", "content": p}]
+        r = await aclient.chat.completions.create(model=model, messages=messages)
+        resp = r.choices[0].message.content
+        try:
+            last_code = extract_last_code_block(resp)
+            json_parsed = json_repair.loads(last_code)  # Use json.loads directly
+            json_parsed = [path for path in json_parsed if isinstance(path["p"], str)]
+            pathways = [path["p"] for path in json_parsed]
+            return pathways
+        except Exception as e:
+            print("retrying")
+            print(e)
+            print(resp)
+            if attempt == n_retry - 1:
+                raise RuntimeError("Retries exceeded.") from e
 
 
 async def gs_proposal(
@@ -734,7 +742,7 @@ async def gs_proposal(
         # 1. Examine genes and propose possible pathways and processes.
         bio_process = await bp_from_genes(aclient, model, genes)
 
-        # 2. Generate these gene sets with and without input genes as context.
+        # 2. Generate these gene sets (with and) without input genes as context.
         proposed = await get_genes(aclient, bio_process, model=model, use_tqdm=False)
 
         p_vals = []
@@ -746,7 +754,9 @@ async def gs_proposal(
             )
             p_vals.append(p_val)
 
-        return list(zip(bio_process, p_vals))
+        res_pval = list(zip(bio_process, p_vals))
+        res_pval = sorted(res_pval, key=lambda x: x[1])
+        return res_pval
 
     res = await tqdm.asyncio.tqdm.gather(*(gse(p) for p in protein_lists))
     return res

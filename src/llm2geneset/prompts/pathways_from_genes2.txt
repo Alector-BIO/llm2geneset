@@ -1,5 +1,4 @@
-List about 4 biological pathways, biological processes, or cellular components that are likely to have a majority of genes: """{genes}""" with high confidence.
-Be as specific as possible. Use the following JSON schema:
+List about 5 biological pathways, biological processes, or cellular components that contain the following genes """{genes}""" with high confidence. Be as specific as possible. Use the following JSON schema:
 ```json
 {{
     "type": "array",
@@ -14,4 +13,4 @@ Be as specific as possible. Use the following JSON schema:
     }}
 }}
 ```
-The field `p` is a biological pathway or biological process that might involve multiple genes from this gene list: {genes}. Do not repeat the same biological process or pathway name. Place the output in a JSON code block. Do not add any comments in the JSON code block.
+The element `p` designates a pathway, biological process or cellular component. Place the output in a JSON code block. Do not add any comments in the JSON code block.
