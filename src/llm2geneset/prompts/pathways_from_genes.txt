@@ -1,5 +1,5 @@
-List biological pathways or biological processes that are likely to have a majority of genes: {genes} and your confidence low, medium, or high in that they describe a majority of genes. Use the following JSON schema:
-Use the following JSON schema:
+List biological pathways or biological processes that are likely to have a majority of genes: {genes} and your confidence low, medium, or high. Use the following JSON schema:
+
 ```json
 {{
     "type": "array",
