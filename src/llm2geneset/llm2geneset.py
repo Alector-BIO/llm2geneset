@@ -609,11 +609,18 @@ async def get_genes_list(aclient, genes, descr, model="gpt-4o", n_retry=3):
     return res
 
 
-async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=1):
+async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=3):
     """Run GSAI from Ideker Lab.
 
-    Uses the prompt from: https://idekerlab.ucsd.edu/gsai/ to summarize genes.
+    Uses the prompt from: https://idekerlab.ucsd.edu/gsai/ to summarize genes and
+    uncover their function, also provide confidence.
 
+    Args:
+       aclient: asynchronous OpenAI client
+       protein_lists: list of a list of genes, gene sets to
+                 assign function
+       model: OpenAI model string
+       n_retry: number of retries to get valid parsed output
     """
     prompt_file = "gsai_prompt.txt"
     with resources.open_text("llm2geneset.prompts", prompt_file) as file:
@@ -701,8 +708,18 @@ async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=
     return res
 
 
-async def bp_from_genes(aclient, model, genes, n_retry=3):
-    """"""
+async def bp_from_genes(aclient, model, genes: List[str], n_retry=3):
+    """Propose a list of biological processes from a set of genes.
+
+    Args:
+       aclient: asynchronous OpenAI client
+       model: OpenAI model
+       genes: list of genes to use to propose
+       n_retry: number of retries to get correctly parsing output
+    Returns:
+       List of processes and pathways proposed based on input
+       genes.
+    """
     # Generate message.
     prompt_file = "pathways_from_genes2.txt"
 
