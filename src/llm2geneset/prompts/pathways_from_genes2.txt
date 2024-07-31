@@ -13,4 +13,13 @@ List about 5 biological pathways, biological processes, or cellular components t
     }}
 }}
 ```
+Example output will look like the following:
+```json
+[{{"p":"bp_or_pathway1"}},
+ {{"p":"bp_or_pathway2"}},
+ {{"p":"bp_or_pathway3"}},
+ {{"p":"bp_or_pathway4"}},
+ {{"p":"bp_or_pathway5}}]
+```
 The element `p` designates a pathway, biological process or cellular component. Place the output in a JSON code block. Do not add any comments in the JSON code block.
+

@@ -738,9 +738,12 @@ async def bp_from_genes(aclient, model, genes: List[str], n_retry=3):
             json_parsed = json_repair.loads(last_code)  # Use json.loads directly
             json_parsed = [path for path in json_parsed if isinstance(path["p"], str)]
             pathways = [path["p"] for path in json_parsed]
+            if len(pathways) == 0:
+                raise ValueError("No pathways returned.")
             return pathways
         except Exception as e:
             print("retrying")
+            print(p)
             print(e)
             print(resp)
             if attempt == n_retry - 1:
