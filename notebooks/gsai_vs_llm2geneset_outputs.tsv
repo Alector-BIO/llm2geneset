@@ -1,0 +1,641 @@
+model	library	gt_name	gt_name_clean	name	ROUGE1	ROUGE2	ROUGEL	csim	method
+gpt-3.5-turbo-0125	KEGG_2021_Human	ABC transporters	ABC transporters	ABC Transporter-Mediated Cellular Efflux and Detoxification	1.0	1.0	1.0	0.7034014680889187	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	AGE-RAGE signaling pathway in diabetic complications	AGE-RAGE signaling pathway in diabetic complications	Cellular signaling and regulation	0.14285714285714285	0.0	0.14285714285714285	0.41194452132623	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	AMPK signaling pathway	AMPK signaling pathway	Glucose Homeostasis and Insulin Signaling	0.3333333333333333	0.0	0.3333333333333333	0.475437329286836	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Acute myeloid leukemia	Acute myeloid leukemia	Regulation of cellular signaling pathways	0.0	0.0	0.0	0.21712313002028383	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Adherens junction	Adherens junction	Cell Adhesion and Signaling Cascade Integration	0.0	0.0	0.0	0.49851231624081815	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Adipocytokine signaling pathway	Adipocytokine signaling pathway	Glucose and lipid metabolism regulation	0.0	0.0	0.0	0.4454725719138566	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Adrenergic signaling in cardiomyocytes	Adrenergic signaling in cardiomyocytes	Cardiac muscle contraction regulation	0.0	0.0	0.0	0.470818277350043	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	African trypanosomiasis	African trypanosomiasis	Immune response signaling cascade	0.0	0.0	0.0	0.206463345124681	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Alanine, aspartate and glutamate metabolism	Alanine, aspartate and glutamate metabolism	Glutamine and glutamate metabolism	0.6	0.5	0.6	0.6603476083528446	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Alcoholism	Alcoholism	Chromatin remodeling and gene regulation	0.0	0.0	0.0	0.14984080452207066	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Aldosterone synthesis and secretion	Aldosterone synthesis and secretion	Hormone signaling and calcium regulation	0.25	0.0	0.25	0.3592130402663115	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Aldosterone-regulated sodium reabsorption	Aldosterone-regulated sodium reabsorption	Regulation of Ion Transport and Cellular Signaling Pathways	0.25	0.0	0.25	0.4736279947746178	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Allograft rejection	Allograft rejection	Immune response regulation and antigen presentation	0.0	0.0	0.0	0.3136965558577218	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Alzheimer disease	Alzheimer disease	Protein degradation and cellular function regulation	0.0	0.0	0.0	0.22708849358914218	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Amino sugar and nucleotide sugar metabolism	Amino sugar and nucleotide sugar metabolism	Carbohydrate Metabolism and Glycosylation	0.3333333333333333	0.0	0.16666666666666666	0.5805221934433116	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Aminoacyl-tRNA biosynthesis	Aminoacyl-tRNA biosynthesis	tRNA aminoacylation	0.6666666666666666	0.0	0.3333333333333333	0.7577713147051652	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Amoebiasis	Amoebiasis	Immune response and inflammation	0.0	0.0	0.0	0.24635000838566656	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Amphetamine addiction	Amphetamine addiction	Neuronal Signaling Cascade	0.0	0.0	0.0	0.2522947197691603	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Amyotrophic lateral sclerosis	Amyotrophic lateral sclerosis	Protein degradation and quality control	0.0	0.0	0.0	0.2024757200099936	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Antigen processing and presentation	Antigen processing and presentation	Antigen processing and presentation	1.0	1.0	1.0	0.9999990661988699	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Apelin signaling pathway	Apelin signaling pathway	Cellular signaling and regulation	0.3333333333333333	0.0	0.3333333333333333	0.41962439609708235	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Apoptosis	Apoptosis	Apoptosis regulation and cell death signaling	1.0	0.0	1.0	0.6020260182519199	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Arachidonic acid metabolism	Arachidonic acid metabolism	Arachidonic acid metabolism and lipid signaling	1.0	1.0	1.0	0.839237844439663	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Arginine and proline metabolism	Arginine and proline metabolism	Polyamine metabolism and amino acid catabolism	0.5	0.0	0.25	0.6331178234758862	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Arginine biosynthesis	Arginine biosynthesis	Urea cycle and nitrogen metabolism	0.0	0.0	0.0	0.5093247802056988	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Arrhythmogenic right ventricular cardiomyopathy	Arrhythmogenic right ventricular cardiomyopathy	Cardiac muscle contraction and ion channel regulation	0.0	0.0	0.0	0.3416367479908785	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ascorbate and aldarate metabolism	Ascorbate and aldarate metabolism	Xenobiotic metabolism and detoxification  	0.5	0.0	0.25	0.39569723242756594	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Asthma	Asthma	Immune Response Modulation	0.0	0.0	0.0	0.26833221722728906	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Autoimmune thyroid disease	Autoimmune thyroid disease	Immune response regulation	0.0	0.0	0.0	0.3418325505131926	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Autophagy	Autophagy	Autophagy regulation and cellular homeostasis	1.0	0.0	1.0	0.6538227136313581	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Axon guidance	Axon guidance	Axon guidance and neural development	1.0	1.0	1.0	0.7908442398693896	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	B cell receptor signaling pathway	B cell receptor signaling pathway	Immune signaling and regulation	0.2	0.0	0.2	0.38729652584278296	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Bacterial invasion of epithelial cells	Bacterial invasion of epithelial cells	Cell Adhesion and Migration	0.2	0.0	0.2	0.3771494190333149	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Basal cell carcinoma	Basal cell carcinoma	Wnt signaling pathway regulation	0.0	0.0	0.0	0.16968377143817615	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Basal transcription factors	Basal transcription factors	Transcription initiation and regulation	0.3333333333333333	0.0	0.3333333333333333	0.5309912872401977	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Base excision repair	Base excision repair	DNA Base Excision Repair	1.0	1.0	1.0	0.899423359278149	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Bile secretion	Bile secretion	Bile acid transport and metabolism	0.5	0.0	0.5	0.5805845869621693	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Biosynthesis of unsaturated fatty acids	Biosynthesis of unsaturated fatty acids	Fatty acid metabolism and elongation	0.4	0.25	0.4	0.6484070856572718	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Bladder cancer	Bladder cancer	Cell cycle regulation and growth signaling pathway integration	0.0	0.0	0.0	0.2012847659253874	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Breast cancer	Breast cancer	Wnt signaling pathway regulation and cell fate determination	0.0	0.0	0.0	0.21996399180209414	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Butanoate metabolism	Butanoate metabolism	Mitochondrial beta-oxidation of fatty acids	0.0	0.0	0.0	0.4695121656163343	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	C-type lectin receptor signaling pathway	C-type lectin receptor signaling pathway	Immune Response Regulation	0.0	0.0	0.0	0.3890368301591079	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Caffeine metabolism	Caffeine metabolism	Xenobiotic metabolism and detoxification	0.5	0.0	0.5	0.44118235043111664	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Calcium signaling pathway	Calcium signaling pathway	Calcium signaling and receptor activity	0.6666666666666666	0.5	0.6666666666666666	0.781916644936551	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Carbohydrate digestion and absorption	Carbohydrate digestion and absorption	Carbohydrate metabolism and glucose homeostasis	0.5	0.0	0.5	0.5856380521313191	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cardiac muscle contraction	Cardiac muscle contraction	Mitochondrial electron transport chain and ATP synthesis	0.0	0.0	0.0	0.27191232948267996	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cell adhesion molecules	Cell adhesion molecules	Cell adhesion and immune cell interaction	0.6666666666666666	0.5	0.6666666666666666	0.6354153986262189	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cell cycle	Cell cycle	Cell Cycle Regulation	1.0	1.0	1.0	0.7623612826929097	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cellular senescence	Cellular senescence	Cell Cycle Regulation and Proliferation	0.0	0.0	0.0	0.44165693709974985	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Central carbon metabolism in cancer	Central carbon metabolism in cancer	Glucose Metabolism and Cellular Energy Homeostasis	0.2	0.0	0.2	0.5115084816688995	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Chagas disease	Chagas disease	Inflammatory response and immune signaling cascade  	0.0	0.0	0.0	0.23522509000565722	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Chemical carcinogenesis	Chemical carcinogenesis	Cellular signaling and metabolism regulation	0.0	0.0	0.0	0.30577842183603055	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Chemokine signaling pathway	Chemokine signaling pathway	Chemotaxis and Inflammatory Response Coordination	0.0	0.0	0.0	0.60338724422632	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cholesterol metabolism	Cholesterol metabolism	Lipoprotein metabolism and cholesterol homeostasis	1.0	0.0	0.5	0.7611868183037693	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Choline metabolism in cancer	Choline metabolism in cancer	Cellular Signaling Pathway Integration	0.0	0.0	0.0	0.3490186848103248	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cholinergic synapse	Cholinergic synapse	G protein-coupled receptor signaling and cAMP-mediated processes	0.0	0.0	0.0	0.31804025491786625	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Chronic myeloid leukemia	Chronic myeloid leukemia	Cell growth regulation and signal transduction	0.0	0.0	0.0	0.268391911656564	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Circadian entrainment	Circadian entrainment	Second messenger-mediated signaling cascade	0.0	0.0	0.0	0.2635145258077843	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Circadian rhythm	Circadian rhythm	Circadian Rhythm Regulation	1.0	1.0	1.0	0.6928880974269971	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Citrate cycle (TCA cycle)	Citrate cycle (TCA cycle)	Tricarboxylic acid cycle (TCA cycle) and oxidative phosphorylation	0.75	0.6666666666666666	0.75	0.710598489060493	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cocaine addiction	Cocaine addiction	Neuronal Signaling and Plasticity	0.0	0.0	0.0	0.2287795218935974	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Collecting duct acid secretion	Collecting duct acid secretion	Vacuolar Acidification and Ion Transport	0.0	0.0	0.0	0.49432796935883483	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Colorectal cancer	Colorectal cancer	Cell Growth and Survival Signaling Pathway	0.0	0.0	0.0	0.2520978991710422	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Complement and coagulation cascades	Complement and coagulation cascades	Complement system activation and regulation	0.5	0.0	0.5	0.6891799890571944	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Coronavirus disease	Coronavirus disease	Immune response and signaling cascades	0.0	0.0	0.0	0.21235880543600472	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cortisol synthesis and secretion	Cortisol synthesis and secretion	Steroid hormone biosynthesis and signaling	0.25	0.0	0.25	0.5982823782425631	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cushing syndrome	Cushing syndrome	Wnt signaling pathway	0.0	0.0	0.0	0.1960858736528221	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cysteine and methionine metabolism	Cysteine and methionine metabolism	One-carbon metabolism and transsulfuration pathway	0.5	0.0	0.25	0.663116076193493	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cytokine-cytokine receptor interaction	Cytokine-cytokine receptor interaction	Immune response regulation	0.0	0.0	0.0	0.46924460258301903	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cytosolic DNA-sensing pathway	Cytosolic DNA-sensing pathway	Innate immune response and cytokine signaling cascade	0.0	0.0	0.0	0.5487963822779911	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	D-Glutamine and D-glutamate metabolism	D-Glutamine and D-glutamate metabolism	Glutamate metabolism and ammonia detoxification	0.5	0.2	0.3333333333333333	0.7201753995767278	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	DNA replication	DNA replication	DNA replication and repair	1.0	1.0	1.0	0.806752402002036	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Diabetic cardiomyopathy	Diabetic cardiomyopathy	Oxidative Phosphorylation and Cellular Respiration	0.0	0.0	0.0	0.23555990317755068	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Dilated cardiomyopathy	Dilated cardiomyopathy	Cardiac muscle contraction and calcium signaling	0.0	0.0	0.0	0.3412826718313181	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Dopaminergic synapse	Dopaminergic synapse	Calcium signaling and CREB pathway integration  	0.0	0.0	0.0	0.34066767355166017	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Drug metabolism	Drug metabolism	Drug and xenobiotic metabolism	1.0	0.0	1.0	0.7337426548262127	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	ECM-receptor interaction	ECM-receptor interaction	Extracellular Matrix Organization and Cell-Cell Adhesion	0.0	0.0	0.0	0.5410325345677611	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Endocrine and other factor-regulated calcium reabsorption	Endocrine and other factor-regulated calcium reabsorption	Calcium signaling and regulation	0.42857142857142855	0.0	0.2857142857142857	0.5703544763128823	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Endocytosis	Endocytosis	Endosomal sorting and trafficking	0.0	0.0	0.0	0.44479733005320665	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Endometrial cancer	Endometrial cancer	Cellular Signaling and Regulation	0.0	0.0	0.0	0.23214501820854214	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Epithelial cell signaling in Helicobacter pylori infection	Epithelial cell signaling in Helicobacter pylori infection	Immune Response Signaling Pathway	0.14285714285714285	0.0	0.14285714285714285	0.5242905087090168	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Epstein-Barr virus infection	Epstein-Barr virus infection	Immune Response Signaling Pathway	0.0	0.0	0.0	0.27792464803154404	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	ErbB signaling pathway	ErbB signaling pathway	Cellular Signaling Network	0.3333333333333333	0.0	0.3333333333333333	0.5785040836629831	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Estrogen signaling pathway	Estrogen signaling pathway	Cellular Signaling and Transcriptional Regulation	0.3333333333333333	0.0	0.3333333333333333	0.5644585370327311	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ether lipid metabolism	Ether lipid metabolism	Phospholipid metabolism and lipid signaling	0.6666666666666666	0.0	0.3333333333333333	0.6657423403175138	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fanconi anemia pathway	Fanconi anemia pathway	DNA damage repair and replication fidelity 	0.0	0.0	0.0	0.4062722979000381	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fat digestion and absorption	Fat digestion and absorption	Lipid Metabolism and Transport	0.25	0.0	0.25	0.5652820117001519	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fatty acid biosynthesis	Fatty acid biosynthesis	Fatty acid metabolism and lipid biosynthesis	1.0	0.5	1.0	0.789248391724222	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fatty acid degradation	Fatty acid degradation	Fatty acid metabolism and β-oxidation	0.6666666666666666	0.5	0.6666666666666666	0.734328378958713	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fatty acid elongation	Fatty acid elongation	Fatty Acid Elongation and Lipid Metabolism	1.0	1.0	1.0	0.8379847106544429	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fc epsilon RI signaling pathway	Fc epsilon RI signaling pathway	Immune cell signaling and activation	0.2	0.0	0.2	0.4691935026998344	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fc gamma R-mediated phagocytosis	Fc gamma R-mediated phagocytosis	Actin cytoskeleton regulation and signaling	0.0	0.0	0.0	0.3378560153209152	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ferroptosis	Ferroptosis	Autophagy regulation	0.0	0.0	0.0	0.3806348973369638	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fluid shear stress and atherosclerosis	Fluid shear stress and atherosclerosis	Cellular stress response and redox regulation	0.4	0.0	0.4	0.33415023275365163	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Focal adhesion	Focal adhesion	Cell Adhesion and Integrin-Mediated Signaling Pathways	0.5	0.0	0.5	0.5478323961629594	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Folate biosynthesis	Folate biosynthesis	Metabolic pathway regulation	0.0	0.0	0.0	0.3285534664600145	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	FoxO signaling pathway	FoxO signaling pathway	Cellular Growth and Signaling Pathways	0.6666666666666666	0.5	0.6666666666666666	0.49277747318145565	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fructose and mannose metabolism	Fructose and mannose metabolism	Glycolysis and Gluconeogenesis	0.25	0.0	0.25	0.5574423146585705	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	GABAergic synapse	GABAergic synapse	GABAergic Neurotransmission	0.5	0.0	0.5	0.8135850042931373	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Galactose metabolism	Galactose metabolism	Glycogen metabolism and glucose homeostasis	0.5	0.0	0.5	0.6116343833381599	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Gap junction	Gap junction	Cellular Signal Transduction	0.0	0.0	0.0	0.40716446586368193	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Gastric acid secretion	Gastric acid secretion	G-protein coupled receptor signaling cascade	0.0	0.0	0.0	0.29410179959942484	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Gastric cancer	Gastric cancer	WNT signaling pathway regulation	0.0	0.0	0.0	0.1509545616307873	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glioma	Glioma	Cell Cycle Regulation and Growth Signaling Pathways	0.0	0.0	0.0	0.24062076462215465	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glucagon signaling pathway	Glucagon signaling pathway	Glucose metabolism and signaling network	0.3333333333333333	0.0	0.3333333333333333	0.6487336784597048	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glutamatergic synapse	Glutamatergic synapse	Cellular Signal Transduction	0.0	0.0	0.0	0.32637525307733584	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glutathione metabolism	Glutathione metabolism	Antioxidant defense and detoxification	0.0	0.0	0.0	0.5619336945263258	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glycerolipid metabolism	Glycerolipid metabolism	Triacylglycerol metabolism and lipid biosynthesis	0.5	0.0	0.5	0.7070855851857539	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glycerophospholipid metabolism	Glycerophospholipid metabolism	Phospholipid Metabolism and Membrane Homeostasis	0.5	0.0	0.5	0.7564345386166746	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glycine, serine and threonine metabolism	Glycine, serine and threonine metabolism	One-carbon metabolism and amino acid biosynthesis	0.4	0.0	0.2	0.54458356953146	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glycolysis / Gluconeogenesis	Glycolysis / Gluconeogenesis	Glycolysis and Gluconeogenesis	1.0	0.0	1.0	0.877845778919712	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glycosaminoglycan biosynthesis	Glycosaminoglycan biosynthesis	Proteoglycan biosynthesis and modification	0.5	0.0	0.5	0.7905495150391945	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glycosaminoglycan degradation	Glycosaminoglycan degradation	Lysosomal Biogenesis and Function	0.0	0.0	0.0	0.33697291208113606	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glycosphingolipid biosynthesis	Glycosphingolipid biosynthesis	Glycosylation and oligosaccharide biosynthesis	0.5	0.0	0.5	0.6956466414910308	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	GPI Anchor Biosynthesis	0.75	0.6666666666666666	0.75	0.8331589930594303	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glyoxylate and dicarboxylate metabolism	Glyoxylate and dicarboxylate metabolism	TCA cycle and amino acid metabolism	0.5	0.0	0.5	0.5245030139068313	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	GnRH secretion	GnRH secretion	G Protein-Coupled Receptor (GPCR) Signaling Pathway	0.0	0.0	0.0	0.3195808310997004	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	GnRH signaling pathway	GnRH signaling pathway	Cell Signaling Cascade	0.3333333333333333	0.0	0.3333333333333333	0.4828246648434158	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Graft-versus-host disease	Graft-versus-host disease	Immune response regulation and antigen presentation	0.0	0.0	0.0	0.23280990522038084	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Growth hormone synthesis, secretion and action	Growth hormone synthesis, secretion and action	MAPK signaling pathway regulation	0.0	0.0	0.0	0.2515879427622085	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	HIF-1 signaling pathway	HIF-1 signaling pathway	Cellular Signaling and Metabolism Integration	0.25	0.0	0.25	0.5114361168732374	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Hedgehog signaling pathway	Hedgehog signaling pathway	Hedgehog signaling pathway regulation	1.0	1.0	1.0	0.8639805027118795	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Hematopoietic cell lineage	Hematopoietic cell lineage	Immune cell signaling and regulation	0.3333333333333333	0.0	0.3333333333333333	0.41682383629607767	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Hepatitis B	Hepatitis B	Immune response and signal transduction cascade	0.0	0.0	0.0	0.220243561979719	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Hepatitis C	Hepatitis C	Innate immune response and antiviral defense	0.0	0.0	0.0	0.25204827822351716	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Hepatocellular carcinoma	Hepatocellular carcinoma	Cellular Signaling Pathway Coordination	0.0	0.0	0.0	0.24260074758815953	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Herpes simplex virus 1 infection	Herpes simplex virus 1 infection	Immune response regulation and signal transduction	0.0	0.0	0.0	0.18303299945168833	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Hippo signaling pathway	Hippo signaling pathway	Wnt signaling pathway regulation	0.6666666666666666	0.5	0.6666666666666666	0.5296554765482437	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Histidine metabolism	Histidine metabolism	Histamine and histidine catabolism pathway	0.5	0.0	0.5	0.6996608314494877	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Homologous recombination	Homologous recombination	DNA Damage Repair	0.0	0.0	0.0	0.49196692048010576	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Human T-cell leukemia virus 1 infection	Human T-cell leukemia virus 1 infection	Cell cycle regulation	0.14285714285714285	0.0	0.14285714285714285	0.19283535409033276	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Human cytomegalovirus infection	Human cytomegalovirus infection	Immune Response Signaling and Regulation	0.0	0.0	0.0	0.29231614183571464	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Human immunodeficiency virus 1 infection	Human immunodeficiency virus 1 infection	Immune Response and Cellular Signaling	0.0	0.0	0.0	0.31502557731616654	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Human papillomavirus infection	Human papillomavirus infection	Regulation of Wnt signaling pathway and cell proliferation	0.0	0.0	0.0	0.1840440108632308	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Huntington disease	Huntington disease	Mitochondrial respiratory chain complex assembly and function	0.0	0.0	0.0	0.16025392485405032	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Hypertrophic cardiomyopathy	Hypertrophic cardiomyopathy	Muscle contraction and regulation	0.0	0.0	0.0	0.2628442093884516	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	IL-17 signaling pathway	IL-17 signaling pathway	Inflammatory Response Regulation and Immune Signaling	0.25	0.0	0.25	0.5184092755362397	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Inflammatory bowel disease	Inflammatory bowel disease	Immune response signaling and regulation	0.0	0.0	0.0	0.2956657146780275	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Inflammatory mediator regulation of TRP channels	Inflammatory mediator regulation of TRP channels	Cellular signaling and regulation	0.16666666666666666	0.0	0.16666666666666666	0.3837304887782045	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Influenza A	Influenza A	Antiviral Immune Response 	0.0	0.0	0.0	0.3583372570365458	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Inositol phosphate metabolism	Inositol phosphate metabolism	Phosphoinositide signaling cascade	0.0	0.0	0.0	0.6709526119549735	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Insulin resistance	Insulin resistance	Glucose homeostasis regulation and insulin signaling cascade	0.5	0.0	0.5	0.5007508882486347	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Insulin secretion	Insulin secretion	Pancreatic hormone secretion and glucose homeostasis  	0.5	0.0	0.5	0.6424001385646609	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Insulin signaling pathway	Insulin signaling pathway	Insulin Signaling Pathway and Glucose Metabolism	1.0	1.0	1.0	0.8583400356064265	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Intestinal immune network for IgA production	Intestinal immune network for IgA production	Immune Cell Signaling and Activation	0.16666666666666666	0.0	0.16666666666666666	0.45973414665467033	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	JAK-STAT signaling pathway	JAK-STAT signaling pathway	Cytokine Signaling Cascade Integration	0.25	0.0	0.25	0.4740798520718621	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Kaposi sarcoma-associated herpesvirus infection	Kaposi sarcoma-associated herpesvirus infection	Immune response and signaling cascade coordination	0.0	0.0	0.0	0.22309277424764642	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Legionellosis	Legionellosis	Inflammatory Response and Immune Regulation	0.0	0.0	0.0	0.21002260809730255	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Leishmaniasis	Leishmaniasis	Immune response signaling pathway regulation	0.0	0.0	0.0	0.20420616324699156	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Leukocyte transendothelial migration	Leukocyte transendothelial migration	Cell-Cell Adhesion and Cytoskeletal Organization	0.0	0.0	0.0	0.3624419910525428	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Linoleic acid metabolism	Linoleic acid metabolism	Phospholipid metabolism and arachidonic acid cascade	0.6666666666666666	0.0	0.3333333333333333	0.5727491147525159	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Lipid and atherosclerosis	Lipid and atherosclerosis	Immune response signaling and regulation	0.3333333333333333	0.0	0.3333333333333333	0.25981112099573306	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Long-term depression	Long-term depression	Calcium signaling and cellular response	0.0	0.0	0.0	0.19897921490629084	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Long-term potentiation	Long-term potentiation	Protein Kinase Signaling Cascade	0.0	0.0	0.0	0.2717830653029545	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Longevity regulating pathway	Longevity regulating pathway	Cellular Energy Sensing and Metabolism Regulation	0.3333333333333333	0.0	0.3333333333333333	0.4654487535477595	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Lysine degradation	Lysine degradation	Histone methylation and chromatin modification	0.0	0.0	0.0	0.30338484206900773	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Lysosome	Lysosome	Lysosomal enzyme trafficking and catabolism	1.0	0.0	1.0	0.5305699940589317	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	MAPK signaling pathway	MAPK signaling pathway	Cell Signaling Pathway Integration	0.6666666666666666	0.5	0.6666666666666666	0.5742829046042641	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Malaria	Malaria	Immune Response and Inflammation Regulation	0.0	0.0	0.0	0.22367585059238676	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Mannose type O-glycan biosynthesis	Mannose type O-glycan biosynthesis	Protein glycosylation and modification	0.0	0.0	0.0	0.5309895803380522	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Maturity onset diabetes of the young	Maturity onset diabetes of the young	Pancreatic beta-cell development and function	0.0	0.0	0.0	0.40839787797915594	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Measles	Measles	Immune response signaling cascade	0.0	0.0	0.0	0.2053083314253179	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Melanogenesis	Melanogenesis	WNT signaling pathway	0.0	0.0	0.0	0.2633042834942927	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Melanoma	Melanoma	Cell Cycle Regulation and Growth Signaling Pathways	0.0	0.0	0.0	0.2405932268412217	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Metabolism of xenobiotics by cytochrome P450	Metabolism of xenobiotics by cytochrome P450	Drug metabolism and detoxification	0.16666666666666666	0.0	0.16666666666666666	0.6067531671606299	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	MicroRNAs in cancer	MicroRNAs in cancer	Regulation of mRNA translation	0.0	0.0	0.0	0.396666255223327	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Mineral absorption	Mineral absorption	Metal ion transport and homeostasis	0.0	0.0	0.0	0.424132883438629	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Mismatch repair	Mismatch repair	DNA Replication and Repair	0.5	0.0	0.5	0.48252848811357785	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Mitophagy	Mitophagy	Autophagy regulation and mitochondrial quality control	0.0	0.0	0.0	0.5922275842174677	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Morphine addiction	Morphine addiction	Neurotransmission and signaling regulation	0.0	0.0	0.0	0.2255589816395514	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Mucin type O-glycan biosynthesis	Mucin type O-glycan biosynthesis	Protein glycosylation and modification	0.0	0.0	0.0	0.50722933852187	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	N-Glycan biosynthesis	N-Glycan biosynthesis	N-linked glycosylation	0.3333333333333333	0.0	0.3333333333333333	0.6633614197286151	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	NF-kappa B signaling pathway	NF-kappa B signaling pathway	Immune response signaling cascade	0.2	0.0	0.2	0.5578100660568255	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	NOD-like receptor signaling pathway	NOD-like receptor signaling pathway	Immune response signaling cascade	0.2	0.0	0.2	0.5968623574011641	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Natural killer cell mediated cytotoxicity	Natural killer cell mediated cytotoxicity	Immune response regulation and cell signaling	0.2	0.0	0.2	0.376652319394933	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Necroptosis	Necroptosis	Inflammatory response and apoptotic signaling	0.0	0.0	0.0	0.4946675795778632	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Neomycin, kanamycin and gentamicin biosynthesis	Neomycin, kanamycin and gentamicin biosynthesis	Glycolysis regulation and glucose metabolism	0.2	0.0	0.2	0.24697318178008135	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Neuroactive ligand-receptor interaction	Neuroactive ligand-receptor interaction	G protein-coupled receptor signaling	0.25	0.0	0.25	0.4254462567988728	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Neurotrophin signaling pathway	Neurotrophin signaling pathway	Cellular Signaling Cascade	0.3333333333333333	0.0	0.3333333333333333	0.5357495518349557	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Neutrophil extracellular trap formation	Neutrophil extracellular trap formation	Chromatin remodeling and gene regulation	0.0	0.0	0.0	0.28017277116709316	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Nicotinate and nicotinamide metabolism	Nicotinate and nicotinamide metabolism	NAD metabolism and regulation	0.5	0.0	0.25	0.5741626559598136	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Nicotine addiction	Nicotine addiction	GABAergic and Glutamatergic Synaptic Transmission	0.0	0.0	0.0	0.23179569024358593	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Nitrogen metabolism	Nitrogen metabolism	Glutamate metabolism and regulation	0.5	0.0	0.5	0.529409767616321	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Non-alcoholic fatty liver disease	Non-alcoholic fatty liver disease	Mitochondrial electron transport chain and oxidative phosphorylation	0.0	0.0	0.0	0.2418909733348557	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Non-homologous end-joining	Non-homologous end-joining	Non-Homologous End Joining (NHEJ) Pathway	1.0	1.0	1.0	0.8060961917087899	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Non-small cell lung cancer	Non-small cell lung cancer	Cell Cycle Regulation and Apoptosis	0.2	0.0	0.2	0.23605945607734286	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Notch signaling pathway	Notch signaling pathway	Notch signaling pathway regulation	1.0	1.0	1.0	0.8466801431978185	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Nucleotide excision repair	Nucleotide excision repair	Nucleotide Excision Repair	1.0	1.0	1.0	0.9999988256674994	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Olfactory transduction	Olfactory transduction	Olfactory Signal Transduction	1.0	0.0	1.0	0.8868663166646792	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	One carbon pool by folate	One carbon pool by folate	One-carbon metabolism and folate cycle	0.6	0.25	0.6	0.7337171020142842	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Oocyte meiosis	Oocyte meiosis	Cell Cycle Regulation	0.0	0.0	0.0	0.37183906367874286	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Osteoclast differentiation	Osteoclast differentiation	Immune response signaling cascade	0.0	0.0	0.0	0.3026609286747722	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Other glycan degradation	Other glycan degradation	Lysosomal Storage Disorders and Glycosphingolipid Metabolism	0.0	0.0	0.0	0.5112393117340923	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Other types of O-glycan biosynthesis	Other types of O-glycan biosynthesis	Protein glycosylation and modification	0.0	0.0	0.0	0.5316183542180315	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ovarian steroidogenesis	Ovarian steroidogenesis	Steroid hormone biosynthesis and signaling	0.0	0.0	0.0	0.5980564137547161	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Oxidative phosphorylation	Oxidative phosphorylation	Oxidative phosphorylation	1.0	1.0	1.0	0.9999988791052113	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Oxytocin signaling pathway	Oxytocin signaling pathway	Calcium signaling and smooth muscle contraction	0.3333333333333333	0.0	0.3333333333333333	0.4218119632256035	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	PD-L1 expression and PD-1 checkpoint pathway in cancer	PD-L1 expression and PD-1 checkpoint pathway in cancer	Immune response signaling pathway activation	0.1	0.0	0.1	0.3864150524408697	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	PI3K-Akt signaling pathway	PI3K-Akt signaling pathway	Cellular Signaling and Regulatory Network	0.25	0.0	0.25	0.49569717836881444	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	PPAR signaling pathway	PPAR signaling pathway	Fatty acid metabolism and lipid homeostasis	0.0	0.0	0.0	0.406141955707108	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pancreatic cancer	Pancreatic cancer	Cell cycle regulation and cell growth signaling	0.0	0.0	0.0	0.20860547301047314	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pancreatic secretion	Pancreatic secretion	Digestive enzyme secretion and pancreatic function	1.0	0.0	0.5	0.7266516963903749	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pantothenate and CoA biosynthesis	Pantothenate and CoA biosynthesis	Coenzyme A biosynthesis	0.25	0.0	0.25	0.7251221574337978	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Parathyroid hormone synthesis, secretion and action	Parathyroid hormone synthesis, secretion and action	Calcium homeostasis and signaling	0.16666666666666666	0.0	0.16666666666666666	0.4184462722516604	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Parkinson disease	Parkinson disease	Mitochondrial Electron Transport Chain and ATP Production	0.0	0.0	0.0	0.18692048439416858	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pathogenic Escherichia coli infection	Pathogenic Escherichia coli infection	Cellular Inflammatory Response and Cytokine Signaling	0.0	0.0	0.0	0.2751455391089312	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pathways in cancer	Pathways in cancer	Cell Signaling Pathways Regulation	0.3333333333333333	0.0	0.3333333333333333	0.5507696233306055	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pathways of neurodegeneration	Pathways of neurodegeneration	Autophagy regulation and protein degradation	0.0	0.0	0.0	0.4273058285070507	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pentose and glucuronate interconversions	Pentose and glucuronate interconversions	Glycosaminoglycan metabolism	0.0	0.0	0.0	0.47015203069899697	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pentose phosphate pathway	Pentose phosphate pathway	Pentose phosphate pathway (PPP) and glycolysis	1.0	1.0	1.0	0.7536135070871739	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Peroxisome	Peroxisome	Peroxisomal biogenesis and lipid metabolism	1.0	0.0	1.0	0.6025415290620241	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pertussis	Pertussis	Innate Immune Response Signaling Pathway	0.0	0.0	0.0	0.15352827159333132	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Phagosome	Phagosome	Antigen Processing and Presentation	0.0	0.0	0.0	0.31463897277383673	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Phenylalanine metabolism	Phenylalanine metabolism	Catabolism and detoxification  	0.0	0.0	0.0	0.37853272158919393	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Phenylalanine, tyrosine and tryptophan biosynthesis	Phenylalanine, tyrosine and tryptophan biosynthesis	Amino Acid Metabolism and Catabolism   	0.2	0.0	0.2	0.4562985482874882	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Phosphatidylinositol signaling system	Phosphatidylinositol signaling system	Inositol phosphate signaling pathway	0.3333333333333333	0.0	0.3333333333333333	0.736441208862985	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Phospholipase D signaling pathway	Phospholipase D signaling pathway	Cell Signaling and Signal Transduction	0.25	0.0	0.25	0.46601829740384454	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Phosphonate and phosphinate metabolism	Phosphonate and phosphinate metabolism	Membrane phospholipid biosynthesis	0.0	0.0	0.0	0.43714876431597316	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Phototransduction	Phototransduction	Phototransduction in rods and cones	1.0	0.0	1.0	0.7660992053384618	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Platelet activation	Platelet activation	Platelet Activation and Signaling	1.0	1.0	1.0	0.8535703916724473	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Porphyrin and chlorophyll metabolism	Porphyrin and chlorophyll metabolism	Heme biosynthesis and metabolism	0.5	0.0	0.5	0.679599184911618	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Primary bile acid biosynthesis	Primary bile acid biosynthesis	Cholesterol and Bile Acid Metabolism	0.5	0.3333333333333333	0.5	0.6878547868473102	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Primary immunodeficiency	Primary immunodeficiency	Adaptive immune response signaling and regulation	0.0	0.0	0.0	0.44031762355638393	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Prion disease	Prion disease	Mitochondrial electron transport chain and ATP synthesis	0.0	0.0	0.0	0.13532512065577793	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Progesterone-mediated oocyte maturation	Progesterone-mediated oocyte maturation	Cell Cycle Regulation and Signaling Pathways	0.0	0.0	0.0	0.28001340386235496	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Prolactin signaling pathway	Prolactin signaling pathway	Insulin signaling pathway and glucose metabolism	0.6666666666666666	0.5	0.6666666666666666	0.5125128695844189	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Propanoate metabolism	Propanoate metabolism	Branched-chain amino acid metabolism	0.5	0.0	0.5	0.5055615027195763	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Prostate cancer	Prostate cancer	Cellular Signaling and Transcriptional Regulation	0.0	0.0	0.0	0.22714496285548452	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Proteasome	Proteasome	Proteasome-Mediated Protein Degradation	1.0	0.0	1.0	0.7471114146156865	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Protein digestion and absorption	Protein digestion and absorption	Extracellular matrix formation and remodeling	0.25	0.0	0.25	0.29392158973650434	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Protein export	Protein export	Protein Translocation and Secretion	0.5	0.0	0.5	0.652007394504513	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Protein processing in endoplasmic reticulum	Protein processing in endoplasmic reticulum	Endoplasmic Reticulum-Associated Degradation (ERAD)	0.4	0.25	0.4	0.5584521797768631	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Proteoglycans in cancer	Proteoglycans in cancer	Regulation of WNT Signaling Pathway	0.0	0.0	0.0	0.3082521247066849	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Proximal tubule bicarbonate reclamation	Proximal tubule bicarbonate reclamation	Acid-base and ion homeostasis regulation	0.0	0.0	0.0	0.44762479983175024	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Purine metabolism	Purine metabolism	Nucleotide biosynthesis and nucleotide metabolism	0.5	0.0	0.5	0.6230658926979866	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pyrimidine metabolism	Pyrimidine metabolism	Nucleotide metabolism and synthesis	0.5	0.0	0.5	0.6863393535907927	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pyruvate metabolism	Pyruvate metabolism	Citric acid cycle and energy metabolism regulation	0.5	0.0	0.5	0.5344902234663738	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	RIG-I-like receptor signaling pathway	RIG-I-like receptor signaling pathway	Immune Response Signaling Pathway	0.3333333333333333	0.2	0.3333333333333333	0.6464691236183372	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	RNA degradation	RNA degradation	mRNA degradation and processing	0.5	0.0	0.5	0.6381576954831358	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	RNA polymerase	RNA polymerase	Transcription by RNA polymerase complexes	1.0	1.0	1.0	0.5802050086375371	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	RNA transport	RNA transport	mRNA export and translation regulation	0.0	0.0	0.0	0.43105677460998115	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Rap1 signaling pathway	Rap1 signaling pathway	Cellular Signaling and Regulation	0.3333333333333333	0.0	0.3333333333333333	0.5097191405973664	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ras signaling pathway	Ras signaling pathway	Cellular Signaling Network	0.3333333333333333	0.0	0.3333333333333333	0.48773922791719604	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Regulation of actin cytoskeleton	Regulation of actin cytoskeleton	Regulation of Actin Cytoskeleton Dynamics and Cell Movement	1.0	1.0	1.0	0.8710977395870088	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Regulation of lipolysis in adipocytes	Regulation of lipolysis in adipocytes	Cellular Signaling and Metabolism Coordination	0.0	0.0	0.0	0.402089643285441	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Relaxin signaling pathway	Relaxin signaling pathway	Cell Signaling and Growth Regulation	0.3333333333333333	0.0	0.3333333333333333	0.387930581506451	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Renal cell carcinoma	Renal cell carcinoma	Cell growth and survival signaling cascade	0.3333333333333333	0.0	0.3333333333333333	0.26481656412219473	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Renin secretion	Renin secretion	Regulation of Vascular Tone and Blood Pressure	0.0	0.0	0.0	0.38051518847675325	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Renin-angiotensin system	Renin-angiotensin system	Renin-angiotensin system regulation 	1.0	1.0	1.0	0.8203141226198611	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Retinol metabolism	Retinol metabolism	Retinoid metabolism and detoxification	0.5	0.0	0.5	0.7894480583807776	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Retrograde endocannabinoid signaling	Retrograde endocannabinoid signaling	Neuronal Signaling and Intracellular Communication	0.3333333333333333	0.0	0.3333333333333333	0.4115309865068666	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Rheumatoid arthritis	Rheumatoid arthritis	Immune response regulation	0.0	0.0	0.0	0.28235471299823983	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Riboflavin metabolism	Riboflavin metabolism	Phosphate metabolism and regulation	0.5	0.0	0.5	0.3884601113121193	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ribosome	Ribosome	Ribosome biogenesis and protein translation	1.0	0.0	1.0	0.5952363969148065	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ribosome biogenesis in eukaryotes	Ribosome biogenesis in eukaryotes	Ribosome biogenesis and RNA processing	0.5	0.3333333333333333	0.5	0.7272307373007707	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	SNARE interactions in vesicular transport	SNARE interactions in vesicular transport	Vesicle-mediated membrane trafficking	0.0	0.0	0.0	0.6155380422529041	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Salivary secretion	Salivary secretion	Regulation of ion transport and signal transduction	0.0	0.0	0.0	0.30671368432484103	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Salmonella infection	Salmonella infection	Cellular signaling and cytoskeletal dynamics	0.0	0.0	0.0	0.1267157375437252	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Selenocompound metabolism	Selenocompound metabolism	Selenocysteine biosynthesis and selenium metabolism	0.5	0.0	0.5	0.7412276808923025	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Serotonergic synapse	Serotonergic synapse	System of unrelated proteins	0.0	0.0	0.0	0.3058486625808917	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Shigellosis	Shigellosis	Regulation of the NF-kappaB signaling pathway	0.0	0.0	0.0	0.1604847859277888	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Signaling pathways regulating pluripotency of stem cells	Signaling pathways regulating pluripotency of stem cells	Wnt signaling pathway and developmental regulation 	0.42857142857142855	0.16666666666666666	0.42857142857142855	0.6029966493248509	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Small cell lung cancer	Small cell lung cancer	Cell Cycle Regulation and Apoptosis	0.25	0.0	0.25	0.2712925119175489	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Sphingolipid metabolism	Sphingolipid metabolism	Sphingolipid metabolism and regulation	1.0	1.0	1.0	0.8746345604766381	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Sphingolipid signaling pathway	Sphingolipid signaling pathway	Regulation of MAPK Signaling Pathway and Cell Fate Determination	0.6666666666666666	0.5	0.6666666666666666	0.49596069621995015	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Spinocerebellar ataxia	Spinocerebellar ataxia	Autophagy regulation and protein degradation	0.0	0.0	0.0	0.2175130586971291	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Spliceosome	Spliceosome	Pre-mRNA splicing complex assembly and regulation	0.0	0.0	0.0	0.548218708724042	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Staphylococcus aureus infection	Staphylococcus aureus infection	Immune response and defense mechanisms	0.0	0.0	0.0	0.20096520204182317	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Starch and sucrose metabolism	Starch and sucrose metabolism	Glycogen metabolism and glucose homeostasis	0.5	0.0	0.25	0.596987923373884	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Steroid biosynthesis	Steroid biosynthesis	Cholesterol biosynthesis and metabolism	0.5	0.0	0.5	0.6924924168806351	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Steroid hormone biosynthesis	Steroid hormone biosynthesis	Steroid and xenobiotic metabolism	0.3333333333333333	0.0	0.3333333333333333	0.5499828682355731	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Sulfur metabolism	Sulfur metabolism	Sulfur metabolism and detoxification	1.0	1.0	1.0	0.8543087841590158	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Sulfur relay system	Sulfur relay system	Sulfur transfer and molybdenum cofactor biosynthesis	0.3333333333333333	0.0	0.3333333333333333	0.6149888563713486	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Synaptic vesicle cycle	Synaptic vesicle cycle	Neurotransmitter release and synaptic vesicle exocytosis	0.6666666666666666	0.5	0.6666666666666666	0.6766918016933288	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Synthesis and degradation of ketone bodies	Synthesis and degradation of ketone bodies	Ketogenesis and cholesterol metabolism	0.16666666666666666	0.0	0.16666666666666666	0.6408301635865155	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Systemic lupus erythematosus	Systemic lupus erythematosus	Immune response and antigen presentation	0.0	0.0	0.0	0.26058207601709016	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	T cell receptor signaling pathway	T cell receptor signaling pathway	T cell receptor signaling cascade	0.8	0.75	0.8	0.884781125490423	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	TGF-beta signaling pathway	TGF-beta signaling pathway	TGF-beta signaling pathway and regulation of cell growth	1.0	1.0	1.0	0.826097270572267	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	TNF signaling pathway	TNF signaling pathway	Immune response signaling pathway	0.6666666666666666	0.5	0.6666666666666666	0.6421728163794962	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Taste transduction	Taste transduction	Chemoreception and Signal Transduction	0.5	0.0	0.5	0.6100359934223774	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Taurine and hypotaurine metabolism	Taurine and hypotaurine metabolism	Glutathione metabolism and neurotransmitter synthesis	0.5	0.0	0.25	0.5708054726674233	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Terpenoid backbone biosynthesis	Terpenoid backbone biosynthesis	Cholesterol biosynthesis	0.3333333333333333	0.0	0.3333333333333333	0.5888806621488418	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Th1 and Th2 cell differentiation	Th1 and Th2 cell differentiation	T cell activation and immune response	0.4	0.0	0.2	0.5265246511352685	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Th17 cell differentiation	Th17 cell differentiation	Immune response signal transduction	0.0	0.0	0.0	0.4016421743071062	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Thermogenesis	Thermogenesis	Mitochondrial respiratory chain and energy metabolism	0.0	0.0	0.0	0.31414980338594034	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Thiamine metabolism	Thiamine metabolism	System of unrelated proteins	0.0	0.0	0.0	0.13546195734100663	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Thyroid cancer	Thyroid cancer	Cellular stress response and DNA damage repair	0.0	0.0	0.0	0.2301684103759097	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Thyroid hormone signaling pathway	Thyroid hormone signaling pathway	Regulation of gene expression and signal transduction pathways	0.5	0.0	0.5	0.47112459748719215	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Thyroid hormone synthesis	Thyroid hormone synthesis	Oxidative stress response and redox signaling	0.0	0.0	0.0	0.24403183930232353	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Tight junction	Tight junction	Cell Junction Regulation and Cytoskeletal Organization	0.5	0.0	0.5	0.4941394704173801	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Toll-like receptor signaling pathway	Toll-like receptor signaling pathway	Innate Immune Response Signaling	0.2	0.0	0.2	0.643438567991199	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Toxoplasmosis	Toxoplasmosis	Inflammatory signaling cascade and immune response modulation	0.0	0.0	0.0	0.19300088525799095	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Transcriptional misregulation in cancer	Transcriptional misregulation in cancer	Transcriptional Regulation and Cellular Responses	0.25	0.0	0.25	0.6056830062577431	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Tryptophan metabolism	Tryptophan metabolism	Tryptophan Metabolism	1.0	1.0	1.0	0.999999121724631	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Tuberculosis	Tuberculosis	Immune Response Signaling Cascade	0.0	0.0	0.0	0.2042275739183545	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Type I diabetes mellitus	Type I diabetes mellitus	Immune response and antigen presentation	0.0	0.0	0.0	0.26496571452036355	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Type II diabetes mellitus	Type II diabetes mellitus	Insulin Signaling Pathway and Glucose Homeostasis  	0.0	0.0	0.0	0.3659046476563323	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Tyrosine metabolism	Tyrosine metabolism	Tyrosine metabolism and oxidative stress response	1.0	1.0	1.0	0.8154186623980694	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ubiquinone and other terpenoid-quinone biosynthesis	Ubiquinone and other terpenoid-quinone biosynthesis	Coenzyme Q (CoQ) biosynthesis pathway	0.16666666666666666	0.0	0.16666666666666666	0.7067079803250014	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ubiquitin mediated proteolysis	Ubiquitin mediated proteolysis	Ubiquitin-Mediated Protein Degradation Pathway	0.6666666666666666	0.5	0.6666666666666666	0.803826892547371	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	VEGF signaling pathway	VEGF signaling pathway	Cell Signaling Cascade	0.3333333333333333	0.0	0.3333333333333333	0.5224795816374883	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Valine, leucine and isoleucine degradation	Valine, leucine and isoleucine degradation	Fatty acid oxidation and ketogenesis	0.2	0.0	0.2	0.43375298888037894	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Various types of N-glycan biosynthesis	Various types of N-glycan biosynthesis	N-linked glycosylation pathway	0.16666666666666666	0.0	0.16666666666666666	0.6109015521107104	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Vascular smooth muscle contraction	Vascular smooth muscle contraction	Vascular smooth muscle cell contraction and regulation	1.0	0.6666666666666666	1.0	0.8511481518026415	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Vasopressin-regulated water reabsorption	Vasopressin-regulated water reabsorption	Intracellular Protein Transport and Signaling	0.0	0.0	0.0	0.27840918512587853	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Vibrio cholerae infection	Vibrio cholerae infection	Protein Trafficking and Intracellular Communication	0.0	0.0	0.0	0.19211815066497723	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Viral carcinogenesis	Viral carcinogenesis	Cell Cycle Regulation and DNA Damage Response	0.0	0.0	0.0	0.32049376990419637	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Viral myocarditis	Viral myocarditis	Immune response signaling and regulation	0.0	0.0	0.0	0.2407537738578588	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Viral protein interaction with cytokine and cytokine receptor	Viral protein interaction with cytokine and cytokine receptor	Chemokine Signaling Cascade	0.0	0.0	0.0	0.47298732578640656	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Vitamin B6 metabolism	Vitamin B6 metabolism	Vitamin B6 metabolism and biosynthesis	1.0	1.0	1.0	0.892337187628345	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Vitamin digestion and absorption	Vitamin digestion and absorption	Vitamin and nutrient uptake and transport processes	0.5	0.0	0.5	0.6519457606917793	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Wnt signaling pathway	Wnt signaling pathway	Wnt signaling pathway regulation	1.0	1.0	1.0	0.8267265838008321	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	Yersinia infection	Yersinia infection	Immune response signaling cascade	0.0	0.0	0.0	0.3243054463864065	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	alpha-Linolenic acid metabolism	alpha-Linolenic acid metabolism	Phospholipid Metabolism and Lipid Signaling Pathway	0.25	0.0	0.25	0.4841329288855588	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	beta-Alanine metabolism	beta-Alanine metabolism	Spermidine and spermine metabolism	0.3333333333333333	0.0	0.3333333333333333	0.49106480604804464	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	cAMP signaling pathway	cAMP signaling pathway	Cellular Signaling and Regulation	0.3333333333333333	0.0	0.3333333333333333	0.44836666507373557	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	cGMP-PKG signaling pathway	cGMP-PKG signaling pathway	Calcium signaling and regulation	0.25	0.0	0.25	0.5125298914528109	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	mRNA surveillance pathway	mRNA surveillance pathway	mRNA Processing and Nuclear Export	0.3333333333333333	0.0	0.3333333333333333	0.6096511925396149	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	mTOR signaling pathway	mTOR signaling pathway	Cellular Signaling and Metabolic Regulation**	0.3333333333333333	0.0	0.3333333333333333	0.48407609557964515	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	p53 signaling pathway	p53 signaling pathway	DNA damage response and cell cycle regulation	0.0	0.0	0.0	0.4649457543549711	GSAI
+gpt-3.5-turbo-0125	KEGG_2021_Human	ABC transporters	ABC transporters	Multidrug resistance	0.0	0.0	0.0	0.4698545383326751	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	AGE-RAGE signaling pathway in diabetic complications	AGE-RAGE signaling pathway in diabetic complications	PI3K-Akt signaling pathway	0.2857142857142857	0.16666666666666666	0.2857142857142857	0.48126435571076775	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	AMPK signaling pathway	AMPK signaling pathway	mTOR signaling pathway	0.6666666666666666	0.5	0.6666666666666666	0.6976284311629952	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Acute myeloid leukemia	Acute myeloid leukemia	MAPK signaling pathway	0.0	0.0	0.0	0.22086488745051303	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Adherens junction	Adherens junction	Cell-cell junction assembly	0.5	0.0	0.5	0.5917116193463334	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Adipocytokine signaling pathway	Adipocytokine signaling pathway	TNF signaling pathway	0.6666666666666666	0.5	0.6666666666666666	0.5829484402670441	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Adrenergic signaling in cardiomyocytes	Adrenergic signaling in cardiomyocytes	Cardiac muscle contraction	0.0	0.0	0.0	0.4317784325698501	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	African trypanosomiasis	African trypanosomiasis	Regulation of cytokine production	0.0	0.0	0.0	0.1677288192392713	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Alanine, aspartate and glutamate metabolism	Alanine, aspartate and glutamate metabolism	Alanine, aspartate and glutamate metabolism	1.0	1.0	1.0	0.9997068371666633	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Alcoholism	Alcoholism	GRIN/NMDA receptor complex	0.0	0.0	0.0	0.1495268410380621	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Aldosterone synthesis and secretion	Aldosterone synthesis and secretion	cAMP signaling pathway	0.0	0.0	0.0	0.23002343881946333	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Aldosterone-regulated sodium reabsorption	Aldosterone-regulated sodium reabsorption	PI3K-Akt signaling pathway	0.0	0.0	0.0	0.22414283710221133	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Allograft rejection	Allograft rejection	Antigen processing and presentation	0.0	0.0	0.0	0.2755305649062371	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Alzheimer disease	Alzheimer disease	Wnt signaling pathway	0.0	0.0	0.0	0.23154183883501667	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Amino sugar and nucleotide sugar metabolism	Amino sugar and nucleotide sugar metabolism	UDP-N-acetylglucosamine biosynthetic process	0.0	0.0	0.0	0.5080299918760057	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Aminoacyl-tRNA biosynthesis	Aminoacyl-tRNA biosynthesis	Aminoacyl-tRNA biosynthesis	1.0	1.0	1.0	0.9999987729455915	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Amoebiasis	Amoebiasis	Inflammatory response	0.0	0.0	0.0	0.19498251981765008	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Amphetamine addiction	Amphetamine addiction	Long-term potentiation	0.0	0.0	0.0	0.2274537546041389	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Amyotrophic lateral sclerosis	Amyotrophic lateral sclerosis	Mitochondrial inner membrane protein complex	0.0	0.0	0.0	0.2383838787658225	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Antigen processing and presentation	Antigen processing and presentation	Antigen processing and presentation	1.0	1.0	1.0	0.9999989977304333	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Apelin signaling pathway	Apelin signaling pathway	Positive regulation of vascular smooth muscle contraction	0.0	0.0	0.0	0.3369287844741353	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Apoptosis	Apoptosis	Apoptosis	1.0	0.0	1.0	0.9990993183312108	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Arachidonic acid metabolism	Arachidonic acid metabolism	eicosanoid biosynthetic process	0.0	0.0	0.0	0.5745621487454428	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Arginine and proline metabolism	Arginine and proline metabolism	Arginine and proline metabolism	1.0	1.0	1.0	0.9999990412707296	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Arginine biosynthesis	Arginine biosynthesis	Glutaminolysis	0.0	0.0	0.0	0.4699043624007715	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Arrhythmogenic right ventricular cardiomyopathy	Arrhythmogenic right ventricular cardiomyopathy	Integrin cell surface interactions	0.0	0.0	0.0	0.18819992676006675	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ascorbate and aldarate metabolism	Ascorbate and aldarate metabolism	Nucleotide sugar biosynthetic process	0.0	0.0	0.0	0.3545925908887718	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Asthma	Asthma	Cytokine-cytokine receptor interaction	0.0	0.0	0.0	0.2108943404622049	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Autoimmune thyroid disease	Autoimmune thyroid disease	Antigen processing and presentation	0.0	0.0	0.0	0.223320343963635	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Autophagy	Autophagy	Autophagy	1.0	0.0	1.0	0.9999989729951599	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Axon guidance	Axon guidance	Axon guidance	1.0	1.0	1.0	0.9999984051826734	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	B cell receptor signaling pathway	B cell receptor signaling pathway	B cell receptor signaling pathway	1.0	1.0	1.0	0.9999990451036089	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Bacterial invasion of epithelial cells	Bacterial invasion of epithelial cells	Regulation of actin cytoskeleton	0.2	0.0	0.2	0.30373656000292965	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Basal cell carcinoma	Basal cell carcinoma	Wnt signaling pathway	0.0	0.0	0.0	0.2219762468420154	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Basal transcription factors	Basal transcription factors	RNA polymerase II transcription initiation	0.3333333333333333	0.0	0.3333333333333333	0.499250752101007	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Base excision repair	Base excision repair	Base excision repair	1.0	1.0	1.0	0.9999988211065107	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Bile secretion	Bile secretion	Gallbladder bile acid absorption	0.5	0.0	0.5	0.6046334756920063	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Biosynthesis of unsaturated fatty acids	Biosynthesis of unsaturated fatty acids	Very long chain fatty acid metabolism	0.4	0.25	0.4	0.5112638399603799	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Bladder cancer	Bladder cancer	EGFR signaling pathway	0.0	0.0	0.0	0.24591877940707316	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Breast cancer	Breast cancer	Wnt signaling pathway	0.0	0.0	0.0	0.2535618646583514	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Butanoate metabolism	Butanoate metabolism	Ketogenesis	0.0	0.0	0.0	0.44809315491151236	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	C-type lectin receptor signaling pathway	C-type lectin receptor signaling pathway	Toll-like receptor signaling pathway	0.5	0.4	0.5	0.6702811041864081	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Caffeine metabolism	Caffeine metabolism	Drug metabolism - cytochrome P450	0.5	0.0	0.5	0.5457895633811505	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Calcium signaling pathway	Calcium signaling pathway	Calcium signaling pathway	1.0	1.0	1.0	0.999999236876244	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Carbohydrate digestion and absorption	Carbohydrate digestion and absorption	Carbohydrate digestion and absorption	1.0	1.0	1.0	0.9999999571643886	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cardiac muscle contraction	Cardiac muscle contraction	Calcium signaling pathway	0.0	0.0	0.0	0.3059522041053814	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cell adhesion molecules	Cell adhesion molecules	Cell adhesion molecules (CAMs) pathway	1.0	1.0	1.0	0.7497646023922335	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cell cycle	Cell cycle	Cell cycle	1.0	1.0	1.0	0.9999986924374396	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cellular senescence	Cellular senescence	Cell cycle	0.0	0.0	0.0	0.4358450854791716	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Central carbon metabolism in cancer	Central carbon metabolism in cancer	Insulin signaling pathway	0.0	0.0	0.0	0.3419836712303383	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Chagas disease	Chagas disease	NF-kappa B signaling pathway	0.0	0.0	0.0	0.16252063041122936	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Chemical carcinogenesis	Chemical carcinogenesis	Metabolism of xenobiotics by cytochrome P450	0.0	0.0	0.0	0.36616092053452326	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Chemokine signaling pathway	Chemokine signaling pathway	Chemokine signaling pathway	1.0	1.0	1.0	0.9999990127297511	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cholesterol metabolism	Cholesterol metabolism	Lipoprotein particle pathway	0.0	0.0	0.0	0.515910401512157	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Choline metabolism in cancer	Choline metabolism in cancer	PI3K-Akt signaling pathway	0.0	0.0	0.0	0.3203808844856739	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cholinergic synapse	Cholinergic synapse	Muscarinic acetylcholine receptor signaling pathway	0.0	0.0	0.0	0.5161128334724994	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Chronic myeloid leukemia	Chronic myeloid leukemia	PI3K-Akt signaling pathway	0.0	0.0	0.0	0.21683898178936734	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Circadian entrainment	Circadian entrainment	CREB signaling pathway	0.0	0.0	0.0	0.27006936293104367	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Circadian rhythm	Circadian rhythm	circadian rhythm pathway	1.0	1.0	1.0	0.6500248637825994	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Citrate cycle (TCA cycle)	Citrate cycle (TCA cycle)	tricarboxylic acid cycle	0.25	0.0	0.25	0.7258238499100405	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cocaine addiction	Cocaine addiction	CREB signaling pathway	0.0	0.0	0.0	0.22148335614860518	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Collecting duct acid secretion	Collecting duct acid secretion	Proton-transporting V-type ATPase, V1 domain (GO:0016469)	0.0	0.0	0.0	0.28082136181990697	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Colorectal cancer	Colorectal cancer	TGF-beta signaling pathway	0.0	0.0	0.0	0.21480267199647912	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Complement and coagulation cascades	Complement and coagulation cascades	Complement and coagulation cascades	1.0	1.0	1.0	0.9999991223419744	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Coronavirus disease	Coronavirus disease	Ribosome	0.0	0.0	0.0	0.1861151564385415	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cortisol synthesis and secretion	Cortisol synthesis and secretion	cAMP signaling pathway	0.0	0.0	0.0	0.262462910788137	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cushing syndrome	Cushing syndrome	Wnt signaling pathway	0.0	0.0	0.0	0.1960858736528221	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cysteine and methionine metabolism	Cysteine and methionine metabolism	Transsulfuration pathway	0.0	0.0	0.0	0.6193986140986847	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cytokine-cytokine receptor interaction	Cytokine-cytokine receptor interaction	Inflammatory response	0.0	0.0	0.0	0.3709489529999533	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Cytosolic DNA-sensing pathway	Cytosolic DNA-sensing pathway	Interferon signaling pathway	0.25	0.0	0.25	0.5431165872556933	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	D-Glutamine and D-glutamate metabolism	D-Glutamine and D-glutamate metabolism	Glutamate metabolism	0.3333333333333333	0.2	0.3333333333333333	0.7980432262755904	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	DNA replication	DNA replication	DNA replication	1.0	1.0	1.0	0.9999999954994315	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Diabetic cardiomyopathy	Diabetic cardiomyopathy	Cellular respiration	0.0	0.0	0.0	0.2621758979167632	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Dilated cardiomyopathy	Dilated cardiomyopathy	Cardiac muscle contraction	0.0	0.0	0.0	0.3742501453188326	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Dopaminergic synapse	Dopaminergic synapse	Dopaminergic synapse	1.0	1.0	1.0	1.000000064909694	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Drug metabolism	Drug metabolism	Drug metabolism - other enzymes	1.0	1.0	1.0	0.7130213446428355	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	ECM-receptor interaction	ECM-receptor interaction	Integrin cell surface interactions	0.3333333333333333	0.0	0.3333333333333333	0.5661606162035449	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Endocrine and other factor-regulated calcium reabsorption	Endocrine and other factor-regulated calcium reabsorption	Calcium signaling pathway	0.14285714285714285	0.0	0.14285714285714285	0.5042709072065104	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Endocytosis	Endocytosis	Endocytosis	1.0	0.0	1.0	0.9999985851343485	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Endometrial cancer	Endometrial cancer	EGF signaling pathway	0.0	0.0	0.0	0.23907255296173732	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Epithelial cell signaling in Helicobacter pylori infection	Epithelial cell signaling in Helicobacter pylori infection	NF-kappa B signaling pathway	0.14285714285714285	0.0	0.14285714285714285	0.4148115110259436	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Epstein-Barr virus infection	Epstein-Barr virus infection	Apoptosis	0.0	0.0	0.0	0.2794024173368818	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	ErbB signaling pathway	ErbB signaling pathway	Ras signaling pathway	0.6666666666666666	0.5	0.6666666666666666	0.6107342642353766	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Estrogen signaling pathway	Estrogen signaling pathway	Ras signaling pathway	0.6666666666666666	0.5	0.6666666666666666	0.5278235866808907	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ether lipid metabolism	Ether lipid metabolism	Phospholipase A2 signaling pathway	0.0	0.0	0.0	0.4436323477652907	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fanconi anemia pathway	Fanconi anemia pathway	Fanconi anemia pathway	1.0	1.0	1.0	0.9999991178588761	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fat digestion and absorption	Fat digestion and absorption	Cholesterol transport	0.0	0.0	0.0	0.4049299862238326	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fatty acid biosynthesis	Fatty acid biosynthesis	Fatty acid biosynthetic process	0.6666666666666666	0.5	0.6666666666666666	0.8694164659741552	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fatty acid degradation	Fatty acid degradation	Fatty acid beta-oxidation	0.6666666666666666	0.5	0.6666666666666666	0.7918712013798272	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fatty acid elongation	Fatty acid elongation	Fatty acid elongation	1.0	1.0	1.0	0.9999989150981156	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fc epsilon RI signaling pathway	Fc epsilon RI signaling pathway	Fc-epsilon receptor I signaling in mast cells	0.6	0.25	0.6	0.6988043817524845	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fc gamma R-mediated phagocytosis	Fc gamma R-mediated phagocytosis	Fc gamma R-mediated phagocytosis	1.0	1.0	1.0	0.9999988993046549	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ferroptosis	Ferroptosis	Cellular Iron ion Homeostasis	0.0	0.0	0.0	0.4296366976220163	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fluid shear stress and atherosclerosis	Fluid shear stress and atherosclerosis	MAPK signaling pathway	0.0	0.0	0.0	0.17734504947009982	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Focal adhesion	Focal adhesion	EGF-EGFR signaling pathway	0.0	0.0	0.0	0.3684577316734973	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Folate biosynthesis	Folate biosynthesis	Pteridine-containing compound metabolic process	0.0	0.0	0.0	0.49567102344098846	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	FoxO signaling pathway	FoxO signaling pathway	Insulin signaling pathway	0.6666666666666666	0.5	0.6666666666666666	0.6238593585315153	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Fructose and mannose metabolism	Fructose and mannose metabolism	Fructose and mannose metabolism	1.0	1.0	1.0	0.999998975332506	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	GABAergic synapse	GABAergic synapse	GABA-A receptor complex	0.0	0.0	0.0	0.6314241005390044	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Galactose metabolism	Galactose metabolism	Glucose metabolic process	0.5	0.0	0.5	0.6251034075670281	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Gap junction	Gap junction	Ras signaling pathway	0.0	0.0	0.0	0.3344228004007416	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Gastric acid secretion	Gastric acid secretion	Potassium transport	0.0	0.0	0.0	0.2641666856262294	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Gastric cancer	Gastric cancer	Wnt signaling pathway	0.0	0.0	0.0	0.1819240712791919	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glioma	Glioma	Ras signaling pathway	0.0	0.0	0.0	0.25227953905506295	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glucagon signaling pathway	Glucagon signaling pathway	Glycolysis	0.0	0.0	0.0	0.3986342531944453	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glutamatergic synapse	Glutamatergic synapse	cAMP signaling pathway	0.0	0.0	0.0	0.30785188315811385	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glutathione metabolism	Glutathione metabolism	Glutathione metabolism	1.0	1.0	1.0	0.9999990219087719	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glycerolipid metabolism	Glycerolipid metabolism	Glycerolipid metabolism	1.0	1.0	1.0	0.9999989038659165	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glycerophospholipid metabolism	Glycerophospholipid metabolism	Phospholipid biosynthetic process	0.0	0.0	0.0	0.6480851339033326	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glycine, serine and threonine metabolism	Glycine, serine and threonine metabolism	Serine biosynthesis	0.2	0.0	0.2	0.6996917228344363	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glycolysis / Gluconeogenesis	Glycolysis / Gluconeogenesis	Glycolysis	0.5	0.0	0.5	0.745714444796764	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glycosaminoglycan biosynthesis	Glycosaminoglycan biosynthesis	Glycosaminoglycan biosynthesis	1.0	1.0	1.0	0.9999990477363474	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glycosaminoglycan degradation	Glycosaminoglycan degradation	Glycosaminoglycan degradation	1.0	1.0	1.0	0.9999989677494763	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glycosphingolipid biosynthesis	Glycosphingolipid biosynthesis	O-linked glycosylation	0.0	0.0	0.0	0.44553274429190487	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	GPI-anchor biosynthesis	0.75	0.6666666666666666	0.75	0.8577254683747626	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Glyoxylate and dicarboxylate metabolism	Glyoxylate and dicarboxylate metabolism	Citric acid cycle	0.0	0.0	0.0	0.4328048991041995	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	GnRH secretion	GnRH secretion	Phosphatidylinositol signaling system	0.0	0.0	0.0	0.1706315306597033	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	GnRH signaling pathway	GnRH signaling pathway	Gonadotropin-releasing hormone (GnRH) signaling pathway	1.0	1.0	1.0	0.888849446260151	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Graft-versus-host disease	Graft-versus-host disease	natural killer cell mediated cytotoxicity	0.0	0.0	0.0	0.2878719042210126	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Growth hormone synthesis, secretion and action	Growth hormone synthesis, secretion and action	Insulin signaling pathway	0.0	0.0	0.0	0.36223671047969525	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	HIF-1 signaling pathway	HIF-1 signaling pathway	HIF-1 signaling pathway	1.0	1.0	1.0	0.9999991075283581	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Hedgehog signaling pathway	Hedgehog signaling pathway	Hedgehog signaling pathway	1.0	1.0	1.0	0.9999991831235081	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Hematopoietic cell lineage	Hematopoietic cell lineage	Cytokine-cytokine receptor interaction	0.0	0.0	0.0	0.38155743862034464	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Hepatitis B	Hepatitis B	Apoptosis	0.0	0.0	0.0	0.3331264125383822	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Hepatitis C	Hepatitis C	EGFR signaling pathway	0.0	0.0	0.0	0.1769441402551675	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Hepatocellular carcinoma	Hepatocellular carcinoma	Wnt signaling pathway	0.0	0.0	0.0	0.19704353102938682	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Herpes simplex virus 1 infection	Herpes simplex virus 1 infection	Apoptotic process	0.0	0.0	0.0	0.1972443585316248	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Hippo signaling pathway	Hippo signaling pathway	Wnt signaling pathway	0.6666666666666666	0.5	0.6666666666666666	0.5832206282940139	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Histidine metabolism	Histidine metabolism	Tryptophan metabolism	0.5	0.0	0.5	0.6372541273388448	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Homologous recombination	Homologous recombination	Homologous recombination	1.0	1.0	1.0	0.9999989960642559	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Human T-cell leukemia virus 1 infection	Human T-cell leukemia virus 1 infection	Cell cycle	0.14285714285714285	0.0	0.14285714285714285	0.16421628493482043	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Human cytomegalovirus infection	Human cytomegalovirus infection	Apoptotic process	0.0	0.0	0.0	0.26968933894947156	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Human immunodeficiency virus 1 infection	Human immunodeficiency virus 1 infection	MAPK signaling pathway	0.0	0.0	0.0	0.1501165669044925	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Human papillomavirus infection	Human papillomavirus infection	Wnt signaling pathway	0.0	0.0	0.0	0.17653718219189432	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Huntington disease	Huntington disease	Proteasome complex	0.0	0.0	0.0	0.25332093553705193	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Hypertrophic cardiomyopathy	Hypertrophic cardiomyopathy	Cardiac muscle contraction	0.0	0.0	0.0	0.42153695461639074	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	IL-17 signaling pathway	IL-17 signaling pathway	Regulation of cytokine production involved in immune response	0.0	0.0	0.0	0.4267149792289083	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Inflammatory bowel disease	Inflammatory bowel disease	Th17 cell differentiation	0.0	0.0	0.0	0.26748679653849916	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Inflammatory mediator regulation of TRP channels	Inflammatory mediator regulation of TRP channels	MAPK signaling pathway	0.0	0.0	0.0	0.30898591815311804	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Influenza A	Influenza A	Interferon alpha/beta signaling pathway	0.0	0.0	0.0	0.29861294464336074	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Inositol phosphate metabolism	Inositol phosphate metabolism	Phosphatidylinositol signaling system	0.0	0.0	0.0	0.6453267243046306	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Insulin resistance	Insulin resistance	insulin signaling pathway	0.5	0.0	0.5	0.561824486424417	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Insulin secretion	Insulin secretion	Regulation of insulin secretion	1.0	1.0	1.0	0.7956548331666079	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Insulin signaling pathway	Insulin signaling pathway	Insulin signaling pathway	1.0	1.0	1.0	0.999998819052915	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Intestinal immune network for IgA production	Intestinal immune network for IgA production	Antigen processing and presentation	0.0	0.0	0.0	0.312917402420403	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	JAK-STAT signaling pathway	JAK-STAT signaling pathway	Cytokine-cytokine receptor interaction	0.0	0.0	0.0	0.38889334584886	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Kaposi sarcoma-associated herpesvirus infection	Kaposi sarcoma-associated herpesvirus infection	MAPK signaling pathway	0.0	0.0	0.0	0.2083183564890052	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Legionellosis	Legionellosis	TNF signaling pathway	0.0	0.0	0.0	0.14851925091830764	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Leishmaniasis	Leishmaniasis	Innate immune response	0.0	0.0	0.0	0.230332774826079	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Leukocyte transendothelial migration	Leukocyte transendothelial migration	Leukocyte transendothelial migration	1.0	1.0	1.0	0.9999991292077444	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Linoleic acid metabolism	Linoleic acid metabolism	Phospholipase A2 activity	0.0	0.0	0.0	0.42967128032368884	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Lipid and atherosclerosis	Lipid and atherosclerosis	TNF signaling pathway	0.0	0.0	0.0	0.27507669474867474	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Long-term depression	Long-term depression	Ras signaling pathway	0.0	0.0	0.0	0.17823603039900615	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Long-term potentiation	Long-term potentiation	Long-term potentiation	1.0	1.0	1.0	0.999998961223882	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Longevity regulating pathway	Longevity regulating pathway	PI3K-Akt signaling pathway	0.3333333333333333	0.0	0.3333333333333333	0.43982863771241576	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Lysine degradation	Lysine degradation	Histone H3-K9 methylation	0.0	0.0	0.0	0.32466349684795853	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Lysosome	Lysosome	Lysosome	1.0	0.0	1.0	0.9999987098368137	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	MAPK signaling pathway	MAPK signaling pathway	ErbB signaling pathway	0.6666666666666666	0.5	0.6666666666666666	0.6212324095386876	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Malaria	Malaria	Inflammatory response	0.0	0.0	0.0	0.21859511135028634	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Mannose type O-glycan biosynthesis	Mannose type O-glycan biosynthesis	O-mannosylation	0.2	0.0	0.2	0.6489145477431004	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Maturity onset diabetes of the young	Maturity onset diabetes of the young	Endocrine pancreas development	0.0	0.0	0.0	0.37210673644180037	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Measles	Measles	Cellular Response to Interferon-beta	0.0	0.0	0.0	0.19971738617164758	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Melanogenesis	Melanogenesis	Wnt signaling pathway	0.0	0.0	0.0	0.2633042834942927	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Melanoma	Melanoma	PI3K-Akt signaling pathway	0.0	0.0	0.0	0.21243232185944688	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Metabolism of xenobiotics by cytochrome P450	Metabolism of xenobiotics by cytochrome P450	Glutathione metabolism	0.16666666666666666	0.0	0.16666666666666666	0.48399754650270316	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	MicroRNAs in cancer	MicroRNAs in cancer	regulation of cell cycle	0.0	0.0	0.0	0.354005680473654	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Mineral absorption	Mineral absorption	Metallothionein-mediated Zinc Homeostasis	0.0	0.0	0.0	0.35269845809818384	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Mismatch repair	Mismatch repair	DNA replication	0.0	0.0	0.0	0.38466063163774655	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Mitophagy	Mitophagy	Autophagy	0.0	0.0	0.0	0.6875827390977014	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Morphine addiction	Morphine addiction	cAMP signaling pathway	0.0	0.0	0.0	0.11845709518570766	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Mucin type O-glycan biosynthesis	Mucin type O-glycan biosynthesis	Glycosylation of O-glycans on proteins	0.4	0.25	0.4	0.6444502081784247	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	N-Glycan biosynthesis	N-Glycan biosynthesis	Oligosaccharide biosynthesis	0.3333333333333333	0.0	0.3333333333333333	0.6446205386510643	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	NF-kappa B signaling pathway	NF-kappa B signaling pathway	NF-kappaB signaling pathway	0.6	0.25	0.6	0.930838183267545	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	NOD-like receptor signaling pathway	NOD-like receptor signaling pathway	NOD-like receptor signaling pathway	1.0	1.0	1.0	0.9999990253662665	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Natural killer cell mediated cytotoxicity	Natural killer cell mediated cytotoxicity	Natural killer cell mediated cytotoxicity	1.0	1.0	1.0	0.999999104014524	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Necroptosis	Necroptosis	Regulation of programmed cell death	0.0	0.0	0.0	0.5107961672851453	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Neomycin, kanamycin and gentamicin biosynthesis	Neomycin, kanamycin and gentamicin biosynthesis	hexokinase activity	0.0	0.0	0.0	0.2270620161249112	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Neuroactive ligand-receptor interaction	Neuroactive ligand-receptor interaction	regulation of appetite	0.0	0.0	0.0	0.3219111171418573	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Neurotrophin signaling pathway	Neurotrophin signaling pathway	Neurotrophin signaling pathway	1.0	1.0	1.0	0.9999999437738921	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Neutrophil extracellular trap formation	Neutrophil extracellular trap formation	Regulation of MAP kinase activity	0.0	0.0	0.0	0.2515652486532109	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Nicotinate and nicotinamide metabolism	Nicotinate and nicotinamide metabolism	NAD metabolic process	0.25	0.0	0.25	0.560167454416592	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Nicotine addiction	Nicotine addiction	Cellular response to gamma-aminobutyric acid stimulus	0.0	0.0	0.0	0.18835845923868139	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Nitrogen metabolism	Nitrogen metabolism	Glutamate metabolic process	0.5	0.0	0.5	0.49264364717975034	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Non-alcoholic fatty liver disease	Non-alcoholic fatty liver disease	Mitochondrial electron transport chain	0.0	0.0	0.0	0.26249913066649044	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Non-homologous end-joining	Non-homologous end-joining	DNA ligation during DNA repair	0.0	0.0	0.0	0.47766765766760044	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Non-small cell lung cancer	Non-small cell lung cancer	EGFR signaling pathway	0.0	0.0	0.0	0.278690520135425	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Notch signaling pathway	Notch signaling pathway	Negative regulation of Notch signaling pathway	1.0	1.0	1.0	0.7175103463359966	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Nucleotide excision repair	Nucleotide excision repair	Nucleotide excision repair	1.0	1.0	1.0	0.9999986467645262	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Olfactory transduction	Olfactory transduction	Olfactory transduction pathway	1.0	1.0	1.0	0.8643018835611911	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	One carbon pool by folate	One carbon pool by folate	One-carbon metabolism	0.4	0.25	0.4	0.6771551845240241	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Oocyte meiosis	Oocyte meiosis	Calcium signaling pathway	0.0	0.0	0.0	0.2619700781219584	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Osteoclast differentiation	Osteoclast differentiation	NF-kappa B signaling pathway	0.0	0.0	0.0	0.3037515845475265	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Other glycan degradation	Other glycan degradation	Lysosomal storage disease	0.0	0.0	0.0	0.4054986941439044	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Other types of O-glycan biosynthesis	Other types of O-glycan biosynthesis	O-glycan processing	0.3333333333333333	0.2	0.3333333333333333	0.6905800322850372	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ovarian steroidogenesis	Ovarian steroidogenesis	Cyclic nucleotide signaling pathway	0.0	0.0	0.0	0.26838768926530254	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Oxidative phosphorylation	Oxidative phosphorylation	Mitochondrial electron transport, NADH to Ubiquinone	0.0	0.0	0.0	0.4565473515790628	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Oxytocin signaling pathway	Oxytocin signaling pathway	Calcium signaling pathway	0.6666666666666666	0.5	0.6666666666666666	0.5891803617375754	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	PD-L1 expression and PD-1 checkpoint pathway in cancer	PD-L1 expression and PD-1 checkpoint pathway in cancer	MAPK signaling pathway	0.1	0.0	0.1	0.3503104955070503	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	PI3K-Akt signaling pathway	PI3K-Akt signaling pathway	Extracellular matrix component	0.0	0.0	0.0	0.29310839276779027	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	PPAR signaling pathway	PPAR signaling pathway	Fatty acid metabolism	0.0	0.0	0.0	0.3666363807012265	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pancreatic cancer	Pancreatic cancer	PI3K-Akt signaling pathway	0.0	0.0	0.0	0.2628802098893831	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pancreatic secretion	Pancreatic secretion	Salivary secretion	0.5	0.0	0.5	0.6410275631541076	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pantothenate and CoA biosynthesis	Pantothenate and CoA biosynthesis	Amino acid biosynthetic process	0.0	0.0	0.0	0.4484182525903286	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Parathyroid hormone synthesis, secretion and action	Parathyroid hormone synthesis, secretion and action	Positive regulation of cAMP biosynthetic process	0.0	0.0	0.0	0.26267882011373733	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Parkinson disease	Parkinson disease	Proteasome Complex	0.0	0.0	0.0	0.236989571439142	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pathogenic Escherichia coli infection	Pathogenic Escherichia coli infection	NF-kappa B signaling pathway	0.0	0.0	0.0	0.2147907412117977	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pathways in cancer	Pathways in cancer	Wnt signaling pathway	0.3333333333333333	0.0	0.3333333333333333	0.47676531161742053	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pathways of neurodegeneration	Pathways of neurodegeneration	Wnt signaling pathway	0.3333333333333333	0.0	0.3333333333333333	0.3913120645313649	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pentose and glucuronate interconversions	Pentose and glucuronate interconversions	UGT-mediated glucuronidation	0.0	0.0	0.0	0.500072121114632	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pentose phosphate pathway	Pentose phosphate pathway	Pentose phosphate pathway	1.0	1.0	1.0	0.9999987957639658	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Peroxisome	Peroxisome	Peroxisomal targeting signal import	1.0	0.0	1.0	0.49946317757990133	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pertussis	Pertussis	JNK cascade	0.0	0.0	0.0	0.16284221477343866	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Phagosome	Phagosome	Phagosome	1.0	0.0	1.0	0.9999988474322057	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Phenylalanine metabolism	Phenylalanine metabolism	histamine biosynthetic process	0.0	0.0	0.0	0.3893733246789489	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Phenylalanine, tyrosine and tryptophan biosynthesis	Phenylalanine, tyrosine and tryptophan biosynthesis	Phenylalanine metabolism	0.2	0.0	0.2	0.6510850925092433	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Phosphatidylinositol signaling system	Phosphatidylinositol signaling system	Phosphatidylinositol biosynthetic process	0.3333333333333333	0.0	0.3333333333333333	0.6950024652535328	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Phospholipase D signaling pathway	Phospholipase D signaling pathway	EGFR signaling pathway	0.5	0.3333333333333333	0.5	0.5576486641164707	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Phosphonate and phosphinate metabolism	Phosphonate and phosphinate metabolism	Cholinephosphotransferase activity	0.0	0.0	0.0	0.3737526279180799	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Phototransduction	Phototransduction	Visual phototransduction	1.0	0.0	1.0	0.8067706004735373	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Platelet activation	Platelet activation	Platelet activation	1.0	1.0	1.0	0.9999990436385403	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Porphyrin and chlorophyll metabolism	Porphyrin and chlorophyll metabolism	Heme biosynthetic process	0.0	0.0	0.0	0.5402793738158085	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Primary bile acid biosynthesis	Primary bile acid biosynthesis	Bile acid biosynthesis	0.75	0.6666666666666666	0.75	0.9109467088513666	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Primary immunodeficiency	Primary immunodeficiency	B cell receptor signaling pathway	0.0	0.0	0.0	0.30097389983189393	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Prion disease	Prion disease	Proteasome core complex	0.0	0.0	0.0	0.26382719375760455	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Progesterone-mediated oocyte maturation	Progesterone-mediated oocyte maturation	Ras signaling pathway	0.0	0.0	0.0	0.20132288581041027	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Prolactin signaling pathway	Prolactin signaling pathway	Jak-STAT signaling pathway	0.6666666666666666	0.5	0.6666666666666666	0.4997132906976935	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Propanoate metabolism	Propanoate metabolism	Butanoate metabolism	0.5	0.0	0.5	0.7913955607452196	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Prostate cancer	Prostate cancer	PI3K-Akt signaling pathway	0.0	0.0	0.0	0.2398995817721169	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Proteasome	Proteasome	Proteasome complex	1.0	0.0	1.0	0.8892399676058079	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Protein digestion and absorption	Protein digestion and absorption	Collagen formation	0.0	0.0	0.0	0.30563683572739986	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Protein export	Protein export	Signal recognition particle (SRP) pathway	0.0	0.0	0.0	0.3954913323983396	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Protein processing in endoplasmic reticulum	Protein processing in endoplasmic reticulum	Protein processing in endoplasmic reticulum	1.0	1.0	1.0	0.9999909978418079	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Proteoglycans in cancer	Proteoglycans in cancer	Ras signaling pathway}]	0.0	0.0	0.0	0.2427038811979636	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Proximal tubule bicarbonate reclamation	Proximal tubule bicarbonate reclamation	Cellular ion homeostasis	0.0	0.0	0.0	0.29094598379289904	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Purine metabolism	Purine metabolism	Adenosine nucleotides degradation	0.0	0.0	0.0	0.5511737960058105	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pyrimidine metabolism	Pyrimidine metabolism	Pyrimidine metabolism	1.0	1.0	1.0	1.0000000990485738	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Pyruvate metabolism	Pyruvate metabolism	Citric acid (TCA) cycle	0.0	0.0	0.0	0.41550505547065686	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	RIG-I-like receptor signaling pathway	RIG-I-like receptor signaling pathway	MAPK signaling pathway	0.3333333333333333	0.2	0.3333333333333333	0.489343208455966	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	RNA degradation	RNA degradation	mRNA degradation	0.5	0.0	0.5	0.7082984704590909	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	RNA polymerase	RNA polymerase	RNA polymerase activity	1.0	1.0	1.0	0.8523709395020291	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	RNA transport	RNA transport	Nuclear pore complex	0.0	0.0	0.0	0.3780526627568076	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Rap1 signaling pathway	Rap1 signaling pathway	PI3K-Akt signaling pathway	0.6666666666666666	0.5	0.6666666666666666	0.5901595461309697	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ras signaling pathway	Ras signaling pathway	Ras Signaling Pathway	1.0	1.0	1.0	0.9999988269286316	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Regulation of actin cytoskeleton	Regulation of actin cytoskeleton	Myosin filament	0.0	0.0	0.0	0.4195115281729088	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Regulation of lipolysis in adipocytes	Regulation of lipolysis in adipocytes	Adrenergic signaling in cardiomyocytes	0.2	0.0	0.2	0.5034985583454423	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Relaxin signaling pathway	Relaxin signaling pathway	EGFR signaling pathway	0.6666666666666666	0.5	0.6666666666666666	0.4888748103244327	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Renal cell carcinoma	Renal cell carcinoma	PI3K-Akt signaling pathway	0.0	0.0	0.0	0.19609196454714903	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Renin secretion	Renin secretion	Calcium signaling pathway	0.0	0.0	0.0	0.2877449906779709	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Renin-angiotensin system	Renin-angiotensin system	Renin-angiotensin system	1.0	1.0	1.0	1.0000000710898616	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Retinol metabolism	Retinol metabolism	Retinol metabolism	1.0	1.0	1.0	0.9999990296820588	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Retrograde endocannabinoid signaling	Retrograde endocannabinoid signaling	Mitochondrial respiratory chain complex I assembly	0.0	0.0	0.0	0.21387400578160576	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Rheumatoid arthritis	Rheumatoid arthritis	Angiogenesis	0.0	0.0	0.0	0.2941185781669002	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Riboflavin metabolism	Riboflavin metabolism	phosphorus metabolic process	0.5	0.0	0.5	0.4252167841428586	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ribosome	Ribosome	Ribosome	1.0	0.0	1.0	0.9999989135288402	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ribosome biogenesis in eukaryotes	Ribosome biogenesis in eukaryotes	rRNA processing	0.0	0.0	0.0	0.46370069473469466	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	SNARE interactions in vesicular transport	SNARE interactions in vesicular transport	Vesicle-mediated transport	0.2	0.0	0.2	0.5963269362468178	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Salivary secretion	Salivary secretion	Potassium-transporting ATPase activity	0.0	0.0	0.0	0.23223646537937637	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Salmonella infection	Salmonella infection	MAPK signaling pathway	0.0	0.0	0.0	0.14164285607770966	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Selenocompound metabolism	Selenocompound metabolism	Selenocysteine biosynthesis	0.0	0.0	0.0	0.6795975335750901	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Serotonergic synapse	Serotonergic synapse	Serotonergic synapse	1.0	1.0	1.0	0.9999990062174089	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Shigellosis	Shigellosis	NF-kappa B signaling pathway	0.0	0.0	0.0	0.17041901404005608	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Signaling pathways regulating pluripotency of stem cells	Signaling pathways regulating pluripotency of stem cells	Wnt signaling pathway	0.2857142857142857	0.16666666666666666	0.2857142857142857	0.5472999350624426	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Small cell lung cancer	Small cell lung cancer	NF-kappa B signaling pathway	0.0	0.0	0.0	0.19470054104568357	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Sphingolipid metabolism	Sphingolipid metabolism	sphingolipid biosynthetic process	0.5	0.0	0.5	0.7371570718690401	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Sphingolipid signaling pathway	Sphingolipid signaling pathway	Sphingolipid metabolism	0.3333333333333333	0.0	0.3333333333333333	0.733422803023715	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Spinocerebellar ataxia	Spinocerebellar ataxia	Proteasome complex	0.0	0.0	0.0	0.28197955457885754	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Spliceosome	Spliceosome	mRNA splicing, via spliceosome	1.0	0.0	1.0	0.6085413571440692	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Staphylococcus aureus infection	Staphylococcus aureus infection	Complement activation	0.0	0.0	0.0	0.2148940576343079	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Starch and sucrose metabolism	Starch and sucrose metabolism	Glycogenolysis pathway	0.0	0.0	0.0	0.45151122292453433	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Steroid biosynthesis	Steroid biosynthesis	Cholesterol biosynthetic process	0.0	0.0	0.0	0.6823241998359237	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Steroid hormone biosynthesis	Steroid hormone biosynthesis	Androgen and estrogen metabolism	0.0	0.0	0.0	0.5270111578043291	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Sulfur metabolism	Sulfur metabolism	Sulfur metabolism	1.0	1.0	1.0	1.0000000675937897	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Sulfur relay system	Sulfur relay system	Molybdenum cofactor biosynthetic process	0.0	0.0	0.0	0.359251401329857	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Synaptic vesicle cycle	Synaptic vesicle cycle	Synaptic vesicle exocytosis	0.6666666666666666	0.5	0.6666666666666666	0.7815220805925802	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Synthesis and degradation of ketone bodies	Synthesis and degradation of ketone bodies	Ketone body metabolism	0.3333333333333333	0.2	0.3333333333333333	0.6773456502945261	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Systemic lupus erythematosus	Systemic lupus erythematosus	antigen processing and presentation	0.0	0.0	0.0	0.20836305458286927	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	T cell receptor signaling pathway	T cell receptor signaling pathway	T cell receptor signaling pathway	1.0	1.0	1.0	0.9999990098476398	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	TGF-beta signaling pathway	TGF-beta signaling pathway	TGF-beta signaling pathway	1.0	1.0	1.0	0.9992642305674474	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	TNF signaling pathway	TNF signaling pathway	MAPK signaling pathway	0.6666666666666666	0.5	0.6666666666666666	0.5876347994883959	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Taste transduction	Taste transduction	Taste transduction	1.0	1.0	1.0	0.999998991945806	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Taurine and hypotaurine metabolism	Taurine and hypotaurine metabolism	gamma-glutamyl cycle	0.0	0.0	0.0	0.5007381508921301	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Terpenoid backbone biosynthesis	Terpenoid backbone biosynthesis	Isoprenoid biosynthetic process	0.0	0.0	0.0	0.6901865443977476	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Th1 and Th2 cell differentiation	Th1 and Th2 cell differentiation	Th1 and Th2 cell differentiation	1.0	1.0	1.0	0.9999989141832764	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Th17 cell differentiation	Th17 cell differentiation	MAPK cascade	0.0	0.0	0.0	0.2951636184784681	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Thermogenesis	Thermogenesis	Oxidative phosphorylation	0.0	0.0	0.0	0.3646773064217549	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Thiamine metabolism	Thiamine metabolism	Energy metabolism	0.5	0.0	0.5	0.5469681498984347	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Thyroid cancer	Thyroid cancer	MAPK signaling pathway	0.0	0.0	0.0	0.21844432768558053	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Thyroid hormone signaling pathway	Thyroid hormone signaling pathway	Insulin signaling pathway	0.5	0.3333333333333333	0.5	0.675333371657298	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Thyroid hormone synthesis	Thyroid hormone synthesis	Potassium-transporting ATPase complex	0.0	0.0	0.0	0.25159479975246957	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Tight junction	Tight junction	Regulation of actin cytoskeleton	0.0	0.0	0.0	0.32064182325648527	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Toll-like receptor signaling pathway	Toll-like receptor signaling pathway	TLR signaling pathway	0.4	0.25	0.4	0.8168510518092287	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Toxoplasmosis	Toxoplasmosis	Inflammatory response	0.0	0.0	0.0	0.24162617969539926	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Transcriptional misregulation in cancer	Transcriptional misregulation in cancer	Regulation of hematopoietic cell differentiation	0.0	0.0	0.0	0.3925841786473306	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Tryptophan metabolism	Tryptophan metabolism	Tryptophan metabolism	1.0	1.0	1.0	0.9999190906921755	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Tuberculosis	Tuberculosis	Inflammatory response	0.0	0.0	0.0	0.25332243489396095	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Type I diabetes mellitus	Type I diabetes mellitus	Antigen processing and presentation	0.0	0.0	0.0	0.24161407116933178	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Type II diabetes mellitus	Type II diabetes mellitus	Insulin signaling pathway	0.0	0.0	0.0	0.35786159547089147	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Tyrosine metabolism	Tyrosine metabolism	tyrosine metabolism	1.0	1.0	1.0	0.9999990398359668	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ubiquinone and other terpenoid-quinone biosynthesis	Ubiquinone and other terpenoid-quinone biosynthesis	Coenzyme Q biosynthetic process	0.0	0.0	0.0	0.7003281823201539	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Ubiquitin mediated proteolysis	Ubiquitin mediated proteolysis	Ubiquitin mediated proteolysis	1.0	1.0	1.0	0.999997234828481	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	VEGF signaling pathway	VEGF signaling pathway	Ras signaling pathway	0.6666666666666666	0.5	0.6666666666666666	0.505873449569781	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Valine, leucine and isoleucine degradation	Valine, leucine and isoleucine degradation	Branched-chain amino acid catabolic process	0.0	0.0	0.0	0.6201106706071418	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Various types of N-glycan biosynthesis	Various types of N-glycan biosynthesis	Protein N-glycosylation	0.16666666666666666	0.0	0.16666666666666666	0.6525113680448822	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Vascular smooth muscle contraction	Vascular smooth muscle contraction	Angiotensin signaling pathway	0.0	0.0	0.0	0.39960099065283305	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Vasopressin-regulated water reabsorption	Vasopressin-regulated water reabsorption	Regulation of intracellular transport	0.25	0.0	0.25	0.34348240718942147	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Vibrio cholerae infection	Vibrio cholerae infection	Proton transport ATPase activity	0.0	0.0	0.0	0.1482830442314008	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Viral carcinogenesis	Viral carcinogenesis	positive regulation of cell proliferation	0.0	0.0	0.0	0.3489183491610557	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Viral myocarditis	Viral myocarditis	Antigen processing and presentation	0.0	0.0	0.0	0.18912085246493676	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Viral protein interaction with cytokine and cytokine receptor	Viral protein interaction with cytokine and cytokine receptor	Chemokine signaling pathway	0.0	0.0	0.0	0.4709857603633124	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Vitamin B6 metabolism	Vitamin B6 metabolism	Pyridoxal 5'-phosphate salvage pathway	0.0	0.0	0.0	0.5411257251742929	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Vitamin digestion and absorption	Vitamin digestion and absorption	Folate transport	0.0	0.0	0.0	0.36703104086898564	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Wnt signaling pathway	Wnt signaling pathway	Wnt signaling pathway, canonical Wnt signaling pathway	1.0	1.0	1.0	0.833483723111196	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	Yersinia infection	Yersinia infection	Regulation of actin cytoskeleton	0.0	0.0	0.0	0.20885613258008104	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	alpha-Linolenic acid metabolism	alpha-Linolenic acid metabolism	Phospholipase A2 activity	0.0	0.0	0.0	0.425642344645596	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	beta-Alanine metabolism	beta-Alanine metabolism	Fatty acid beta-oxidation	0.3333333333333333	0.0	0.3333333333333333	0.4323463424811394	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	cAMP signaling pathway	cAMP signaling pathway	cAMP signaling pathway	1.0	1.0	1.0	0.9999990994686794	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	cGMP-PKG signaling pathway	cGMP-PKG signaling pathway	cGMP-PKG signaling pathway	1.0	1.0	1.0	0.9999991089779955	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	mRNA surveillance pathway	mRNA surveillance pathway	RNA surveillance pathway	0.6666666666666666	0.5	0.6666666666666666	0.7339294492325256	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	mTOR signaling pathway	mTOR signaling pathway	Wnt signaling pathway	0.6666666666666666	0.5	0.6666666666666666	0.5735432261426708	llm2geneset
+gpt-3.5-turbo-0125	KEGG_2021_Human	p53 signaling pathway	p53 signaling pathway	Cell cycle	0.0	0.0	0.0	0.35029484286928714	llm2geneset
