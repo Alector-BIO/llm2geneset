@@ -6,12 +6,10 @@ from importlib import resources
 from typing import List
 
 import json_repair
-import numpy as np
 import tiktoken
 import tqdm.asyncio
 from asynciolimiter import StrictLimiter
 from scipy.stats import hypergeom
-from sklearn.metrics.pairwise import cosine_similarity
 
 
 def read_gmt(gmt_file: str):
@@ -72,42 +70,6 @@ def get_embeddings(client, text_list: List[str], model="text-embedding-3-large")
     # for the text_list, convert sliding windows of text into sliding
     # windows of embeddings
     return all_embeddings
-
-
-def get_csim(
-    client,
-    lib,
-    sample1,
-    sample2,
-    spre="biological function of ",
-    gpre="genes involved in ",
-):
-    """Get cosine similarity between gene set description and sample (w/ prefix)."""
-    if not spre.endswith(" "):
-        spre += " "
-    if not gpre.endswith(" "):
-        gpre += " "
-
-    gene_sets = list(lib.keys())
-    gene_sets_descriptive = [gpre + i for i in gene_sets]
-
-    if sample2 is not None:
-        merged = gene_sets_descriptive + [spre + sample1] + [spre + sample2]
-        emb = get_embeddings(client, merged)
-        # compute similarity between geneset list, NOTE
-        csim1 = cosine_similarity(emb[: len(gene_sets)], [emb[len(gene_sets)]])
-        csim2 = cosine_similarity(emb[: len(gene_sets)], [emb[len(gene_sets) + 1]])
-
-        csim1 = dict(zip(gene_sets, csim1.squeeze()))
-        csim2 = dict(zip(gene_sets, csim2.squeeze()))
-
-        return (csim1, csim2)
-    else:
-        merged = gene_sets_descriptive + [sample1]
-        emb = get_embeddings(client, merged)
-        csim1 = cosine_similarity(emb[: len(gene_sets)], [emb[len(gene_sets)]])
-        csim1 = dict(zip(gene_sets, csim1.squeeze()))
-        return (csim1, None)
 
 
 def extract_last_code_block(markdown_text):
@@ -432,183 +394,6 @@ def sel_conf(descr, gen_genes, conf_vals):
     return conf_genes
 
 
-async def get_pathways(
-    aclient, cond1, cond2, n=3, model="gpt-4o", n_retry=3, use_sysmsg=False
-):
-    """Return a list of candidate pathways.
-
-    @param cond1: study design sample 1 (analogous to tissue x or disease)
-    @param cond2: study design sample 2 (tissue y or healthy control)
-    @param n: number of pathways we want LLM to produce
-    @param n_retry: if LLM fails to give JSON format, ask to try again
-    """
-
-    sys_msg = "You are an expert in cellular and molecular biology."
-
-    prompt_file = "pathways_concise.txt"
-
-    with resources.open_text("llm2geneset.prompts", prompt_file) as file:
-        prompt = file.read()
-
-    # Create the prompts by formatting the template
-    cond1_high_prompt = prompt.format(cond1=cond1, cond2=cond2, n=n)
-    cond2_high_prompt = prompt.format(cond1=cond2, cond2=cond1, n=n)
-
-    rate_limiter = StrictLimiter(0.95 * 10000.0 / 60.0)
-
-    async def complete(p):
-        await rate_limiter.wait()
-        for attempt in range(n_retry):
-            messages = [{"role": "user", "content": p}]
-            if use_sysmsg:
-                messages = [{"role": "system", "content": sys_msg}] + messages
-            r = await aclient.chat.completions.create(model=model, messages=messages)
-            resp = r.choices[0].message.content
-            pathways = []
-            try:
-                last_code = extract_last_code_block(resp)
-                json_parsed = json_repair.loads(last_code)  # Use json.loads directly
-                # Ensure correct structure
-                json_parsed = [
-                    path for path in json_parsed if isinstance(path["p"], str)
-                ]
-                pathways = [path["p"] for path in json_parsed]
-                return {
-                    "parsed_pathways": pathways,
-                    "ntries": attempt + 1,
-                }
-            except Exception as e:
-                print("retrying")
-                print(e)
-                print(p)
-                print(resp)
-                if attempt == n_retry - 1:
-                    raise RuntimeError("Retries exceeded.") from e
-
-    # Prepare the list of prompts
-    cond1_high_prompts = [cond1_high_prompt]
-    cond2_high_prompts = [cond2_high_prompt]
-
-    # Run completions asynchronously.
-    res1 = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in cond1_high_prompts))
-    res2 = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in cond2_high_prompts))
-    res = res1[0]["parsed_pathways"] + res2[0]["parsed_pathways"]
-    res = np.unique(res)
-
-    return res
-
-
-async def get_pathways_from_genes(
-    aclient, genes, model="gpt-4o", n_retry=3, use_sysmsg=False
-):
-    """Return a list of candidate pathways.
-
-    @param genes: string of list of protein coding genes joined by comma.
-    eg.,  "ABCA1, ABCA3, ABCA4, ABCA7, ABCA12,
-    ABCA13"
-    @param n_retry: if LLM fails to give JSON format, ask to try again
-    """
-
-    sys_msg = "You are an expert in cellular and molecular biology."
-
-    prompt_file = "pathways_from_genes.txt"
-
-    with resources.open_text("llm2geneset.prompts", prompt_file) as file:
-        prompt = file.read()
-
-    # Create the prompts by formatting the template
-    prompts = [prompt.format(genes=g) for g in genes]
-    rate_limiter = StrictLimiter(0.95 * 10000.0 / 60.0)
-
-    async def complete(p):
-        await rate_limiter.wait()
-        for attempt in range(n_retry):
-            messages = [{"role": "user", "content": p}]
-            if use_sysmsg:
-                messages = [{"role": "system", "content": sys_msg}] + messages
-            r = await aclient.chat.completions.create(model=model, messages=messages)
-            resp = r.choices[0].message.content
-
-            try:
-                last_code = extract_last_code_block(resp)
-                json_parsed = json_repair.loads(last_code)  # Use json.loads directly
-                # Ensure correct structure
-                json_parsed = [
-                    path for path in json_parsed if isinstance(path["p"], str)
-                ]
-                pathways = [path["p"] for path in json_parsed]
-                confidence = [g["confidence"] for g in json_parsed]
-                return {
-                    "parsed_pathways": pathways,
-                    "conf": confidence,
-                    "ntries": attempt + 1,
-                }
-            except Exception as e:
-                print("retrying")
-                print(e)
-                print(p)
-                print(resp)
-                if attempt == n_retry - 1:
-                    raise RuntimeError("Retries exceeded.") from e
-
-    # Prepare the list of prompts
-    res = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in prompts))
-
-    return res
-
-
-async def get_genes_list(aclient, genes, descr, model="gpt-4o", n_retry=3):
-    """Get genes for given descriptions using asyncio."""
-    prompt_file = "genes_single_gene.txt"
-    with resources.open_text("llm2geneset.prompts", prompt_file) as file:
-        prompt = file.read()
-
-    format_file = "genes_single_gene_format.txt"
-    with resources.open_text("llm2geneset.prompts", format_file) as file:
-        format_msg = file.read()
-
-    prompts = [prompt.format(descr=descr, gene=g) for g in genes]
-
-    # TODO: Make this rate limit a parameter.
-    rate_limiter = StrictLimiter(0.50 * 10000.0 / 60.0)
-
-    sys_msg = "You are a helpful assistant to a molecular and cellular biologist."
-
-    async def complete(p):
-        for attempt in range(n_retry):
-            await rate_limiter.wait()
-            # Count input tokens.
-            # Prepend sys message if requested.
-            messages = [
-                {"role": "system", "content": sys_msg},
-                {"role": "user", "content": p},
-            ]
-            # LLM
-            r = await aclient.chat.completions.create(model=model, messages=messages)
-            resp_gene = r.choices[0].message.content
-            messages = [
-                {"role": "system", "content": sys_msg},
-                {"role": "user", "content": p},
-                {"role": "assistant", "content": resp_gene},
-                {"role": "user", "content": format_msg},
-            ]
-            r = await aclient.chat.completions.create(model=model, messages=messages)
-            resp_format = r.choices[0].message.content
-            try:
-                last_code = extract_last_code_block(resp_format)
-                json_parsed = json_repair.loads(last_code)
-                json_parsed["response"] = resp_gene
-                return json_parsed
-            except Exception as e:
-                print(resp_format)
-                if attempt == n_retry - 1:
-                    raise RuntimeError("Retries exceeded.") from e
-
-    # Run completions asynchronously.
-    res = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in prompts))
-    return res
-
-
 async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=3):
     """Run GSAI from Ideker Lab.
 
@@ -650,14 +435,13 @@ async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=
         else:
             return None
 
-    def parse_list(text):
-        pattern_skip_confidence = r"LLM self-assessed confidence: \d+\.\d+\n\n"
-        relevant_text = re.split(pattern_skip_confidence, text, 1)[-1]
-        pattern_list_items = (
-            r"\d+\.\s*([A-Z0-9]+)\s*\((.*?)\)\s*(.*?)(?=\n\d+\.|\n[A-Z]|\Z)"
+    def parse_list(input_text):
+        list_items = re.findall(
+            r"^\d+\.\s.*?(?=\n|\Z)", input_text, re.DOTALL | re.MULTILINE
         )
-        matches = re.findall(pattern_list_items, relevant_text, re.DOTALL)
-        return {match[0]: f"({match[1]}) {match[2]}".strip() for match in matches}
+        text_after_list = [re.sub(r"^\d+\.\s", "", item) for item in list_items]
+        text_after_list = [item.strip() for item in text_after_list]
+        return list_items
 
     async def complete(p):
         await rate_limiter.wait()
