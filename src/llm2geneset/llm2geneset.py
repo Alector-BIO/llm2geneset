@@ -6,6 +6,7 @@ from importlib import resources
 from typing import List
 
 import json_repair
+import pandas as pd
 import tiktoken
 import tqdm.asyncio
 from asynciolimiter import StrictLimiter
@@ -15,6 +16,9 @@ from scipy.stats import hypergeom
 def read_gmt(gmt_file: str):
     """
     Load a GMT file.
+
+    See for details:
+    https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats
 
     Args:
        gmt_file: a gene set file in Broad GMT format
@@ -60,12 +64,10 @@ def get_embeddings(client, text_list: List[str], model="text-embedding-3-large")
     # Process in batches of 2048
     all_embeddings = []
     for batch in chunks(text_list_cleaned, 2048):  # for each sliding window
-        # we get the response, which includes the embedding vector
         response = client.embeddings.create(model=model, input=batch).data
         # Extract embeddings for the current batch (sliding window) and append to
         # the all_embeddings list
         batch_embeddings = [resp.embedding for resp in response]
-        # we append the embeddings for this sliding window to all embeddings
         all_embeddings.extend(batch_embeddings)
     # for the text_list, convert sliding windows of text into sliding
     # windows of embeddings
@@ -113,6 +115,7 @@ async def get_genes(
                      per gene
        use_sysmsg: apply system message to model input
        n_retry: number of times to retry
+       use_tqdm: true/false show tqdm progress bar
     Returns:
       list of a list of dicts with
       genes, unique genes in gene set
@@ -492,31 +495,37 @@ async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=
     return res
 
 
-async def bp_from_genes(aclient, model, genes: List[str], n_retry=3):
+async def bp_from_genes(aclient, model, genes: List[str], n_pathways=5, n_retry=3):
     """Propose a list of biological processes from a set of genes.
 
     Args:
        aclient: asynchronous OpenAI client
        model: OpenAI model
        genes: list of genes to use to propose
+       n_pathways: number of pathways to propose
        n_retry: number of retries to get correctly parsing output
     Returns:
        List of processes and pathways proposed based on input
        genes.
     """
     # Generate message.
-    prompt_file = "pathways_from_genes2.txt"
+    prompt_file = "pathways_from_genes.txt"
 
     with resources.open_text("llm2geneset.prompts", prompt_file) as file:
         prompt = file.read()
 
     # Create the prompts by formatting the template
-    p = prompt.format(genes=",".join(genes))
+    p = prompt.format(n_pathways=n_pathways, genes=",".join(genes))
 
+    encoding = tiktoken.encoding_for_model(model)
+    in_toks = 0
+    out_toks = 0
     for attempt in range(n_retry):
+        in_toks += len(encoding.encode(p))
         messages = [{"role": "user", "content": p}]
         r = await aclient.chat.completions.create(model=model, messages=messages)
         resp = r.choices[0].message.content
+        out_toks += len(encoding.encode(resp))
         try:
             last_code = extract_last_code_block(resp)
             json_parsed = json_repair.loads(last_code)  # Use json.loads directly
@@ -524,7 +533,7 @@ async def bp_from_genes(aclient, model, genes: List[str], n_retry=3):
             pathways = [path["p"] for path in json_parsed]
             if len(pathways) == 0:
                 raise ValueError("No pathways returned.")
-            return pathways
+            return {"pathways": pathways, "in_toks": in_toks, "out_toks": out_toks}
         except Exception as e:
             print("retrying")
             print(p)
@@ -535,10 +544,28 @@ async def bp_from_genes(aclient, model, genes: List[str], n_retry=3):
 
 
 async def gs_proposal(
-    aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=1
+    aclient,
+    protein_lists: List[List[str]],
+    model="gpt-4o",
+    n_background=19846,
+    n_pathways=5,
+    n_retry=1,
 ):
-    """ """
+    """Proposal-based approach to map from genes to function.
 
+    Args:
+       aclient: asynchronous OpenAI client
+       protein_lists: list of a list of genes, gene sets to
+                      assign function
+       model: OpenAI model string
+       n_background: number of genes in background set
+       n_pathways: number of pathways to propose given a gene list
+       n_retry: number of retries to get valid parsed output
+    Returns:
+      A dict with tot_in_toks (input) and tot_out_toks (output)
+      tokens used. A pandas data frame with the hypergeometric
+      overrepresentation results for each proposed gene set.
+    """
     rate_limiter = StrictLimiter(0.95 * 10000.0 / 60.0)
 
     async def gse(genes):
@@ -546,21 +573,43 @@ async def gs_proposal(
         # 1. Examine genes and propose possible pathways and processes.
         bio_process = await bp_from_genes(aclient, model, genes)
 
-        # 2. Generate these gene sets (with and) without input genes as context.
-        proposed = await get_genes(aclient, bio_process, model=model, use_tqdm=False)
+        # 2. Generate these gene sets without input genes as context.
+        proposed = await get_genes(
+            aclient, bio_process["pathways"], model=model, use_tqdm=False
+        )
 
-        p_vals = []
-        for idx in range(len(bio_process)):
+        # 3. Get over-representation p-values.
+        tot_in_toks = bio_process["in_toks"]
+        tot_out_toks = bio_process["out_toks"]
+        output = []
+        for idx in range(len(bio_process["pathways"])):
             llm_genes = proposed[idx]["parsed_genes"]
+            # Use hypergeometric to compute p-value.
             intersection = set(llm_genes).intersection(set(genes))
             p_val = hypergeom.sf(
-                len(intersection) - 1, 19846 - len(genes), len(genes), len(llm_genes)
+                len(intersection) - 1,
+                n_background - len(genes),
+                len(genes),
+                len(llm_genes),
             )
-            p_vals.append(p_val)
+            tot_in_toks += proposed[idx]["in_toks"]
+            tot_out_toks += proposed[idx]["out_toks"]
+            output.append(
+                {
+                    "bio_process": bio_process["pathways"][idx],
+                    "in_toks": proposed[idx]["in_toks"],
+                    "out_toks": proposed[idx]["out_toks"],
+                    "p_val": p_val,
+                }
+            )
 
-        res_pval = list(zip(bio_process, p_vals))
-        res_pval = sorted(res_pval, key=lambda x: x[1])
-        return res_pval
+        df_out = pd.DataFrame(output)
+        df_out.sort_values("p_val", inplace=True)
+        return {
+            "tot_in_toks": tot_in_toks,
+            "tot_out_toks": tot_out_toks,
+            "ora_results": df_out,
+        }
 
     res = await tqdm.asyncio.tqdm.gather(*(gse(p) for p in protein_lists))
     return res

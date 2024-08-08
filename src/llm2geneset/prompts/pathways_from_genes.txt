@@ -1,4 +1,4 @@
-List about 5 biological pathways, biological processes, or cellular components that contain the following genes """{genes}""" with high confidence. Be as specific as possible. Use the following JSON schema:
+List about {n_pathways} biological pathways, biological processes, or cellular components that contain the following genes """{genes}""" with high confidence. Be as specific as possible. Use the following JSON schema:
 ```json
 {{
     "type": "array",
@@ -19,7 +19,5 @@ Example output will look like the following:
  {{"p":"bp_or_pathway2"}},
  {{"p":"bp_or_pathway3"}},
  {{"p":"bp_or_pathway4"}},
- {{"p":"bp_or_pathway5}}]
 ```
 The element `p` designates a pathway, biological process or cellular component. Place the output in a JSON code block. Do not add any comments in the JSON code block.
-
