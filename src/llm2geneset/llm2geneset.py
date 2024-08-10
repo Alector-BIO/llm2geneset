@@ -41,12 +41,16 @@ def read_gmt(gmt_file: str):
     return (descr, genes)
 
 
-def get_embeddings(client, text_list: List[str], model="text-embedding-3-large"):
+def get_embeddings(
+    client, text_list: List[str], model="text-embedding-3-large", batchsz=2048
+):
     """Get embeddings using OpenAI API, processing in batches of 2048.
 
     Args:
+        client: synchronous OpenAI client
         text_list: lists of texts to embed
         model: embedding model
+        batchsz: size of batches max is 2048
     Returns:
         List of embeddings.
     """
