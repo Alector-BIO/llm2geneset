@@ -218,6 +218,7 @@ async def get_genes_context(
        context: list of textual context, a string
        model: OpenAI model name
        n_retry: number of retries per
+
     """
     prompt_file = "genes_concise_context.txt"
 
@@ -511,6 +512,7 @@ async def bp_from_genes(aclient, model, genes: List[str], n_pathways=5, n_retry=
     Returns:
        List of processes and pathways proposed based on input
        genes.
+
     """
     # Generate message.
     prompt_file = "pathways_from_genes.txt"
