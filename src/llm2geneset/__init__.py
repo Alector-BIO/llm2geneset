@@ -28,11 +28,11 @@ from .llm2geneset import (
 
 __all__ = [
     "read_gmt",
+    "get_embeddings",
     "get_genes",
     "ensemble_genes",
     "sel_conf",
     "get_genes_context",
-    "get_embeddings",
     "gsai",
     "gs_proposal",
 ]
