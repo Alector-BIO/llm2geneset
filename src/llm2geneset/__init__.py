@@ -16,6 +16,7 @@ finally:
     del version, PackageNotFoundError
 
 from .llm2geneset import (
+    bp_from_genes,
     ensemble_genes,
     get_embeddings,
     get_genes,
@@ -27,6 +28,7 @@ from .llm2geneset import (
 )
 
 __all__ = [
+    "bp_from_genes",
     "read_gmt",
     "get_embeddings",
     "get_genes",

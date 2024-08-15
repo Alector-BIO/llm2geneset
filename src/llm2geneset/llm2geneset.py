@@ -190,14 +190,10 @@ async def get_genes(
                     "ntries": attempt + 1,
                 }
             except Exception as e:
-                # print("retrying")
-                # print(e)
-                # print(p)
-                # print(resp)
                 if attempt == n_retry - 1:
                     raise RuntimeError("Retries exceeded.") from e
 
-    # Run completions asynchronously.
+    # Run completions asynchronously. Display progress bar if requested.
     if use_tqdm:
         res = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in prompts))
     else:
@@ -619,3 +615,14 @@ async def gs_proposal(
 
     res = await tqdm.asyncio.tqdm.gather(*(gse(p) for p in protein_lists))
     return res
+
+
+def simple_ora(genes: List[str], gene_sets):
+    """
+    Run simple overrepresentation analysis on a set of genes.
+
+    Args:
+       genes:
+       gene_sets: gene sets
+    """
+    pass
