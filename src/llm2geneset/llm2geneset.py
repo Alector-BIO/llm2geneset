@@ -585,7 +585,7 @@ async def gs_proposal(
         tot_out_toks = bio_process["out_toks"]
         output = []
         for idx in range(len(bio_process["pathways"])):
-            llm_genes = proposed[idx]["parsed_genes"]
+            llm_genes = list(set(proposed[idx]["parsed_genes"]))
             # Use hypergeometric to compute p-value.
             intersection = set(llm_genes).intersection(set(genes))
             p_val = hypergeom.sf(
@@ -596,12 +596,24 @@ async def gs_proposal(
             )
             tot_in_toks += proposed[idx]["in_toks"]
             tot_out_toks += proposed[idx]["out_toks"]
+
+            generatio = None
+            if len(llm_genes) > 0:
+                generatio = float(len(intersection)) / len(llm_genes)
+
             output.append(
                 {
                     "bio_process": bio_process["pathways"][idx],
+                    "ngenes": len(set(genes)),
+                    "nllm": len(llm_genes),
+                    "ninter": len(intersection),
+                    "generatio": generatio,
+                    "bgratio": float(len(set(llm_genes))) / n_background,
+                    "p_val": p_val,
                     "in_toks": proposed[idx]["in_toks"],
                     "out_toks": proposed[idx]["out_toks"],
-                    "p_val": p_val,
+                    "intersection": ",".join(list(intersection)),
+                    "llm_genes": ",".join(llm_genes),
                 }
             )
 

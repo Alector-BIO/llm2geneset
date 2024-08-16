@@ -257,3 +257,39 @@ def efetch_pubmed_sync(pubmed_ids):
         )
 
     return abstracts
+
+
+def efetch_pmc(pmcid):
+    """Uses efetch to obtain full text article."""
+    http = urllib3.PoolManager()
+    efetch_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
+
+    # Join PubMed IDs together.
+    fields = {
+        "db": "pmc",
+        "id": pmcid,
+        "api_key": os.getenv("NCBI_API_KEY"),
+        "retmode": "xml",
+    }
+
+    efetch_response = http.request_encode_body(
+        "POST",
+        efetch_url,
+        encode_multipart=False,
+        fields=fields,
+    )
+
+    soup = BeautifulSoup(efetch_response.data, "xml")
+
+    from bs4 import Comment
+
+    pub_msg = (
+        "The publisher of this article does not allow "
+        "downloading of the full text in XML form."
+    )
+    comments = soup.findAll(text=lambda text: isinstance(text, Comment))
+    if len(comments) > 0:
+        if comments[0] == pub_msg:
+            return None
+
+    return soup
