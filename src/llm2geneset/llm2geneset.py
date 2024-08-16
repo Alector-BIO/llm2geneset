@@ -573,7 +573,7 @@ async def gs_proposal(
     async def gse(genes):
         await rate_limiter.wait()
         # 1. Examine genes and propose possible pathways and processes.
-        bio_process = await bp_from_genes(aclient, model, genes)
+        bio_process = await bp_from_genes(aclient, model, genes, n_pathways)
 
         # 2. Generate these gene sets without input genes as context.
         proposed = await get_genes(
