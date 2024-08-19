@@ -11,6 +11,7 @@ import tiktoken
 import tqdm.asyncio
 from asynciolimiter import StrictLimiter
 from scipy.stats import hypergeom
+from statsmodels.stats.multitest import multipletests
 
 
 def read_gmt(gmt_file: str):
@@ -610,19 +611,25 @@ async def gs_proposal(
                     "generatio": generatio,
                     "bgratio": float(len(set(llm_genes))) / n_background,
                     "p_val": p_val,
-                    "in_toks": proposed[idx]["in_toks"],
-                    "out_toks": proposed[idx]["out_toks"],
                     "intersection": ",".join(list(intersection)),
                     "llm_genes": ",".join(llm_genes),
+                    "in_toks": proposed[idx]["in_toks"],
+                    "out_toks": proposed[idx]["out_toks"],
                 }
             )
-
-        df_out = pd.DataFrame(output)
-        df_out.sort_values("p_val", inplace=True)
+        # Generate output, adjust p-values.
+        df = pd.DataFrame(output)
+        df.sort_values("p_val", inplace=True)
+        _, p_adj, _, _ = multipletests(df["p_val"], method="fdr_bh")
+        df["p_adj"] = p_adj
+        loc = df.columns.get_loc("p_val") + 1
+        new_columns = df.columns.tolist()
+        new_columns.insert(loc, new_columns.pop(new_columns.index("p_adj")))
+        df = df[new_columns]
         return {
             "tot_in_toks": tot_in_toks,
             "tot_out_toks": tot_out_toks,
-            "ora_results": df_out,
+            "ora_results": df,
         }
 
     res = await tqdm.asyncio.tqdm.gather(*(gse(p) for p in protein_lists))
