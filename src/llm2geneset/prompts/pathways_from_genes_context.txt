@@ -1,0 +1,23 @@
+List {n_pathways} biological pathways, biological processes, or cellular components that contain the following genes """{genes}""". Also consider the following context as related to the genes: """{context}""". Use the following JSON schema:
+```json
+{{
+    "type": "array",
+    "items": {{
+        "type": "object",
+        "properties": {{
+            "p": {{
+                "type": "string",
+            }},
+        }},
+        "required": ["p"]
+    }}
+}}
+```
+Example output will look like the following:
+```json
+[{{"p":"BP or Pathway 1"}},
+ {{"p":"BP or Pathway 2"}},
+ {{"p":"BP or Pathway 3"}},
+ {{"p":"BP or Pathway 4"}}
+```
+The element `p` designates a pathway, biological process or cellular component. Place the output in a JSON code block. Do not add any comments in the JSON code block.
