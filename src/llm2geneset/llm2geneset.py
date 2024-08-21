@@ -497,13 +497,16 @@ async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=
     return res
 
 
-async def bp_from_genes(aclient, model, genes: List[str], n_pathways=5, n_retry=3):
+async def bp_from_genes(
+    aclient, model, genes: List[str], n_pathways=5, context="", n_retry=3
+):
     """Propose a list of biological processes from a set of genes.
 
     Args:
        aclient: asynchronous OpenAI client
        model: OpenAI model
        genes: list of genes to use to propose
+       context: string describing context to consider when proposing pathways.
        n_pathways: number of pathways to propose
        n_retry: number of retries to get correctly parsing output
     Returns:
@@ -513,13 +516,19 @@ async def bp_from_genes(aclient, model, genes: List[str], n_pathways=5, n_retry=
     """
     # Generate message.
     prompt_file = "pathways_from_genes.txt"
+    if context != "":
+        prompt_file = "pathways_from_genes_context.txt"
 
     with resources.open_text("llm2geneset.prompts", prompt_file) as file:
         prompt = file.read()
 
     # Create the prompts by formatting the template
-    p = prompt.format(n_pathways=n_pathways, genes=",".join(genes))
+    if context == "":
+        p = prompt.format(n_pathways=n_pathways, genes=",".join(genes))
+    else:
+        p = prompt.format(context=context, n_pathways=n_pathways, genes=",".join(genes))
 
+    print(p)
     encoding = tiktoken.encoding_for_model(model)
     in_toks = 0
     out_toks = 0
@@ -550,6 +559,7 @@ async def gs_proposal(
     aclient,
     protein_lists: List[List[str]],
     model="gpt-4o",
+    context="",
     n_background=19846,
     n_pathways=5,
     n_retry=1,
@@ -574,7 +584,7 @@ async def gs_proposal(
     async def gse(genes):
         await rate_limiter.wait()
         # 1. Examine genes and propose possible pathways and processes.
-        bio_process = await bp_from_genes(aclient, model, genes, n_pathways)
+        bio_process = await bp_from_genes(aclient, model, genes, n_pathways, context)
 
         # 2. Generate these gene sets without input genes as context.
         proposed = await get_genes(
@@ -598,21 +608,28 @@ async def gs_proposal(
             tot_in_toks += proposed[idx]["in_toks"]
             tot_out_toks += proposed[idx]["out_toks"]
 
-            generatio = None
+            generatio = float(len(intersection)) / len(set(genes))
+            bgratio = float(len(set(llm_genes))) / n_background
+
+            richFactor = None
+            foldEnrich = None
             if len(llm_genes) > 0:
-                generatio = float(len(intersection)) / len(llm_genes)
+                richFactor = float(len(intersection)) / len(set(llm_genes))
+                foldEnrich = generatio / bgratio
 
             output.append(
                 {
-                    "bio_process": bio_process["pathways"][idx],
-                    "ngenes": len(set(genes)),
-                    "nllm": len(llm_genes),
-                    "ninter": len(intersection),
+                    "set_descr": bio_process["pathways"][idx],
                     "generatio": generatio,
-                    "bgratio": float(len(set(llm_genes))) / n_background,
+                    "bgratio": bgratio,
+                    "richFactor": richFactor,
+                    "foldEnrich": foldEnrich,
                     "p_val": p_val,
                     "intersection": ",".join(list(intersection)),
-                    "llm_genes": ",".join(llm_genes),
+                    "set_genes": ",".join(llm_genes),
+                    "ngenes": len(set(genes)),
+                    "nset": len(llm_genes),
+                    "ninter": len(intersection),
                     "in_toks": proposed[idx]["in_toks"],
                     "out_toks": proposed[idx]["out_toks"],
                 }
@@ -636,12 +653,59 @@ async def gs_proposal(
     return res
 
 
-def simple_ora(genes: List[str], gene_sets):
+def simple_ora(genes: List[str], set_descr, gene_sets, n_background=19846):
     """
     Run simple overrepresentation analysis on a set of genes.
 
     Args:
-       genes:
-       gene_sets: gene sets
+       genes: genes on which to perform overreprsentation analysis
+       set_descr: list of gene set descriptions
+       gene_sets: list of a list of genes
+       n_background: size of background gene set
     """
-    pass
+    output = []
+    for idx in range(len(set_descr)):
+        set_genes = list(set(gene_sets[idx]))
+        # Use hypergeometric to compute p-value.
+        intersection = set(set_genes).intersection(set(genes))
+        p_val = hypergeom.sf(
+            len(intersection) - 1,
+            n_background - len(genes),
+            len(genes),
+            len(set_genes),
+        )
+        generatio = float(len(intersection)) / len(set(genes))
+        bgratio = float(len(set(set_genes))) / n_background
+
+        richFactor = None
+        foldEnrich = None
+        if len(set_genes) > 0:
+            richFactor = float(len(intersection)) / len(set(set_genes))
+            foldEnrich = generatio / bgratio
+
+        output.append(
+            {
+                "set_descr": set_descr[idx],
+                "generatio": generatio,
+                "bgratio": bgratio,
+                "richFactor": richFactor,
+                "foldEnrich": foldEnrich,
+                "p_val": p_val,
+                "intersection": ",".join(list(intersection)),
+                "set_genes": ",".join(set_genes),
+                "ngenes": len(set(genes)),
+                "nset": len(set_genes),
+                "ninter": len(intersection),
+            }
+        )
+
+    # Generate output, adjust p-values.
+    df = pd.DataFrame(output)
+    df.sort_values("p_val", inplace=True)
+    _, p_adj, _, _ = multipletests(df["p_val"], method="fdr_bh")
+    df["p_adj"] = p_adj
+    loc = df.columns.get_loc("p_val") + 1
+    new_columns = df.columns.tolist()
+    new_columns.insert(loc, new_columns.pop(new_columns.index("p_adj")))
+    df = df[new_columns]
+    return df

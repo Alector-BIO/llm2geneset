@@ -1,4 +1,4 @@
-List {n_pathways} biological pathways, biological processes, or cellular components that contain the following genes """{genes}""" with high confidence. Be as specific as possible. Use the following JSON schema:
+List {n_pathways} biological pathways, biological processes, or cellular components that contain the following genes """{genes}""" with high confidence. Be as specific as possible. List non-overlapping pathways, processes, or components. Use the following JSON schema:
 ```json
 {{
     "type": "array",
@@ -15,9 +15,9 @@ List {n_pathways} biological pathways, biological processes, or cellular compone
 ```
 Example output will look like the following:
 ```json
-[{{"p":"bp or pathway 1"}},
- {{"p":"bp or pathway 2"}},
- {{"p":"bp or pathway 3"}},
- {{"p":"bp or pathway 4"}},
+[{{"p":"BP or Pathway 1"}},
+ {{"p":"BP or Pathway 2"}},
+ {{"p":"BP or Pathway 3"}},
+ {{"p":"BP or Pathway 4"}}
 ```
 The element `p` designates a pathway, biological process or cellular component. Place the output in a JSON code block. Do not add any comments in the JSON code block.

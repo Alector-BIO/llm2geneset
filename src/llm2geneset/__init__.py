@@ -25,6 +25,7 @@ from .llm2geneset import (
     gsai,
     read_gmt,
     sel_conf,
+    simple_ora,
 )
 
 __all__ = [
@@ -37,6 +38,7 @@ __all__ = [
     "get_genes_context",
     "gsai",
     "gs_proposal",
+    "simple_ora",
 ]
 
 
