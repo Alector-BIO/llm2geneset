@@ -7,7 +7,6 @@ from typing import List
 
 import json_repair
 import pandas as pd
-import tiktoken
 import tqdm.asyncio
 from asynciolimiter import StrictLimiter
 from scipy.stats import hypergeom
@@ -132,6 +131,9 @@ async def get_genes(
     """
     prompt_file = "genes_concise.txt"
 
+    # TODO: Modify to accept context per description and use prompt e.g.
+    # prompt_file = "genes_concise_context.txt"
+
     # If requested, use prompts that require reasoning or confidence.
     if prompt_type == "reason":
         prompt_file = "genes_concise_reason.txt"
@@ -140,8 +142,6 @@ async def get_genes(
 
     with resources.open_text("llm2geneset.prompts", prompt_file) as file:
         prompt = file.read()
-
-    encoding = tiktoken.encoding_for_model(model)
 
     sys_msg = "You are an expert in cellular and molecular biology."
 
@@ -155,18 +155,18 @@ async def get_genes(
         in_toks = 0
         out_toks = 0
         for attempt in range(n_retry):
-            # Count input tokens.
-            in_toks += len(encoding.encode(p))
             # Prepend sys message if requested.
             messages = [{"role": "user", "content": p}]
             if use_sysmsg:
                 messages = [{"role": "system", "content": sys_msg}] + messages
-                in_toks += len(encoding.encode(sys_msg))
             # LLM
-            r = await aclient.chat.completions.create(model=model, messages=messages)
+            r = await aclient.chat.completions.create(
+                model=model, messages=messages, seed=3272995
+            )
+            # Count tokens
+            in_toks += r.usage.prompt_tokens
+            out_toks += r.usage.completion_tokens
             resp = r.choices[0].message.content
-            # Count output tokens.
-            out_toks += len(encoding.encode(resp))
             # Extract gene names.
             genes = []
             try:
@@ -199,89 +199,6 @@ async def get_genes(
         res = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in prompts))
     else:
         res = await asyncio.gather(*(complete(p) for p in prompts))
-    return res
-
-
-async def get_genes_context(
-    aclient, context: List[str], descr: List[str], model="gpt-4o", n_retry=3
-):
-    """Get genes using given context.
-
-    Generates a gene set given some context text.
-
-     Args:
-       aclient: async OpenAI client
-       descr: list of natural language descriptions of a gene set
-       context: list of textual context, a string
-       model: OpenAI model name
-       n_retry: number of retries per
-
-    """
-    prompt_file = "genes_concise_context.txt"
-
-    with resources.open_text("llm2geneset.prompts", prompt_file) as file:
-        prompt = file.read()
-
-    prompt_file_orig = "genes_concise.txt"
-    with resources.open_text("llm2geneset.prompts", prompt_file_orig) as file:
-        prompt_orig = file.read()
-
-    encoding = tiktoken.encoding_for_model(model)
-
-    # If no context, use original prompt.
-    prompts = []
-    for c, d in zip(context, descr):
-        if len(c) == 0:
-            prompts.append(prompt_orig.format(descr=d))
-        else:
-            prompts.append(prompt.format(context=c, descr=d))
-
-    # TODO: Make this rate limit a parameter.
-    rate_limiter = StrictLimiter(0.95 * 10000.0 / 60.0)
-
-    async def complete(p):
-        await rate_limiter.wait()
-        in_toks = 0
-        out_toks = 0
-        for attempt in range(n_retry):
-            # Count input tokens.
-            in_toks += len(encoding.encode(p))
-            # Prepend sys message if requested.
-            messages = [{"role": "user", "content": p}]
-            # LLM
-            r = await aclient.chat.completions.create(model=model, messages=messages)
-            resp = r.choices[0].message.content
-            # Count output tokens.
-            out_toks += len(encoding.encode(resp))
-            # Extract gene names.
-            genes = []
-            try:
-                last_code = extract_last_code_block(resp)
-                json_parsed = json_repair.loads(last_code)
-                # Address issue where sometimes other types are parsed out.
-                json_parsed = [g for g in json_parsed if isinstance(g["gene"], str)]
-                # Parse out gene, reason, and confidence.
-                genes = [g["gene"] for g in json_parsed]
-                reason = ["" for g in json_parsed]
-                conf = ["" for g in json_parsed]
-                return {
-                    "parsed_genes": genes,
-                    "reason": reason,
-                    "conf": conf,
-                    "in_toks": in_toks,
-                    "out_toks": out_toks,
-                    "ntries": attempt + 1,
-                }
-            except Exception as e:
-                print("retrying")
-                print(e)
-                print(p)
-                print(resp)
-                if attempt == n_retry - 1:
-                    raise RuntimeError("Retries exceeded.") from e
-
-    # Run completions asynchronously.
-    res = await tqdm.asyncio.tqdm.gather(*(complete(p) for p in prompts))
     return res
 
 
@@ -418,7 +335,7 @@ async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=
 
     prompts = [prompt.format(proteins=", ".join(p)) for p in protein_lists]
     rate_limiter = StrictLimiter(0.95 * 10000.0 / 60.0)
-    encoding = tiktoken.encoding_for_model(model)
+
     sys_msg = "You are an efficient and insightful assistant to a molecular biologist."
 
     # TODO: Make this rate limit a parameter.
@@ -453,19 +370,20 @@ async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=
         in_toks = 0
         out_toks = 0
         for attempt in range(n_retry):
-            # Count input tokens.
-            in_toks += len(encoding.encode(sys_msg))
-            in_toks += len(encoding.encode(p))
             # Generate message.
             messages = [
                 {"role": "system", "content": sys_msg},
                 {"role": "user", "content": p},
             ]
             # LLM
-            r = await aclient.chat.completions.create(model=model, messages=messages)
+            r = await aclient.chat.completions.create(
+                model=model, messages=messages, seed=3272995
+            )
+            # Count tokens
+            in_toks += r.usage.prompt_tokens
+            out_toks += r.usage.completion_tokens
+            # Get response
             resp = r.choices[0].message.content
-            # Count output tokens.
-            out_toks += len(encoding.encode(resp))
             try:
                 name = parse_name(resp)
                 conf = parse_conf(resp)
@@ -529,15 +447,16 @@ async def bp_from_genes(
         p = prompt.format(context=context, n_pathways=n_pathways, genes=",".join(genes))
 
     print(p)
-    encoding = tiktoken.encoding_for_model(model)
     in_toks = 0
     out_toks = 0
     for attempt in range(n_retry):
-        in_toks += len(encoding.encode(p))
         messages = [{"role": "user", "content": p}]
-        r = await aclient.chat.completions.create(model=model, messages=messages)
+        r = await aclient.chat.completions.create(
+            model=model, messages=messages, seed=3272995
+        )
         resp = r.choices[0].message.content
-        out_toks += len(encoding.encode(resp))
+        in_toks += r.usage.prompt_tokens
+        out_toks += r.usage.completion_tokens
         try:
             last_code = extract_last_code_block(resp)
             json_parsed = json_repair.loads(last_code)  # Use json.loads directly

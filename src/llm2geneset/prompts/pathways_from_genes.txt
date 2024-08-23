@@ -1,4 +1,4 @@
-List {n_pathways} biological pathways, biological processes, or cellular components that contain the following genes """{genes}""" with high confidence. Be as specific as possible. List non-overlapping pathways, processes, or components. Use the following JSON schema:
+List {n_pathways} biological pathways, biological processes, or cellular components that contain the following genes """{genes}""" with high confidence. Be as specific as possible. List non-overlapping pathways, processes, or components. Do not include the gene names in the outputs. Use the following JSON schema:
 ```json
 {{
     "type": "array",
