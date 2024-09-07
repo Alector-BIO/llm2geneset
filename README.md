@@ -16,8 +16,8 @@
 
 > llm2geneset
 
-This project enables generation of gene sets using natural language descriptions
-of biological pathways and processes.
+This project combines LLMs, gene set generation, and overrepresentation analysis
+to power analyis of RNA-seq and scRNA-seq data sets.
 
 ## Usage
 
@@ -31,6 +31,7 @@ export OPENAI_API_ORG="org-XXXX"
 export OPENAI_API_KEY="XXXXX"
 ```
 
+### Optional
 It is also recommended you obtain an [NCBI API Key](https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/)
 and add it to your environment.
 
@@ -46,8 +47,8 @@ import llm2geneset
 
 ## Installation using micromamba
 
-Create an environment using micromamba and work on this
-package in editable mode. Here's how to install micromamba:
+Create an environment using micromamba and work on this package in editable
+mode. Here's how to install micromamba:
 
 ```bash
 cd ~
@@ -68,14 +69,6 @@ Then run the following to setup a location for all of the micromamba environment
 ```bash
 micromamba shell init -s bash -p ~/micromamba
 ```
-
-**NOTE: The rust compiler is only for GSEApy which is in the environment. We
-may or may not keep this dependency.**
-
-Install the main environment. Note that you need `rustc` the
-rust compiler installed. You can install `rustc` by running
-`curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-Then, add `. "$HOME/.cargo/env"` to your .bashrc.
 
 ```bash
 micromamba env create -f llm2geneset.yml

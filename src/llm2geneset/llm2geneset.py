@@ -23,7 +23,9 @@ def read_gmt(gmt_file: str):
     Args:
        gmt_file: a gene set file in Broad GMT format
     Returns:
-       (descr, genes): tuple of descriptions and list of genes
+       A dictionary with keys "descr"  and "genes".
+       "descr" natural language description of the gene set.
+       "genes" list of a list of gene symbols
     """
     with open(gmt_file, "r") as file:
         lines = file.readlines()
@@ -38,7 +40,7 @@ def read_gmt(gmt_file: str):
             descr.append(sp[0])
             genes.append(sp2)
 
-    return (descr, genes)
+    return {"descr": descr, "genes": genes}
 
 
 def get_embeddings(
@@ -96,13 +98,14 @@ def extract_last_code_block(markdown_text):
     return code_blocks[-1]
 
 
-async def get_genes(
+async def get_genes_bench(
     aclient,
     descr,
     model="gpt-4o",
     prompt_type="basic",
     use_sysmsg=False,
-    n_retry=3,
+    seed=3272995,
+    n_retry=5,
     use_tqdm=True,
 ):
     """Get genes for given descriptions using asyncio.
@@ -118,6 +121,8 @@ async def get_genes(
                      add reasoning per gene, "conf" add confidence
                      per gene
        use_sysmsg: apply system message to model input
+       seed: integer seed to (limit) randomness in LLM generation
+             see OpenAI documentation on this
        n_retry: number of times to retry
        use_tqdm: true/false show tqdm progress bar
     Returns:
@@ -148,20 +153,22 @@ async def get_genes(
     prompts = [prompt.format(descr=d) for d in descr]
 
     # TODO: Make this rate limit a parameter.
-    rate_limiter = StrictLimiter(0.95 * 10000.0 / 60.0)
+    rate_limiter = StrictLimiter(20.0)
 
     async def complete(p):
-        await rate_limiter.wait()
         in_toks = 0
         out_toks = 0
         for attempt in range(n_retry):
+            await rate_limiter.wait()
             # Prepend sys message if requested.
             messages = [{"role": "user", "content": p}]
             if use_sysmsg:
                 messages = [{"role": "system", "content": sys_msg}] + messages
             # LLM
+            # Note seed+attempt to get a different generation with a different seed
+            # if the deterministic generation can't be parsed.
             r = await aclient.chat.completions.create(
-                model=model, messages=messages, seed=3272995
+                model=model, messages=messages, seed=seed + attempt
             )
             # Count tokens
             in_toks += r.usage.prompt_tokens
@@ -233,7 +240,7 @@ def filter_items_by_threshold(list_of_lists, threshold):
 def ensemble_genes(descr, gen_genes, thresh):
     """Ensemble gene sets.
 
-    Uses multiple generations of get_genes() to create gene sets.
+    Uses multiple generations of get_genes_bench() to create gene sets.
 
     Args:
        descr: list of gene set descriptions
@@ -316,11 +323,14 @@ def sel_conf(descr, gen_genes, conf_vals):
     return conf_genes
 
 
-async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=3):
+async def gsai_bench(
+    aclient, protein_lists: List[List[str]], model="gpt-4o", seed=3272995, n_retry=3
+):
     """Run GSAI from Ideker Lab.
 
-    Uses the prompt from: https://idekerlab.ucsd.edu/gsai/ to summarize genes and
-    uncover their function, also provide confidence.
+    Uses the prompt from: https://idekerlab.ucsd.edu/gsai/ to summarize genes
+    and uncover their function, also provide confidence. Performs this over
+    many gene sets for benchmarking.
 
     Args:
        aclient: asynchronous OpenAI client
@@ -328,18 +338,18 @@ async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=
                  assign function
        model: OpenAI model string
        n_retry: number of retries to get valid parsed output
+
     """
     prompt_file = "gsai_prompt.txt"
     with resources.open_text("llm2geneset.prompts", prompt_file) as file:
         prompt = file.read()
 
     prompts = [prompt.format(proteins=", ".join(p)) for p in protein_lists]
-    rate_limiter = StrictLimiter(0.95 * 10000.0 / 60.0)
 
     sys_msg = "You are an efficient and insightful assistant to a molecular biologist."
 
     # TODO: Make this rate limit a parameter.
-    rate_limiter = StrictLimiter(0.95 * 10000.0 / 60.0)
+    rate_limiter = StrictLimiter(20.0)
 
     def parse_name(text):
         pattern = r"Name:\s*(.+?)\n"
@@ -377,7 +387,7 @@ async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=
             ]
             # LLM
             r = await aclient.chat.completions.create(
-                model=model, messages=messages, seed=3272995
+                model=model, messages=messages, seed=seed + attempt
             )
             # Count tokens
             in_toks += r.usage.prompt_tokens
@@ -416,7 +426,7 @@ async def gsai(aclient, protein_lists: List[List[str]], model="gpt-4o", n_retry=
 
 
 async def bp_from_genes(
-    aclient, model, genes: List[str], n_pathways=5, context="", n_retry=3
+    aclient, model, genes: List[str], n_pathways=5, context="", seed=3272995, n_retry=3
 ):
     """Propose a list of biological processes from a set of genes.
 
@@ -452,7 +462,7 @@ async def bp_from_genes(
     for attempt in range(n_retry):
         messages = [{"role": "user", "content": p}]
         r = await aclient.chat.completions.create(
-            model=model, messages=messages, seed=3272995
+            model=model, messages=messages, seed=seed + attempt
         )
         resp = r.choices[0].message.content
         in_toks += r.usage.prompt_tokens
@@ -474,7 +484,7 @@ async def bp_from_genes(
                 raise RuntimeError("Retries exceeded.") from e
 
 
-async def gs_proposal(
+async def gs_proposal_bench(
     aclient,
     protein_lists: List[List[str]],
     model="gpt-4o",
@@ -498,7 +508,7 @@ async def gs_proposal(
       tokens used. A pandas data frame with the hypergeometric
       overrepresentation results for each proposed gene set.
     """
-    rate_limiter = StrictLimiter(0.95 * 10000.0 / 60.0)
+    rate_limiter = StrictLimiter(20.0)
 
     async def gse(genes):
         await rate_limiter.wait()
@@ -506,7 +516,7 @@ async def gs_proposal(
         bio_process = await bp_from_genes(aclient, model, genes, n_pathways, context)
 
         # 2. Generate these gene sets without input genes as context.
-        proposed = await get_genes(
+        proposed = await get_genes_bench(
             aclient, bio_process["pathways"], model=model, use_tqdm=False
         )
 
