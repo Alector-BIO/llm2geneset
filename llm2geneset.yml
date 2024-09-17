@@ -12,7 +12,6 @@ dependencies:
   - statsmodels
   - docopt
   - openai
-  - tiktoken
   - pyscaffold>=4.5         # pyscaffold
   - pyscaffoldext-markdown  # pyscaffold
   - pre_commit              # pyscaffold
@@ -30,7 +29,6 @@ dependencies:
   - pip:
       - blitzgsea
       - json-repair
-      - gseapy  # may require presense of rust compiler
       - asynciolimiter
       - rouge-score
 

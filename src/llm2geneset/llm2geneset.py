@@ -105,6 +105,7 @@ async def get_genes_bench(
     prompt_type="basic",
     use_sysmsg=False,
     seed=3272995,
+    limiter=20.0,
     n_retry=5,
     use_tqdm=True,
 ):
@@ -121,6 +122,7 @@ async def get_genes_bench(
                      add reasoning per gene, "conf" add confidence
                      per gene
        use_sysmsg: apply system message to model input
+       limiter: rate limiter calls per second (uses StrictLimiter)
        seed: integer seed to (limit) randomness in LLM generation
              see OpenAI documentation on this
        n_retry: number of times to retry
@@ -153,7 +155,7 @@ async def get_genes_bench(
     prompts = [prompt.format(descr=d) for d in descr]
 
     # TODO: Make this rate limit a parameter.
-    rate_limiter = StrictLimiter(20.0)
+    rate_limiter = StrictLimiter(limiter)
 
     async def complete(p):
         in_toks = 0
@@ -324,7 +326,13 @@ def sel_conf(descr, gen_genes, conf_vals):
 
 
 async def gsai_bench(
-    aclient, protein_lists: List[List[str]], model="gpt-4o", seed=3272995, n_retry=3
+    aclient,
+    protein_lists: List[List[str]],
+    model="gpt-4o",
+    use_sysmsg=True,
+    limiter=20.0,
+    seed=3272995,
+    n_retry=3,
 ):
     """Run GSAI from Ideker Lab.
 
@@ -337,6 +345,9 @@ async def gsai_bench(
        protein_lists: list of a list of genes, gene sets to
                  assign function
        model: OpenAI model string
+       use_sysmsg: use role prompt
+       limiter: rate limiter calls per second (uses StrictLimiter)
+       seed: seed to support repeated generation (see OpenAI docs)
        n_retry: number of retries to get valid parsed output
 
     """
@@ -349,7 +360,7 @@ async def gsai_bench(
     sys_msg = "You are an efficient and insightful assistant to a molecular biologist."
 
     # TODO: Make this rate limit a parameter.
-    rate_limiter = StrictLimiter(20.0)
+    rate_limiter = StrictLimiter(limiter)
 
     def parse_name(text):
         pattern = r"Name:\s*(.+?)\n"
@@ -381,10 +392,15 @@ async def gsai_bench(
         out_toks = 0
         for attempt in range(n_retry):
             # Generate message.
-            messages = [
-                {"role": "system", "content": sys_msg},
-                {"role": "user", "content": p},
-            ]
+            if use_sysmsg:
+                messages = [
+                    {"role": "system", "content": sys_msg},
+                    {"role": "user", "content": p},
+                ]
+            else:
+                messages = [
+                    {"role": "user", "content": p},
+                ]
             # LLM
             r = await aclient.chat.completions.create(
                 model=model, messages=messages, seed=seed + attempt
@@ -456,7 +472,6 @@ async def bp_from_genes(
     else:
         p = prompt.format(context=context, n_pathways=n_pathways, genes=",".join(genes))
 
-    print(p)
     in_toks = 0
     out_toks = 0
     for attempt in range(n_retry):
@@ -491,6 +506,7 @@ async def gs_proposal_bench(
     context="",
     n_background=19846,
     n_pathways=5,
+    limiter=20.0,
     n_retry=1,
 ):
     """Proposal-based approach to map from genes to function.
@@ -508,7 +524,7 @@ async def gs_proposal_bench(
       tokens used. A pandas data frame with the hypergeometric
       overrepresentation results for each proposed gene set.
     """
-    rate_limiter = StrictLimiter(20.0)
+    rate_limiter = StrictLimiter(limiter)
 
     async def gse(genes):
         await rate_limiter.wait()
@@ -517,7 +533,12 @@ async def gs_proposal_bench(
 
         # 2. Generate these gene sets without input genes as context.
         proposed = await get_genes_bench(
-            aclient, bio_process["pathways"], model=model, use_tqdm=False
+            aclient,
+            bio_process["pathways"],
+            model=model,
+            use_tqdm=False,
+            use_sysmsg=False,
+            limiter=limiter,
         )
 
         # 3. Get over-representation p-values.
