@@ -387,10 +387,10 @@ async def gsai_bench(
         return list_items
 
     async def complete(p):
-        await rate_limiter.wait()
         in_toks = 0
         out_toks = 0
         for attempt in range(n_retry):
+            await rate_limiter.wait()
             # Generate message.
             if use_sysmsg:
                 messages = [
