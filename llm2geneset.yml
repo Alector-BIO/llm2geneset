@@ -25,11 +25,12 @@ dependencies:
   - lxml
   - aiohttp
   - docopt
+  - streamlit
   - pip
   - pip:
       - blitzgsea
       - json-repair
       - asynciolimiter
       - rouge-score
-
+      - -e .
 

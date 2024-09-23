@@ -10,6 +10,19 @@ from aiohttp import ServerDisconnectedError
 from asynciolimiter import StrictLimiter
 from bs4 import BeautifulSoup
 
+"""
+### Optional
+It is also recommended you obtain an
+[NCBI API Key]
+(https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/)
+and add it to your environment.
+
+```bash
+export NCBI_API_KEY="x"
+```
+
+"""
+
 
 async def esearch_async(queries, db="pubmed", retmax=100):
     """

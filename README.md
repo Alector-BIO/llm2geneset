@@ -17,9 +17,9 @@
 > llm2geneset
 
 This project combines LLMs, gene set generation, and overrepresentation analysis
-to power analyis of RNA-seq and scRNA-seq data sets.
+to power analyis of RNA-seq, scRNA-seq, and proteomics data sets.
 
-## Usage
+## OpenAI API Key Setup
 
 Please read
 [OpenAI's best practicies for API key safety](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety)
@@ -29,20 +29,6 @@ environment variables e.g.:
 ```bash
 export OPENAI_API_ORG="org-XXXX"
 export OPENAI_API_KEY="XXXXX"
-```
-
-### Optional
-It is also recommended you obtain an [NCBI API Key](https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/)
-and add it to your environment.
-
-```bash
-export NCBI_API_KEY="x"
-```
-
-```python
-import llm2geneset
-
-# New interface is TBD.
 ```
 
 ## Installation using micromamba
@@ -70,16 +56,23 @@ Then run the following to setup a location for all of the micromamba environment
 micromamba shell init -s bash -p ~/micromamba
 ```
 
+Run the following with the `llm2geneset` directory.
+The `yml` installs the package in edittable mode.
+
 ```bash
+cd llm2geneset
 micromamba env create -f llm2geneset.yml
 micromamba activate llm2geneset
 ```
 
-Install the package in editable mode.
+## Usage
 
-```bash
-cd llm2geneset
-pip install -e .
+You can use the package as follows:
+
+```python
+import llm2geneset
+
+# New interface is TBD.
 ```
 
 
