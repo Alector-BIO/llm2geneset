@@ -66,7 +66,6 @@ micromamba activate llm2geneset
 
 ## Usage
 
-### Jupyter Notebook
 
 You can use the package in a script as follows.
 
@@ -95,7 +94,7 @@ if __name__ == "__main__":
 See also `notebooks/simple_example.ipynb` for an example
 of how to use it within a jupyter notebook.
 
-### Webapp Interface
+## Webapp Interface
 
 Streamlit is included in the llm2geneset environment. You
 can run the webapp interface as follows.
