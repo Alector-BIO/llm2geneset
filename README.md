@@ -67,13 +67,33 @@ micromamba activate llm2geneset
 ## Usage
 
 ### Jupyter Notebook
-You can use the package as follows:
+
+You can use the package in a script as follows.
 
 ```python
+import openai
 import llm2geneset
+import asyncio
 
-# New interface is TBD.
+async def main():
+    aclient = openai.AsyncClient()
+    genes = await llm2geneset.get_genes(aclient, "Antigen presentation")
+    print(','.join(genes['parsed_genes']))
+    res = await llm2geneset.gs_proposal(aclient, genes['parsed_genes'])
+    print(res['ora_results'])
+
+if __name__ == "__main__":
+    asyncio.run(main())
+
+# Output:
+# HLA-A,HLA-B,HLA-C,HLA-DRA,HLA-DRB1,HLA-DRB3,HLA-DRB4,...
+# set_descr  generatio   bgratio  richFactor  foldEnrich  
+# 1  Antigen processing and presentation via MHC cl...   0.500000  0.001209    0.625000  413.458333
+# ...
 ```
+
+See also `notebooks/simple_example.ipynb` for an example
+of how to use it within a jupyter notebook.
 
 ### Webapp Interface
 

@@ -705,3 +705,55 @@ async def gs_proposal(
         n_retry,
     )
     return res[0]
+
+
+async def get_genes(
+    aclient,
+    descr,
+    model="gpt-4o",
+    prompt_type="basic",
+    use_sysmsg=False,
+    seed=3272995,
+    limiter=20.0,
+    n_retry=5,
+    use_tqdm=True,
+):
+    """Get genes for given descriptions using asyncio.
+
+    Allows experiments with role prompt, different models,
+    use of confidence and model reasoning. Used also for ensembling.
+
+    Args:
+       aclient: async OpenAI client
+       descr: single pathway/process descriptions
+       model: OpenAI model string
+       prompt_type: "basic", standard prompt, "reason",
+                     add reasoning per gene, "conf" add confidence
+                     per gene
+       use_sysmsg: apply system message to model input
+       limiter: rate limiter calls per second (uses StrictLimiter)
+       seed: integer seed to (limit) randomness in LLM generation
+             see OpenAI documentation on this
+       n_retry: number of times to retry
+       use_tqdm: true/false show tqdm progress bar
+    Returns:
+      list of a list of dicts with
+      genes, unique genes in gene set
+      parsed_genes, all genes parsed, including any duplicates
+      reason, if requested reason gene was included in gene set, one for each
+              gene in parse_genes, otherwise an empty string
+      in_toks, input token count, out_toks, output count
+      ntries, number of tries to get a gene set
+    """
+    res = await get_genes_bench(
+        aclient,
+        [descr],
+        model,
+        prompt_type,
+        use_sysmsg,
+        seed,
+        limiter,
+        n_retry,
+        use_tqdm,
+    )
+    return res[0]
