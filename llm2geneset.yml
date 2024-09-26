@@ -26,9 +26,9 @@ dependencies:
   - aiohttp
   - docopt
   - streamlit
+  - nest-asyncio
   - pip
   - pip:
-      - blitzgsea
       - json-repair
       - asynciolimiter
       - rouge-score

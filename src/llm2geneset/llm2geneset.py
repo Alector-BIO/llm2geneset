@@ -512,6 +512,9 @@ async def gs_proposal_bench(
 ):
     """Proposal-based approach to map from genes to function.
 
+    This version of gs_proposal is used for benchmarking. See
+    gs_proposal() for a simpler interface.
+
     Args:
        aclient: asynchronous OpenAI client
        protein_lists: list of a list of genes, gene sets to
@@ -662,3 +665,43 @@ def simple_ora(genes: List[str], set_descr, gene_sets, n_background=19846):
     new_columns.insert(loc, new_columns.pop(new_columns.index("p_adj")))
     df = df[new_columns]
     return df
+
+
+async def gs_proposal(
+    aclient,
+    protein_lists: List[str],
+    model="gpt-4o",
+    context="",
+    n_background=19846,
+    n_pathways=5,
+    seed=3272995,
+    limiter=20.0,
+    n_retry=1,
+):
+    """Proposal-based approach to map from genes to function.
+
+    Args:
+       aclient: asynchronous OpenAI client
+       protein_lists: a list of genes, gene sets to
+                      assign function
+       model: OpenAI model string
+       n_background: number of genes in background set
+       n_pathways: number of pathways to propose given a gene list
+       n_retry: number of retries to get valid parsed output
+    Returns:
+      A dict with tot_in_toks (input) and tot_out_toks (output)
+      tokens used. A pandas data frame with the hypergeometric
+      overrepresentation results for each proposed gene set.
+    """
+    res = await gs_proposal_bench(
+        aclient,
+        [protein_lists],
+        model,
+        context,
+        n_background,
+        n_pathways,
+        seed,
+        limiter,
+        n_retry,
+    )
+    return res[0]

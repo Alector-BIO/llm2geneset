@@ -20,6 +20,7 @@ from .llm2geneset import (
     ensemble_genes,
     get_embeddings,
     get_genes_bench,
+    gs_proposal,
     gs_proposal_bench,
     gsai_bench,
     read_gmt,
@@ -36,6 +37,7 @@ __all__ = [
     "sel_conf",
     "gsai_bench",
     "gs_proposal_bench",
+    "gs_proposal",
     "simple_ora",
 ]
 
