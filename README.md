@@ -60,19 +60,29 @@ Run the following with the `llm2geneset` directory.
 The `yml` installs the package in edittable mode.
 
 ```bash
-cd llm2geneset
 micromamba env create -f llm2geneset.yml
 micromamba activate llm2geneset
 ```
 
 ## Usage
 
+### Jupyter Notebook
 You can use the package as follows:
 
 ```python
 import llm2geneset
 
 # New interface is TBD.
+```
+
+### Webapp Interface
+
+Streamlit is included in the llm2geneset environment. You
+can run the webapp interface as follows.
+
+```bash
+micromaba activate llm2geneset
+streamlit run webapp/app.py
 ```
 
 
