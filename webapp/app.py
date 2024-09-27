@@ -14,9 +14,17 @@ import llm2geneset
 nest_asyncio.apply()
 
 
-async def async_function(aclient, genes, model, context):
+async def async_function(
+    aclient, genes, model, context, n_pathways, n_background, seed
+):
     res = await llm2geneset.gs_proposal(
-        aclient, genes, model=model, context=context, n_pathways=100
+        aclient,
+        genes,
+        model=model,
+        context=context,
+        n_pathways=n_pathways,
+        n_background=n_background,
+        seed=seed,
     )
     return res
 
@@ -35,13 +43,17 @@ st.caption("Demonstration app for llm2geneset.")
 
 model_input = st.text_area("OpenAI Model", value="gpt-4o-2024-05-13")
 
-# Text area to input experimental context
+genes_input = st.text_area("Gene List", placeholder="Enter genes here...")
+
 context_input = st.text_area(
     "Experimental Context", placeholder="Enter experimental context here..."
 )
 
-# Text area to input genes
-genes_input = st.text_area("Gene List", placeholder="Enter genes here...")
+num_gene_sets = st.number_input("# of gene sets", value=100, min_value=0)
+
+n_background = st.number_input("# of background genes ", value=19846, min_value=0)
+
+seed = st.number_input("seed", value=3272995, min_value=0)
 
 # Button to trigger the action
 if st.button("Go"):
@@ -54,8 +66,10 @@ if st.button("Go"):
     context = context_input.strip()
 
     # Display the processed genes
-    st.write("Context:")
-    st.write(context)
+    if context != "":
+        st.write("Context:")
+        st.write(context)
+
     st.write("Genes:")
     st.write(genes)
 
@@ -63,7 +77,9 @@ if st.button("Go"):
         # Use asyncio to run the asynchronous function
         aclient = openai.AsyncClient()
         loop = asyncio.get_event_loop()
-        afun = async_function(aclient, genes, model, context)
+        afun = async_function(
+            aclient, genes, model, context, num_gene_sets, n_background, seed
+        )
         res = loop.run_until_complete(afun)
         in_toks = res["tot_in_toks"]
         out_toks = res["tot_out_toks"]

@@ -78,7 +78,10 @@ async def main():
     aclient = openai.AsyncClient()
     genes = await llm2geneset.get_genes(aclient, "Antigen presentation")
     print(','.join(genes['parsed_genes']))
-    res = await llm2geneset.gs_proposal(aclient, genes['parsed_genes'])
+    res = await llm2geneset.gs_proposal(
+        aclient, genes, n_pathways=5,
+        n_background=19846)
+    res = await llm2geneset.gs_proposal(aclient, genes['parsed_genes'], )
     print(res['ora_results'])
 
 if __name__ == "__main__":
@@ -86,12 +89,13 @@ if __name__ == "__main__":
 
 # Output:
 # HLA-A,HLA-B,HLA-C,HLA-DRA,HLA-DRB1,HLA-DRB3,HLA-DRB4,...
-# set_descr  generatio   bgratio  richFactor  foldEnrich  
+# set_descr  generatio   bgratio  richFactor  foldEnrich
 # 1  Antigen processing and presentation via MHC cl...   0.500000  0.001209    0.625000  413.458333
 # ...
 ```
 
-See also `notebooks/simple_example.ipynb` for an example
+
+See also [notebooks/simple_example.ipynb](notebooks/simple_example.ipynb) for an example
 of how to use it within a jupyter notebook.
 
 ## Webapp Interface
