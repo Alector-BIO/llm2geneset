@@ -138,9 +138,6 @@ async def get_genes_bench(
     """
     prompt_file = "genes_concise.txt"
 
-    # TODO: Modify to accept context per description and use prompt e.g.
-    # prompt_file = "genes_concise_context.txt"
-
     # If requested, use prompts that require reasoning or confidence.
     if prompt_type == "reason":
         prompt_file = "genes_concise_reason.txt"
