@@ -31,6 +31,18 @@ export OPENAI_API_ORG="org-XXXX"
 export OPENAI_API_KEY="XXXXX"
 ```
 
+## Installation using pixi
+
+An environment to run `llm2geneset` can be configured using 
+[pixi](https://prefix.dev)
+
+Once pixi is installed, run `pixi shell` in the llm2geneset directory 
+
+```bash
+cd llm2geneset
+pixi shell
+```
+
 ## Installation using micromamba
 
 Create an environment using micromamba and work on this package in editable
