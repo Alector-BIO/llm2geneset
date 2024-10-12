@@ -168,10 +168,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libxcb-1.17.0-h8a09558_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libxcrypt-4.4.36-hd590300_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libxml2-2.12.7-he7c6b58_4.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/libxslt-1.1.39-h76b75d6_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libzlib-1.3.1-hb9d3cd8_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/linkify-it-py-2.0.3-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/lxml-5.3.0-py312he28fd5a_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/lz4-c-1.9.4-hcb278e6_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/markdown-it-py-3.0.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/markupsafe-3.0.1-py312h178313f_1.conda
@@ -460,11 +458,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libwebp-base-1.4.0-h93a5062_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libxcb-1.17.0-hdb1d25a_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libxml2-2.12.7-h01dff8b_4.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libxslt-1.1.39-h223e5b9_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libzlib-1.3.1-h8359307_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/linkify-it-py-2.0.3-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/llvm-openmp-19.1.1-h6cdba0f_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/lxml-5.3.0-py312ha59c1f6_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/lz4-c-1.9.4-hb7217d7_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/markdown-it-py-3.0.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/markupsafe-3.0.1-py312h906988d_1.conda
@@ -5209,37 +5205,6 @@ packages:
   size: 707169
   timestamp: 1721031016143
 - kind: conda
-  name: libxslt
-  version: 1.1.39
-  build: h223e5b9_0
-  subdir: osx-arm64
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/libxslt-1.1.39-h223e5b9_0.conda
-  sha256: 2f1d99ef3fb960f23a63f06cf65ee621a5594a8b4616f35d9805be44617a92af
-  md5: 560c9cacc33e927f55b998eaa0cb1732
-  depends:
-  - libxml2 >=2.12.1,<3.0.0a0
-  license: MIT
-  license_family: MIT
-  purls: []
-  size: 225705
-  timestamp: 1701628966565
-- kind: conda
-  name: libxslt
-  version: 1.1.39
-  build: h76b75d6_0
-  subdir: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/libxslt-1.1.39-h76b75d6_0.conda
-  sha256: 684e9b67ef7b9ca0ca993762eeb39705ec58e2e7f958555c758da7ef416db9f3
-  md5: e71f31f8cfb0a91439f2086fc8aa0461
-  depends:
-  - libgcc-ng >=12
-  - libxml2 >=2.12.1,<3.0.0a0
-  license: MIT
-  license_family: MIT
-  purls: []
-  size: 254297
-  timestamp: 1701628814990
-- kind: conda
   name: libzlib
   version: 1.3.1
   build: h8359307_2
@@ -5296,9 +5261,9 @@ packages:
   timestamp: 1707129321841
 - kind: pypi
   name: llm2geneset
-  version: 0.0.post1.dev158+g23795ab.d20241011
+  version: 0.0.2
   path: .
-  sha256: 368abddabcd95643fa075d67dcd04c84c47ccd832c39e0b214bb1dcfb465b9b8
+  sha256: 674bb7317895800cfdaf62d4f0c4c402ff7a2de86810605d013b20bee5acba12
   requires_dist:
   - pandas<3,>=2.2.3
   - tqdm<5,>=4.66.5
@@ -5330,50 +5295,6 @@ packages:
   purls: []
   size: 280398
   timestamp: 1728517150988
-- kind: conda
-  name: lxml
-  version: 5.3.0
-  build: py312ha59c1f6_1
-  build_number: 1
-  subdir: osx-arm64
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/lxml-5.3.0-py312ha59c1f6_1.conda
-  sha256: e33991886f8dea03bb753f47f4d10696ac90ba7c524f6956f190b7a67bea38cc
-  md5: 17635e5526a30ecde8b10d30e753225a
-  depends:
-  - __osx >=11.0
-  - libxml2 >=2.12.7,<3.0a0
-  - libxslt >=1.1.39,<2.0a0
-  - libzlib >=1.3.1,<2.0a0
-  - python >=3.12,<3.13.0a0
-  - python >=3.12,<3.13.0a0 *_cpython
-  - python_abi 3.12.* *_cp312
-  license: BSD-3-Clause and MIT-CMU
-  purls:
-  - pkg:pypi/lxml?source=hash-mapping
-  size: 1146257
-  timestamp: 1725442423483
-- kind: conda
-  name: lxml
-  version: 5.3.0
-  build: py312he28fd5a_1
-  build_number: 1
-  subdir: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/lxml-5.3.0-py312he28fd5a_1.conda
-  sha256: cab6e10f41c0945c7ec52b6720396b0eabc08cd06d7040533ac049252038cd68
-  md5: 4bc1e0dda9208b8934333d878dde4996
-  depends:
-  - __glibc >=2.17,<3.0.a0
-  - libgcc >=13
-  - libxml2 >=2.12.7,<3.0a0
-  - libxslt >=1.1.39,<2.0a0
-  - libzlib >=1.3.1,<2.0a0
-  - python >=3.12,<3.13.0a0
-  - python_abi 3.12.* *_cp312
-  license: BSD-3-Clause and MIT-CMU
-  purls:
-  - pkg:pypi/lxml?source=hash-mapping
-  size: 1399155
-  timestamp: 1725442380821
 - kind: conda
   name: lz4-c
   version: 1.9.4
