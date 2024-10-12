@@ -42,13 +42,3 @@ __all__ = [
     "gs_proposal",
     "simple_ora",
 ]
-
-
-from .eutils import efetch_pubmed_async, efetch_pubmed_sync, esearch_async, esearch_sync
-
-__all__ += [
-    "esearch_async",
-    "esearch_sync",
-    "efetch_pubmed_async",
-    "efetch_pubmed_sync",
-]
