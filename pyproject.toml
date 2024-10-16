@@ -12,7 +12,7 @@ build-backend = "setuptools.build_meta"
 [tool.pixi.project]
 name = "llm2geneset"
 channels = ["conda-forge", "bioconda"]
-platforms = ["osx-arm64", "linux-64"]
+platforms = ["osx-64", "linux-64"]
 
 [tool.pixi.pypi-dependencies]
 llm2geneset = { path = ".", editable = true }
@@ -37,3 +37,8 @@ twine = "*"
 linkify-it-py = "*"
 streamlit = ">=1.39.0,<2"
 tox = ">=4.21.2,<5"
+r-irkernel = ">=1.3.2,<2"
+r-tidyverse = ">=2.0.0,<3"
+bioconductor-biomart = ">=2.58.0,<3"
+r-ggridges = ">=0.5.6,<0.6"
+r-ggrepel = ">=0.9.6,<0.10"

@@ -3,5 +3,7 @@
 Notebooks required to replicate the main findings and results in the 
 manuscript.
 
-The conda environment `benchmark_env.yml` contains the R kernel and dependencies
-for generating the figures in `fig[1-4].ipynb`. `
+
+`fig[1-4].ipynb` can be used to plot figures.
+
+The other notebooks are orders from 0-4 to generate neccessary outputs for plotting.
