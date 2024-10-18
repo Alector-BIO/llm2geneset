@@ -18,6 +18,7 @@ platforms = ["osx-64", "linux-64"]
 llm2geneset = { path = ".", editable = true }
 json-repair = "*"
 asynciolimiter = "*"
+rouge-score = "*"
 
 [tool.pixi.tasks]
 

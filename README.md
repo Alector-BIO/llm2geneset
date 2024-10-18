@@ -43,43 +43,11 @@ cd llm2geneset
 pixi shell
 ```
 
-## Installation using micromamba
-
-Create an environment using micromamba and work on this package in editable
-mode. Here's how to install micromamba:
-
-```bash
-cd ~
-# Linux x86_64
-curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba
-# M1 Mac Silicon
-curl -Ls https://micro.mamba.pm/api/micromamba/osx-arm64/latest | tar -xvj bin/micromamba
-```
-
-In your .bashrc add `bin` to your path:
-
-```bash
-export PATH="$HOME/bin:${PATH}"
-```
-
-Then run the following to setup a location for all of the micromamba environments.
-
-```bash
-micromamba shell init -s bash -p ~/micromamba
-```
-
-Run the following with the `llm2geneset` directory.
-The `yml` installs the package in edittable mode.
-
-```bash
-micromamba env create -f llm2geneset.yml
-micromamba activate llm2geneset
-```
 
 ## Usage
 
-
-You can use the package in a script as follows.
+You can use the package in a script as follows after 
+running `pixi shell`.
 
 ```python
 import openai
@@ -116,10 +84,21 @@ Streamlit is included in the llm2geneset environment. You
 can run the webapp interface as follows.
 
 ```bash
-micromaba activate llm2geneset
+pixi shell
 streamlit run webapp/app.py
 ```
 
+## pypi deployment
+
+Bump version in [setup.cfg](setup.cfg) and run the following according to the instructions
+for [pyscaffold-markdown](https://github.com/pyscaffold/pyscaffoldext-markdown)
+```bash
+pixi shell
+tox -e docs  # to build documentation
+tox -e build  # to build the package distribution
+tox -e publish  # to test project uploads correctly in test.pypi.org
+tox -e publish -- --repository pypi  # release package to PyPI
+```
 
 <!-- pyscaffold-notes -->
 
