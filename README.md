@@ -95,7 +95,7 @@ for [pyscaffold-markdown](https://github.com/pyscaffold/pyscaffoldext-markdown)
 ```bash
 pixi shell
 tox -e docs  # to build documentation
-tox -e build  # to build the package distribution
+tox -e build -- --wheel # to build the package distribution w/o source
 tox -e publish  # to test project uploads correctly in test.pypi.org
 tox -e publish -- --repository pypi  # release package to PyPI
 ```
