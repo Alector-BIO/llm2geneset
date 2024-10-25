@@ -75,7 +75,7 @@ if st.button("Go"):
 
     with st.spinner("Running llm2geneset please wait..."):
         # Use asyncio to run the asynchronous function
-        aclient = openai.AsyncClient()
+        aclient = openai.AsyncClient(api_key=openai_api_key)
         loop = asyncio.get_event_loop()
         afun = async_function(
             aclient, genes, model, context, num_gene_sets, n_background, seed
