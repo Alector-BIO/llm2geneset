@@ -7426,9 +7426,9 @@ packages:
   timestamp: 1707129321841
 - kind: pypi
   name: llm2geneset
-  version: 0.0.2
+  version: 0.0.3
   path: .
-  sha256: 06cd165d0339d0fcbd47edff7ecc99e5ea6a52923b5c35cefd726c438e6057e3
+  sha256: 243797522d3524a6dd4f7ae6d88d8a5cfdc2a5494c5e1557e4fe364141b9e44f
   requires_dist:
   - pandas<3,>=2.2.3
   - tqdm<5,>=4.66.5
