@@ -1,2 +1,3 @@
 streamlit
 llm2geneset
+nest_asyncio 
