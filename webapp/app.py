@@ -31,9 +31,10 @@ async def async_function(
 
 with st.sidebar:
     default_key = os.getenv("OPENAI_API_KEY")
-    openai_api_key = st.text_input("OpenAI API Key", value="", type="password")
-    if not openai_api_key:
-        openai_api_key = default_key
+    if default_key:
+        openai_api_key = st.text_input("OpenAI API Key", value=default_key, type="password")
+    else:
+        openai_api_key = st.text_input("OpenAI API Key", value="", type="password")
     "[Get an OpenAI API key](https://platform.openai.com)"
     "[View source](https://github.com/Alector-Biotech/llm2geneset)"
 
