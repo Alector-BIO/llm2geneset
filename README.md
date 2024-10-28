@@ -19,6 +19,9 @@
 This project combines LLMs, gene set generation, and overrepresentation analysis
 to power analyis of RNA-seq, scRNA-seq, and proteomics data sets.
 
+If you have an OpenAI API key, you can try out the web application
+at [https://llm2geneset.streamlit.app](https://llm2geneset.streamlit.app).
+
 ## OpenAI API Key Setup
 
 Please read
