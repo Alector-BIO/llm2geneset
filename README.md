@@ -46,6 +46,14 @@ cd llm2geneset
 pixi shell
 ```
 
+## Installing as a pypi package
+
+You can also install the package
+using `pip` as it is available on pypi [https://pypi.org/project/llm2geneset](https://pypi.org/project/llm2geneset)
+
+```bash
+pip install llm2geneset
+```
 
 ## Usage
 
