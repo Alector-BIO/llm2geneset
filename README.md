@@ -72,7 +72,7 @@ async def main():
     res = await llm2geneset.gs_proposal(
         aclient, genes, n_pathways=5,
         n_background=19846)
-    res = await llm2geneset.gs_proposal(aclient, genes['parsed_genes'], )
+    res = await llm2geneset.gs_proposal(aclient, genes['parsed_genes'])
     print(res['ora_results'])
 
 if __name__ == "__main__":
