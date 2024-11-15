@@ -111,6 +111,16 @@ tox -e publish  # to test project uploads correctly in test.pypi.org
 tox -e publish -- --repository pypi  # release package to PyPI
 ```
 
+## Pre-print
+
+A bioRxiv pre-print describing this work is available here:
+
+[Enhancing Gene Set Overrepresentation Analysis with Large Language Models](https://www.biorxiv.org/content/10.1101/2024.11.11.621189)
+
+Jiqing Zhu, Rebecca Y. Wang, Xiaoting Wang, Ricardo Azevedo, Alex Moreno, Julia A. Kuhn,  Zia Khan
+doi: https://doi.org/10.1101/2024.11.11.621189
+
+
 <!-- pyscaffold-notes -->
 
 ## Note
