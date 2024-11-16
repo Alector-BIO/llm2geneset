@@ -22,6 +22,15 @@ to power analyis of RNA-seq, scRNA-seq, and proteomics data sets.
 If you have an OpenAI API key, you can try out the web application
 at [https://llm2geneset.streamlit.app](https://llm2geneset.streamlit.app).
 
+## Pre-print
+
+A bioRxiv pre-print describing this work is available here:
+
+[Enhancing Gene Set Overrepresentation Analysis with Large Language Models](https://www.biorxiv.org/content/10.1101/2024.11.11.621189)
+
+Jiqing Zhu, Rebecca Y. Wang, Xiaoting Wang, Ricardo Azevedo, Alex Moreno, Julia A. Kuhn,  Zia Khan
+doi: https://doi.org/10.1101/2024.11.11.621189
+
 ## OpenAI API Key Setup
 
 Please read
@@ -111,14 +120,6 @@ tox -e publish  # to test project uploads correctly in test.pypi.org
 tox -e publish -- --repository pypi  # release package to PyPI
 ```
 
-## Pre-print
-
-A bioRxiv pre-print describing this work is available here:
-
-[Enhancing Gene Set Overrepresentation Analysis with Large Language Models](https://www.biorxiv.org/content/10.1101/2024.11.11.621189)
-
-Jiqing Zhu, Rebecca Y. Wang, Xiaoting Wang, Ricardo Azevedo, Alex Moreno, Julia A. Kuhn,  Zia Khan
-doi: https://doi.org/10.1101/2024.11.11.621189
 
 
 <!-- pyscaffold-notes -->
