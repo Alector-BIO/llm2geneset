@@ -554,9 +554,9 @@ async def gs_proposal_bench(
             intersection = set(llm_genes).intersection(set(genes))
             p_val = hypergeom.sf(
                 len(intersection) - 1,
-                n_background - len(genes),
-                len(genes),
+                n_background,
                 len(llm_genes),
+                len(genes)
             )
             tot_in_toks += proposed[idx]["in_toks"]
             tot_out_toks += proposed[idx]["out_toks"]
@@ -623,9 +623,9 @@ def simple_ora(genes: List[str], set_descr, gene_sets, n_background=19846):
         intersection = set(set_genes).intersection(set(genes))
         p_val = hypergeom.sf(
             len(intersection) - 1,
-            n_background - len(genes),
-            len(genes),
+            n_background,
             len(set_genes),
+            len(genes)
         )
         generatio = float(len(intersection)) / len(set(genes))
         bgratio = float(len(set(set_genes))) / n_background
