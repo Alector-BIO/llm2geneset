@@ -7426,19 +7426,19 @@ packages:
   timestamp: 1707129321841
 - kind: pypi
   name: llm2geneset
-  version: 0.0.3
+  version: 0.0.4
   path: .
-  sha256: 243797522d3524a6dd4f7ae6d88d8a5cfdc2a5494c5e1557e4fe364141b9e44f
+  sha256: a2146ffce7f18adf4f66829bf17bfac26d57c1d749e42a7cd0291fa5518a423a
   requires_dist:
-  - pandas<3,>=2.2.3
-  - tqdm<5,>=4.66.5
-  - scipy<2,>=1.14.1
-  - statsmodels<0.15,>=0.14.4
-  - aiohttp<4,>=3.10.10
-  - openai<2,>=1.51.2
+  - importlib-metadata ; python_full_version < '3.8'
+  - pandas>=2.2.3,<3
+  - tqdm>=4.66.5,<5
+  - scipy>=1.14.1,<2
+  - statsmodels>=0.14.4,<0.15
+  - aiohttp>=3.10.10,<4
+  - openai>=1.51.2,<2
   - json-repair
   - asynciolimiter
-  - importlib-metadata ; python_full_version < '3.8'
   - setuptools ; extra == 'testing'
   - pytest ; extra == 'testing'
   - pytest-cov ; extra == 'testing'
