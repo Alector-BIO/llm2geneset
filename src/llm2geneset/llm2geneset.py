@@ -502,6 +502,7 @@ async def gs_proposal_bench(
     model="gpt-4o",
     context="",
     n_background=19846,
+    bgd_genes=None,
     n_pathways=5,
     seed=3272995,
     limiter=20.0,
@@ -527,8 +528,18 @@ async def gs_proposal_bench(
     """
     rate_limiter = StrictLimiter(limiter)
 
+    if bgd_genes is not None:
+        bgd_genes = set(bgd_genes)
+        n_background = len(bgd_genes)
+    
     async def gse(genes):
         await rate_limiter.wait()
+
+        # Make sure query is in background set.
+
+        if bgd_genes is not None:
+            genes = list(set(genes).intersection(bgd_genes))
+
         # 1. Examine genes and propose possible pathways and processes.
         bio_process = await bp_from_genes(
             aclient, model, genes, n_pathways, context, seed=seed
@@ -550,6 +561,10 @@ async def gs_proposal_bench(
         output = []
         for idx in range(len(bio_process["pathways"])):
             llm_genes = list(set(proposed[idx]["parsed_genes"]))
+
+            if isinstance(bgd_genes, set):
+                llm_genes = set(llm_genes).intersection(bgd_genes)
+                
             # Use hypergeometric to compute p-value.
             intersection = set(llm_genes).intersection(set(genes))
             p_val = hypergeom.sf(
@@ -560,6 +575,16 @@ async def gs_proposal_bench(
             )
             tot_in_toks += proposed[idx]["in_toks"]
             tot_out_toks += proposed[idx]["out_toks"]
+
+            # compute odds ratio
+            x = len(intersection)
+            bg = n_background
+            m = len(llm_genes)
+            k = len(genes)
+            bu = 0.5
+            oddr = ((x + bu) * (bg - m - k + x + bu)) / (
+                (m - x + bu) * (k - x + bu)
+            )  
 
             generatio = float(len(intersection)) / len(set(genes))
             bgratio = float(len(set(llm_genes))) / n_background
@@ -573,6 +598,7 @@ async def gs_proposal_bench(
             output.append(
                 {
                     "set_descr": bio_process["pathways"][idx],
+                    "oddr": oddr,
                     "generatio": generatio,
                     "bgratio": bgratio,
                     "richFactor": richFactor,
@@ -606,7 +632,7 @@ async def gs_proposal_bench(
     return res
 
 
-def simple_ora(genes: List[str], set_descr, gene_sets, n_background=19846):
+def simple_ora(genes: List[str], set_descr, gene_sets, bgd_genes=None, n_background=19846 ):
     """
     Run simple overrepresentation analysis on a set of genes.
 
@@ -617,8 +643,17 @@ def simple_ora(genes: List[str], set_descr, gene_sets, n_background=19846):
        n_background: size of background gene set
     """
     output = []
+
+    # Make sure query is in background set.
+    if bgd_genes is not None:
+        bgd_genes = set(bgd_genes)
+        n_background = len(bgd_genes)
+        genes = list(set(genes).intersection(bgd_genes))
+
     for idx in range(len(set_descr)):
         set_genes = list(set(gene_sets[idx]))
+        if isinstance(bgd_genes, set):
+            set_genes = set(set_genes).intersection(bgd_genes)
         # Use hypergeometric to compute p-value.
         intersection = set(set_genes).intersection(set(genes))
         p_val = hypergeom.sf(
@@ -627,6 +662,17 @@ def simple_ora(genes: List[str], set_descr, gene_sets, n_background=19846):
             len(set_genes),
             len(genes)
         )
+
+        # compute odds ratio
+        x = len(intersection)
+        bg = n_background
+        m = len(set_genes)
+        k = len(genes)
+        bu = 0.5
+        oddr = ((x + bu) * (bg - m - k + x + bu)) / (
+            (m - x + bu) * (k - x + bu)
+        )  
+        
         generatio = float(len(intersection)) / len(set(genes))
         bgratio = float(len(set(set_genes))) / n_background
 
@@ -639,6 +685,7 @@ def simple_ora(genes: List[str], set_descr, gene_sets, n_background=19846):
         output.append(
             {
                 "set_descr": set_descr[idx],
+                "oddr": oddr,
                 "generatio": generatio,
                 "bgratio": bgratio,
                 "richFactor": richFactor,
@@ -670,6 +717,7 @@ async def gs_proposal(
     model="gpt-4o",
     context="",
     n_background=19846,
+    bgd_genes = None,
     n_pathways=5,
     seed=3272995,
     limiter=20.0,
@@ -696,6 +744,7 @@ async def gs_proposal(
         model,
         context,
         n_background,
+        bgd_genes,
         n_pathways,
         seed,
         limiter,
