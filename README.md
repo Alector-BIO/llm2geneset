@@ -19,6 +19,13 @@
 This project combines LLMs, gene set generation, and overrepresentation analysis
 to power analyis of RNA-seq, scRNA-seq, and proteomics data sets.
 
+llm2geneset is similar to popular tools such as [enrichr](https://maayanlab.cloud/Enrichr/),
+[cluststerProfiler](https://guangchuangyu.github.io/software/clusterProfiler/), or
+[DAVID](https://davidbioinformatics.nih.gov/), but is uses LLMs to propose gene set descriptions
+and gene sets themselves. The generated gene sets can also be used in tools such as
+[fGSEA](https://bioconductor.org/packages/release/bioc/html/fgsea.html) and
+[GSEApy](https://gseapy.readthedocs.io/en/latest/introduction.html).
+
 If you have an OpenAI API key, you can try out the web application
 at [https://llm2geneset.streamlit.app](https://llm2geneset.streamlit.app).
 
