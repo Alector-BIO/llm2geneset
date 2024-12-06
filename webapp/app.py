@@ -15,7 +15,7 @@ nest_asyncio.apply()
 
 
 async def async_function(
-    aclient, genes, model, context, n_pathways, n_background, bgd_genes, seed
+    aclient, genes, model, context, n_pathways, n_background, seed
 ):
     res = await llm2geneset.gs_proposal(
         aclient,
@@ -24,7 +24,7 @@ async def async_function(
         context=context,
         n_pathways=n_pathways,
         n_background=n_background,
-        bgd_genes = bgd_genes,
+        #bgd_genes = bgd_genes,
         seed=seed,
     )
     return res
@@ -81,7 +81,7 @@ if st.button("Go"):
         aclient = openai.AsyncClient(api_key=openai_api_key)
         loop = asyncio.get_event_loop()
         afun = async_function(
-            aclient, genes, model, context, num_gene_sets, n_background, bgd_genes, seed
+            aclient, genes, model, context, num_gene_sets, n_background, seed
         )
         res = loop.run_until_complete(afun)
         in_toks = res["tot_in_toks"]
