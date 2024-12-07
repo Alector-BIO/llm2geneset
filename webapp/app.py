@@ -15,7 +15,7 @@ nest_asyncio.apply()
 
 
 async def async_function(
-    aclient, genes, model, context, n_pathways, n_background,bgd_genes, seed
+    aclient, genes, model, context, n_pathways,bgd_genes, seed
 ):
     res = await llm2geneset.gs_proposal(
         aclient,
@@ -23,7 +23,7 @@ async def async_function(
         model=model,
         context=context,
         n_pathways=n_pathways,
-        n_background=n_background,
+        n_background=19846,
         bgd_genes = bgd_genes,
         seed=seed,
     )
@@ -52,9 +52,8 @@ context_input = st.text_area(
 
 num_gene_sets = st.number_input("# of gene sets", value=100, min_value=0)
 
-n_background = st.number_input("# of background genes ", value=19846, min_value=0)
+bgd_genes = st.text_area("Background Gene List", placeholder="Enter background genes here, will use default background genes if not entered...")
 
-bgd_genes = None
 
 seed = st.number_input("seed", value=3272995, min_value=0)
 
@@ -62,9 +61,14 @@ seed = st.number_input("seed", value=3272995, min_value=0)
 if st.button("Go"):
     # Split the input by commas or newlines
     gene_list = genes_input.replace(",", "\n").splitlines()
+    bgd_genes = bgd_genes.replace(",", "\n").splitlines()
 
     # Process the genes
     genes = [gene.strip() for gene in gene_list if gene.strip()]
+    bgd_genes = [gene.strip() for gene in bgd_genes if gene.strip()]
+    if len(bgd_genes) == 0 :
+        bgd_genes = None
+
     model = model_input.strip()
     context = context_input.strip()
 
@@ -81,7 +85,7 @@ if st.button("Go"):
         aclient = openai.AsyncClient(api_key=openai_api_key)
         loop = asyncio.get_event_loop()
         afun = async_function(
-            aclient, genes, model, context, num_gene_sets, n_background,bgd_genes, seed
+            aclient, genes, model, context, num_gene_sets,bgd_genes, seed
         )
         res = loop.run_until_complete(afun)
         in_toks = res["tot_in_toks"]
