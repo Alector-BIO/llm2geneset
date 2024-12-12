@@ -66,9 +66,14 @@ if st.button("Go"):
     # Process the genes
     genes = [gene.strip() for gene in gene_list if gene.strip()]
     bgd_genes = [gene.strip() for gene in bgd_genes if gene.strip()]
-    if len(bgd_genes) == 0 :
+    
+    # Display background genes
+    if bgd_genes != "":
+        st.write("Background Genes:")
+        st.write(bgd_genes)
+    else:
         bgd_genes = None
-
+             
     model = model_input.strip()
     context = context_input.strip()
 
