@@ -68,7 +68,9 @@ if st.button("Go"):
     bgd_genes = [gene.strip() for gene in bgd_genes if gene.strip()]
     
     # Display background genes
-    if bgd_genes != "":
+    print("bgd_genes")
+    print(bgd_genes)
+    if len(bgd_genes) > 0:
         st.write("Background Genes:")
         st.write(bgd_genes)
     else:
