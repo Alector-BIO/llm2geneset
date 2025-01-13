@@ -1,0 +1,17 @@
+<task>
+Analyze the following set of proteins that have been identified as potentially acting together in a particular biological context. Do their known roles and relationships suggest that there a specific process (or processes) that may be occurring? Do you see any strong relationships to specific disease processes or other phenotypes? Its OK if you don’t see a significant pattern, don’t try to find one if it isn’t there. In that case, just briefly describe the roles and interactions.
+
+Be concise and factual. Only speculate about novel protein functions or interactions when you think there is very strong evidence. Be very clear when you are making a conjecture, a speculation. Use language such as “it might be the case that (speculation) based on (supporting reasoning)”.
+
+Be specific: Avoid overly general statements such as ‘the proteins are involved in various cellular processes’.
+</task>
+
+<process>
+Identify groups of  proteins with similar functions or which you think interact in this context. For each group, briefly discuss their interplay, synergistic, or antagonistic effects, and functional integration within the system, instead of listing facts about individual proteins.
+
+Then write a brief summary paragraph.
+</process>
+
+<proteins>
+{proteins}
+</proteins>

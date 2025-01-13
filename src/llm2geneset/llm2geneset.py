@@ -167,7 +167,8 @@ async def get_genes_bench(
             # Note seed+attempt to get a different generation with a different seed
             # if the deterministic generation can't be parsed.
             r = await aclient.chat.completions.create(
-                model=model, messages=messages, seed=seed + attempt
+                model=model, messages=messages, seed=seed + attempt,
+                max_completion_tokens=1000,
             )
             # Count tokens
             in_toks += r.usage.prompt_tokens
@@ -400,7 +401,8 @@ async def gsai_bench(
                 ]
             # LLM
             r = await aclient.chat.completions.create(
-                model=model, messages=messages, seed=seed + attempt
+                model=model, messages=messages, seed=seed + attempt,
+                max_completion_tokens=1000,
             )
             # Count tokens
             in_toks += r.usage.prompt_tokens
@@ -474,7 +476,8 @@ async def bp_from_genes(
     for attempt in range(n_retry):
         messages = [{"role": "user", "content": p}]
         r = await aclient.chat.completions.create(
-            model=model, messages=messages, seed=seed + attempt
+            model=model, messages=messages, seed=seed + attempt,
+            max_completion_tokens=1000,
         )
         resp = r.choices[0].message.content
         in_toks += r.usage.prompt_tokens

@@ -2938,3 +2938,1003 @@ WikiPathway_2023_Human	Toll Like Receptor Signaling Pathway WP75	102
 WikiPathway_2023_Human	TCA Cycle Aka Krebs Or Citric Acid Cycle WP78	18
 WikiPathway_2023_Human	Nucleotide GPCRs WP80	11
 WikiPathway_2023_Human	Prostaglandin Synthesis And Regulation WP98	45
+GO_Biological_Process_2023_sample1000	Peptide Biosynthetic Process (GO:0043043)	158
+GO_Biological_Process_2023_sample1000	ncRNA-mediated Post-Transcriptional Gene Silencing (GO:0035194)	18
+GO_Biological_Process_2023_sample1000	Telomere Maintenance Via Telomere Lengthening (GO:0010833)	26
+GO_Biological_Process_2023_sample1000	Negative Regulation Of B Cell Receptor Signaling Pathway (GO:0050859)	5
+GO_Biological_Process_2023_sample1000	Insulin Secretion Involved In Cellular Response To Glucose Stimulus (GO:0035773)	6
+GO_Biological_Process_2023_sample1000	Cholesterol Import (GO:0070508)	5
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Opsonization (GO:1903028)	8
+GO_Biological_Process_2023_sample1000	Surfactant Homeostasis (GO:0043129)	10
+GO_Biological_Process_2023_sample1000	Nucleosome Assembly (GO:0006334)	54
+GO_Biological_Process_2023_sample1000	cGMP Metabolic Process (GO:0046068)	11
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Double-Strand Break Repair Via Nonhomologous End Joining (GO:2001034)	13
+GO_Biological_Process_2023_sample1000	Protein K63-linked Ubiquitination (GO:0070534)	54
+GO_Biological_Process_2023_sample1000	Telomere Maintenance Via Telomerase (GO:0007004)	19
+GO_Biological_Process_2023_sample1000	Synaptic Vesicle Recycling (GO:0036465)	44
+GO_Biological_Process_2023_sample1000	Membrane Depolarization During Action Potential (GO:0086010)	13
+GO_Biological_Process_2023_sample1000	Spermatid Development (GO:0007286)	53
+GO_Biological_Process_2023_sample1000	Regulation Of Double-Strand Break Repair Via Nonhomologous End Joining (GO:2001032)	25
+GO_Biological_Process_2023_sample1000	Amino Sugar Metabolic Process (GO:0006040)	9
+GO_Biological_Process_2023_sample1000	Regulation Of Intracellular Estrogen Receptor Signaling Pathway (GO:0033146)	25
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Small Molecule Metabolic Process (GO:0062014)	33
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Keratinocyte Migration (GO:0051549)	9
+GO_Biological_Process_2023_sample1000	DNA-templated DNA Replication (GO:0006261)	69
+GO_Biological_Process_2023_sample1000	Mitochondrial Gene Expression (GO:0140053)	103
+GO_Biological_Process_2023_sample1000	mRNA Metabolic Process (GO:0016071)	85
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Regulatory T Cell Differentiation (GO:0045591)	17
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Adenylate Cyclase Activity (GO:0007194)	10
+GO_Biological_Process_2023_sample1000	Regulation Of Norepinephrine Secretion (GO:0014061)	6
+GO_Biological_Process_2023_sample1000	Regulation Of Skeletal Muscle Fiber Development (GO:0048742)	7
+GO_Biological_Process_2023_sample1000	Negative Regulation Of RNA Metabolic Process (GO:0051253)	11
+GO_Biological_Process_2023_sample1000	RNA Catabolic Process (GO:0006401)	57
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Release Of Cytochrome C From Mitochondria (GO:0090201)	16
+GO_Biological_Process_2023_sample1000	Smooth Muscle Cell Migration (GO:0014909)	6
+GO_Biological_Process_2023_sample1000	Glutathione Catabolic Process (GO:0006751)	7
+GO_Biological_Process_2023_sample1000	Cellular Heat Acclimation (GO:0070370)	5
+GO_Biological_Process_2023_sample1000	Regulation Of Secretion (GO:0051046)	16
+GO_Biological_Process_2023_sample1000	Positive Regulation Of NLRP3 Inflammasome Complex Assembly (GO:1900227)	18
+GO_Biological_Process_2023_sample1000	Adenylate Cyclase-Modulating G Protein-Coupled Receptor Signaling Pathway (GO:0007188)	163
+GO_Biological_Process_2023_sample1000	Peptidyl-Proline Hydroxylation (GO:0019511)	10
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Voltage-Gated Calcium Channel Activity (GO:1901387)	12
+GO_Biological_Process_2023_sample1000	Regulation Of Cell Migration (GO:0030334)	434
+GO_Biological_Process_2023_sample1000	ER-associated Misfolded Protein Catabolic Process (GO:0071712)	9
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Adipose Tissue Development (GO:1904179)	7
+GO_Biological_Process_2023_sample1000	Neuron Remodeling (GO:0016322)	9
+GO_Biological_Process_2023_sample1000	Retina Homeostasis (GO:0001895)	39
+GO_Biological_Process_2023_sample1000	Lymphocyte Chemotaxis (GO:0048247)	44
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Synapse Assembly (GO:0051965)	32
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Bone Resorption (GO:0045779)	9
+GO_Biological_Process_2023_sample1000	Vascular Endothelial Growth Factor Receptor-2 Signaling Pathway (GO:0036324)	5
+GO_Biological_Process_2023_sample1000	Reverse Cholesterol Transport (GO:0043691)	16
+GO_Biological_Process_2023_sample1000	Cardiac Muscle Cell Contraction (GO:0086003)	18
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Protein K63-linked Ubiquitination (GO:1900045)	7
+GO_Biological_Process_2023_sample1000	Transepithelial Chloride Transport (GO:0030321)	6
+GO_Biological_Process_2023_sample1000	Regulation Of BMP Signaling Pathway (GO:0030510)	75
+GO_Biological_Process_2023_sample1000	Mitochondrion Disassembly (GO:0061726)	37
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Protein K63-linked Ubiquitination (GO:1902523)	6
+GO_Biological_Process_2023_sample1000	Glycosphingolipid Metabolic Process (GO:0006687)	32
+GO_Biological_Process_2023_sample1000	Regulation Of mRNA Splicing, Via Spliceosome (GO:0048024)	94
+GO_Biological_Process_2023_sample1000	Ribosomal Small Subunit Assembly (GO:0000028)	17
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Glucose Import (GO:0046326)	25
+GO_Biological_Process_2023_sample1000	Thiamine Transmembrane Transport (GO:0071934)	5
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cell Cycle Phase Transition (GO:1901989)	17
+GO_Biological_Process_2023_sample1000	Glycerol-3-Phosphate Metabolic Process (GO:0006072)	6
+GO_Biological_Process_2023_sample1000	Establishment Of Protein Localization To Peroxisome (GO:0072663)	7
+GO_Biological_Process_2023_sample1000	Regulation Of Macromolecule Biosynthetic Process (GO:0010556)	53
+GO_Biological_Process_2023_sample1000	Axon Extension Involved In Axon Guidance (GO:0048846)	6
+GO_Biological_Process_2023_sample1000	GMP Metabolic Process (GO:0046037)	8
+GO_Biological_Process_2023_sample1000	Aspartate Metabolic Process (GO:0006531)	5
+GO_Biological_Process_2023_sample1000	Epithelial Cell Morphogenesis (GO:0003382)	12
+GO_Biological_Process_2023_sample1000	Transcription Initiation At RNA Polymerase II Promoter (GO:0006367)	76
+GO_Biological_Process_2023_sample1000	Aminoglycan Catabolic Process (GO:0006026)	14
+GO_Biological_Process_2023_sample1000	Wnt Signaling Pathway Involved In Midbrain Dopaminergic Neuron Differentiation (GO:1904953)	9
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Lipid Localization (GO:1905954)	10
+GO_Biological_Process_2023_sample1000	Endosome To Pigment Granule Transport (GO:0043485)	8
+GO_Biological_Process_2023_sample1000	PERK-mediated Unfolded Protein Response (GO:0036499)	5
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Ryanodine-Sensitive Calcium-Release Channel Activity (GO:0060315)	11
+GO_Biological_Process_2023_sample1000	Regulation Of Nuclear-Transcribed mRNA poly(A) Tail Shortening (GO:0060211)	14
+GO_Biological_Process_2023_sample1000	Cardiac Ventricle Development (GO:0003231)	19
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Monoatomic Ion Transport (GO:0043270)	40
+GO_Biological_Process_2023_sample1000	Protein Geranylgeranylation (GO:0018344)	5
+GO_Biological_Process_2023_sample1000	Calcium Ion Import Across Plasma Membrane (GO:0098703)	37
+GO_Biological_Process_2023_sample1000	Regulation Of Memory T Cell Differentiation (GO:0043380)	9
+GO_Biological_Process_2023_sample1000	Purine Nucleobase Transport (GO:0006863)	8
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Endocytosis (GO:0045806)	33
+GO_Biological_Process_2023_sample1000	fatty-acyl-CoA Metabolic Process (GO:0035337)	18
+GO_Biological_Process_2023_sample1000	Regulation Of Catecholamine Secretion (GO:0050433)	27
+GO_Biological_Process_2023_sample1000	Inositol Phosphate-Mediated Signaling (GO:0048016)	19
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Blood Vessel Endothelial Cell Proliferation Involved In Sprouting Angiogenesis (GO:1903589)	8
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Protein Modification Process (GO:0031400)	78
+GO_Biological_Process_2023_sample1000	Cellular Response To Lipid (GO:0071396)	228
+GO_Biological_Process_2023_sample1000	Cardiac Muscle Cell Myoblast Differentiation (GO:0060379)	6
+GO_Biological_Process_2023_sample1000	Lactate Metabolic Process (GO:0006089)	7
+GO_Biological_Process_2023_sample1000	Protein Autoprocessing (GO:0016540)	18
+GO_Biological_Process_2023_sample1000	Aortic Valve Development (GO:0003176)	40
+GO_Biological_Process_2023_sample1000	Lipoprotein Transport (GO:0042953)	11
+GO_Biological_Process_2023_sample1000	miRNA Processing (GO:0035196)	32
+GO_Biological_Process_2023_sample1000	7-Methylguanosine mRNA Capping (GO:0006370)	6
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Endoplasmic Reticulum Unfolded Protein Response (GO:1900103)	11
+GO_Biological_Process_2023_sample1000	Tight Junction Assembly (GO:0120192)	53
+GO_Biological_Process_2023_sample1000	Piecemeal Microautophagy Of The Nucleus (GO:0034727)	9
+GO_Biological_Process_2023_sample1000	Amino Sugar Catabolic Process (GO:0046348)	7
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Appetite (GO:0032099)	7
+GO_Biological_Process_2023_sample1000	Purine Ribonucleoside Catabolic Process (GO:0046130)	5
+GO_Biological_Process_2023_sample1000	Replication Fork Processing (GO:0031297)	46
+GO_Biological_Process_2023_sample1000	Smooth Muscle Contraction (GO:0006939)	14
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cell Killing (GO:0031343)	6
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Tumor Necrosis Factor Superfamily Cytokine Production (GO:1903556)	49
+GO_Biological_Process_2023_sample1000	Trigeminal Nerve Development (GO:0021559)	5
+GO_Biological_Process_2023_sample1000	Plasma Membrane To Endosome Transport (GO:0048227)	7
+GO_Biological_Process_2023_sample1000	Regulation Of Long-Term Neuronal Synaptic Plasticity (GO:0048169)	10
+GO_Biological_Process_2023_sample1000	DNA Methylation (GO:0006306)	20
+GO_Biological_Process_2023_sample1000	B Cell Receptor Signaling Pathway (GO:0050853)	46
+GO_Biological_Process_2023_sample1000	Cellular Response To Calcium Ion (GO:0071277)	69
+GO_Biological_Process_2023_sample1000	Filopodium Assembly (GO:0046847)	17
+GO_Biological_Process_2023_sample1000	Regulation Of Enamel Mineralization (GO:0070173)	5
+GO_Biological_Process_2023_sample1000	'De Novo' Post-Translational Protein Folding (GO:0051084)	32
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Phosphatase Activity (GO:0010922)	22
+GO_Biological_Process_2023_sample1000	Modulation By Host Of Viral Process (GO:0044788)	22
+GO_Biological_Process_2023_sample1000	Regulation Of Toll-Like Receptor 2 Signaling Pathway (GO:0034135)	10
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Fibroblast Growth Factor Receptor Signaling Pathway (GO:0040037)	13
+GO_Biological_Process_2023_sample1000	PML Body Organization (GO:0030578)	5
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Histone H3-K4 Methylation (GO:0051571)	12
+GO_Biological_Process_2023_sample1000	Fibrinolysis (GO:0042730)	12
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Oxidoreductase Activity (GO:0051354)	10
+GO_Biological_Process_2023_sample1000	Primary Alcohol Metabolic Process (GO:0034308)	14
+GO_Biological_Process_2023_sample1000	Regulation Of Neurogenesis (GO:0050767)	67
+GO_Biological_Process_2023_sample1000	Morphogenesis Of An Epithelial Sheet (GO:0002011)	9
+GO_Biological_Process_2023_sample1000	Endosome Organization (GO:0007032)	53
+GO_Biological_Process_2023_sample1000	Striated Muscle Tissue Development (GO:0014706)	14
+GO_Biological_Process_2023_sample1000	Vesicle Fusion (GO:0006906)	79
+GO_Biological_Process_2023_sample1000	Regulation Of Interleukin-1-Mediated Signaling Pathway (GO:2000659)	5
+GO_Biological_Process_2023_sample1000	Calcium-Mediated Signaling (GO:0019722)	85
+GO_Biological_Process_2023_sample1000	DNA Replication (GO:0006260)	73
+GO_Biological_Process_2023_sample1000	Regulation Of Myeloid Leukocyte Differentiation (GO:0002761)	7
+GO_Biological_Process_2023_sample1000	Protein Depalmitoylation (GO:0002084)	7
+GO_Biological_Process_2023_sample1000	Regulation Of Urine Volume (GO:0035809)	8
+GO_Biological_Process_2023_sample1000	Cellular Response To Peptide (GO:1901653)	56
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Transcription By RNA Polymerase I (GO:0016479)	9
+GO_Biological_Process_2023_sample1000	Killing By Host Of Symbiont Cells (GO:0051873)	13
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Lipoprotein Particle Clearance (GO:0010985)	6
+GO_Biological_Process_2023_sample1000	mRNA 3'-Splice Site Recognition (GO:0000389)	5
+GO_Biological_Process_2023_sample1000	Cellular Modified Amino Acid Biosynthetic Process (GO:0042398)	7
+GO_Biological_Process_2023_sample1000	Translational Termination (GO:0006415)	8
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Signal Transduction (GO:0009968)	267
+GO_Biological_Process_2023_sample1000	Establishment Of Golgi Localization (GO:0051683)	7
+GO_Biological_Process_2023_sample1000	Hormone Transport (GO:0009914)	9
+GO_Biological_Process_2023_sample1000	Glycoside Catabolic Process (GO:0016139)	7
+GO_Biological_Process_2023_sample1000	Phospholipid Homeostasis (GO:0055091)	12
+GO_Biological_Process_2023_sample1000	Immunological Synapse Formation (GO:0001771)	7
+GO_Biological_Process_2023_sample1000	Collagen-Activated Signaling Pathway (GO:0038065)	8
+GO_Biological_Process_2023_sample1000	Phosphatidylinositol Biosynthetic Process (GO:0006661)	98
+GO_Biological_Process_2023_sample1000	Serotonin Transport (GO:0006837)	9
+GO_Biological_Process_2023_sample1000	Receptor-Mediated Virion Attachment To Host Cell (GO:0046813)	6
+GO_Biological_Process_2023_sample1000	Exocytosis (GO:0006887)	86
+GO_Biological_Process_2023_sample1000	Nucleobase Catabolic Process (GO:0046113)	6
+GO_Biological_Process_2023_sample1000	DNA Strand Elongation (GO:0022616)	12
+GO_Biological_Process_2023_sample1000	Response To Vitamin (GO:0033273)	8
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Protein Targeting To Membrane (GO:0090315)	5
+GO_Biological_Process_2023_sample1000	Regulation Of Lymphocyte Activation (GO:0051249)	18
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Fibrinolysis (GO:0051918)	11
+GO_Biological_Process_2023_sample1000	Ketone Body Metabolic Process (GO:1902224)	6
+GO_Biological_Process_2023_sample1000	Cellular Response To Interleukin-4 (GO:0071353)	13
+GO_Biological_Process_2023_sample1000	Regulation Of Interleukin-1 Production (GO:0032652)	16
+GO_Biological_Process_2023_sample1000	Urogenital System Development (GO:0001655)	10
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Nucleic Acid-Templated Transcription (GO:1903507)	456
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Insulin Secretion Involved In Cellular Response To Glucose Stimulus (GO:0035774)	13
+GO_Biological_Process_2023_sample1000	Regulation Of Non-Canonical Wnt Signaling Pathway (GO:2000050)	14
+GO_Biological_Process_2023_sample1000	Regulation Of Neutrophil Activation (GO:1902563)	5
+GO_Biological_Process_2023_sample1000	DNA Strand Elongation Involved In DNA Replication (GO:0006271)	12
+GO_Biological_Process_2023_sample1000	Regulation Of Coagulation (GO:0050818)	10
+GO_Biological_Process_2023_sample1000	Regulation Of Transcription Involved In G1/S Transition Of Mitotic Cell Cycle (GO:0000083)	19
+GO_Biological_Process_2023_sample1000	Cardiocyte Differentiation (GO:0035051)	13
+GO_Biological_Process_2023_sample1000	Glucose Import (GO:0046323)	12
+GO_Biological_Process_2023_sample1000	Protein Import Into Peroxisome Matrix, Receptor Recycling (GO:0016562)	6
+GO_Biological_Process_2023_sample1000	Norepinephrine Metabolic Process (GO:0042415)	7
+GO_Biological_Process_2023_sample1000	Macrophage Derived Foam Cell Differentiation (GO:0010742)	6
+GO_Biological_Process_2023_sample1000	rRNA Base Methylation (GO:0070475)	10
+GO_Biological_Process_2023_sample1000	Regulation Of Phosphatidylinositol 3-Kinase Signaling (GO:0014066)	90
+GO_Biological_Process_2023_sample1000	Proteoglycan Metabolic Process (GO:0006029)	25
+GO_Biological_Process_2023_sample1000	Ventricular Cardiac Muscle Cell Membrane Repolarization (GO:0099625)	7
+GO_Biological_Process_2023_sample1000	Cell Surface Receptor Signaling Pathway Involved In Heart Development (GO:0061311)	16
+GO_Biological_Process_2023_sample1000	Renal Water Homeostasis (GO:0003091)	14
+GO_Biological_Process_2023_sample1000	Apoptotic Cell Clearance (GO:0043277)	28
+GO_Biological_Process_2023_sample1000	Axonal Fasciculation (GO:0007413)	12
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Protein Kinase Activity (GO:0006469)	88
+GO_Biological_Process_2023_sample1000	Cartilage Development (GO:0051216)	52
+GO_Biological_Process_2023_sample1000	Regulation Of Neuronal Synaptic Plasticity (GO:0048168)	34
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Intracellular Signal Transduction (GO:1902533)	525
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Neuron Projection Arborization (GO:0150012)	7
+GO_Biological_Process_2023_sample1000	DNA Double-Strand Break Processing (GO:0000729)	15
+GO_Biological_Process_2023_sample1000	tRNA Aminoacylation For Protein Translation (GO:0006418)	35
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Leukocyte Apoptotic Process (GO:2000107)	11
+GO_Biological_Process_2023_sample1000	Cellular Response To Virus (GO:0098586)	64
+GO_Biological_Process_2023_sample1000	Somatic Recombination Of Immunoglobulin Genes Involved In Immune Response (GO:0002204)	9
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Synaptic Transmission (GO:0050806)	77
+GO_Biological_Process_2023_sample1000	Regulation Of Mast Cell Activation Involved In Immune Response (GO:0033006)	9
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Glycogen Biosynthetic Process (GO:0045725)	13
+GO_Biological_Process_2023_sample1000	Regulation Of Translational Initiation (GO:0006446)	65
+GO_Biological_Process_2023_sample1000	Regulation Of Cell Adhesion Molecule Production (GO:0060353)	6
+GO_Biological_Process_2023_sample1000	Autophagosome Assembly (GO:0000045)	65
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Hormone Metabolic Process (GO:0032352)	6
+GO_Biological_Process_2023_sample1000	Regulation Of Alcohol Biosynthetic Process (GO:1902930)	11
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Muscle Hypertrophy (GO:0014741)	7
+GO_Biological_Process_2023_sample1000	Axon Ensheathment In Central Nervous System (GO:0032291)	7
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Humoral Immune Response (GO:0002922)	6
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Glial Cell Proliferation (GO:0060253)	5
+GO_Biological_Process_2023_sample1000	Melanocyte Differentiation (GO:0030318)	11
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Protein Sumoylation (GO:0033235)	9
+GO_Biological_Process_2023_sample1000	Ketone Biosynthetic Process (GO:0042181)	9
+GO_Biological_Process_2023_sample1000	Epithelial Tube Branching Involved In Lung Morphogenesis (GO:0060441)	5
+GO_Biological_Process_2023_sample1000	Nucleoside Diphosphate Catabolic Process (GO:0009134)	6
+GO_Biological_Process_2023_sample1000	Mitral Valve Development (GO:0003174)	7
+GO_Biological_Process_2023_sample1000	Regulation Of Cardiac Muscle Contraction (GO:0055117)	35
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Glucose Import (GO:0046325)	7
+GO_Biological_Process_2023_sample1000	DNA Ligation (GO:0006266)	7
+GO_Biological_Process_2023_sample1000	Regulation Of Protein Metabolic Process (GO:0051246)	96
+GO_Biological_Process_2023_sample1000	Folic Acid-Containing Compound Metabolic Process (GO:0006760)	15
+GO_Biological_Process_2023_sample1000	Maturation Of SSU-rRNA (GO:0030490)	38
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Developmental Growth (GO:0048639)	50
+GO_Biological_Process_2023_sample1000	Postsynaptic Density Organization (GO:0097106)	7
+GO_Biological_Process_2023_sample1000	Histone mRNA Metabolic Process (GO:0008334)	23
+GO_Biological_Process_2023_sample1000	Melanosome Organization (GO:0032438)	37
+GO_Biological_Process_2023_sample1000	Mitochondrial Translation (GO:0032543)	98
+GO_Biological_Process_2023_sample1000	Presynapse Assembly (GO:0099054)	15
+GO_Biological_Process_2023_sample1000	Regulation Of Heart Rate By Cardiac Conduction (GO:0086091)	41
+GO_Biological_Process_2023_sample1000	Heparan Sulfate Proteoglycan Biosynthetic Process, Enzymatic Modification (GO:0015015)	10
+GO_Biological_Process_2023_sample1000	Regulation Of Microtubule Binding (GO:1904526)	6
+GO_Biological_Process_2023_sample1000	Glutamate Catabolic Process (GO:0006538)	5
+GO_Biological_Process_2023_sample1000	Regulation Of mRNA Processing (GO:0050684)	35
+GO_Biological_Process_2023_sample1000	Positive Chemotaxis (GO:0050918)	17
+GO_Biological_Process_2023_sample1000	Positive Regulation Of MAP Kinase Activity (GO:0043406)	91
+GO_Biological_Process_2023_sample1000	Histone Deacetylation (GO:0016575)	36
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Autophagy (GO:0010507)	61
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Glycoprotein Biosynthetic Process (GO:0010560)	13
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Immune Effector Process (GO:0002698)	15
+GO_Biological_Process_2023_sample1000	Regulation Of Ventricular Cardiac Muscle Cell Membrane Depolarization (GO:0060373)	5
+GO_Biological_Process_2023_sample1000	High-Density Lipoprotein Particle Assembly (GO:0034380)	9
+GO_Biological_Process_2023_sample1000	Regulation Of Blood Circulation (GO:1903522)	34
+GO_Biological_Process_2023_sample1000	Regulation Of Ruffle Assembly (GO:1900027)	24
+GO_Biological_Process_2023_sample1000	Fructose 1,6-Bisphosphate Metabolic Process (GO:0030388)	8
+GO_Biological_Process_2023_sample1000	Regulation Of Osteoblast Differentiation (GO:0045667)	85
+GO_Biological_Process_2023_sample1000	Regulation Of Viral Entry Into Host Cell (GO:0046596)	44
+GO_Biological_Process_2023_sample1000	Regulation Of Cytoplasmic Translational Elongation (GO:1900247)	7
+GO_Biological_Process_2023_sample1000	Protein Localization To Phagophore Assembly Site (GO:0034497)	13
+GO_Biological_Process_2023_sample1000	DNA Duplex Unwinding (GO:0032508)	41
+GO_Biological_Process_2023_sample1000	Prostanoid Biosynthetic Process (GO:0046457)	14
+GO_Biological_Process_2023_sample1000	Anterograde Axonal Transport (GO:0008089)	39
+GO_Biological_Process_2023_sample1000	Regulation Of Inositol Phosphate Biosynthetic Process (GO:0010919)	6
+GO_Biological_Process_2023_sample1000	Regulation Of Superoxide Metabolic Process (GO:0090322)	5
+GO_Biological_Process_2023_sample1000	Olefinic Compound Biosynthetic Process (GO:0120255)	7
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Morphogenesis Of An Epithelium (GO:1905331)	5
+GO_Biological_Process_2023_sample1000	Ventricular Septum Development (GO:0003281)	37
+GO_Biological_Process_2023_sample1000	Regulation Of Wnt Signaling Pathway (GO:0030111)	109
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Fat Cell Differentiation (GO:0045599)	32
+GO_Biological_Process_2023_sample1000	Positive Regulation Of rRNA Processing (GO:2000234)	9
+GO_Biological_Process_2023_sample1000	Regulation Of Dopamine Metabolic Process (GO:0042053)	7
+GO_Biological_Process_2023_sample1000	tRNA Metabolic Process (GO:0006399)	19
+GO_Biological_Process_2023_sample1000	tRNA 5'-End Processing (GO:0099116)	14
+GO_Biological_Process_2023_sample1000	Autophagosome Membrane Docking (GO:0016240)	6
+GO_Biological_Process_2023_sample1000	Regulation Of Epidermis Development (GO:0045682)	8
+GO_Biological_Process_2023_sample1000	Intracellular Sequestering Of Iron Ion (GO:0006880)	6
+GO_Biological_Process_2023_sample1000	Regulation Of Endothelial Cell Proliferation (GO:0001936)	93
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Leukocyte Apoptotic Process (GO:2000108)	9
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Killing Of Cells Of Another Organism (GO:0051712)	5
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Homotypic Cell-Cell Adhesion (GO:0034111)	10
+GO_Biological_Process_2023_sample1000	Establishment Of Epithelial Cell Apical/Basal Polarity (GO:0045198)	10
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Tau-Protein Kinase Activity (GO:1902949)	5
+GO_Biological_Process_2023_sample1000	Ras Protein Signal Transduction (GO:0007265)	144
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Interleukin-1 Production (GO:0032692)	30
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Proteolysis (GO:0045862)	59
+GO_Biological_Process_2023_sample1000	Regulation Of T Cell Receptor Signaling Pathway (GO:0050856)	34
+GO_Biological_Process_2023_sample1000	Mitotic Spindle Organization (GO:0007052)	85
+GO_Biological_Process_2023_sample1000	Endocardial Cushion Development (GO:0003197)	23
+GO_Biological_Process_2023_sample1000	Proteasome-Mediated Ubiquitin-Dependent Protein Catabolic Process (GO:0043161)	319
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Small GTPase Mediated Signal Transduction (GO:0051058)	20
+GO_Biological_Process_2023_sample1000	Selective Autophagy (GO:0061912)	58
+GO_Biological_Process_2023_sample1000	Regulation Of Steroid Metabolic Process (GO:0019218)	21
+GO_Biological_Process_2023_sample1000	Regulation Of Cell Differentiation (GO:0045595)	193
+GO_Biological_Process_2023_sample1000	Mitotic DNA Integrity Checkpoint Signaling (GO:0044774)	12
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Tooth Mineralization (GO:0070172)	7
+GO_Biological_Process_2023_sample1000	Heart Looping (GO:0001947)	38
+GO_Biological_Process_2023_sample1000	Regulation Of Cellular Ketone Metabolic Process (GO:0010565)	13
+GO_Biological_Process_2023_sample1000	Regulation Of Hormone Biosynthetic Process (GO:0046885)	5
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Telomere Maintenance Via Telomere Lengthening (GO:1904357)	25
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Protein Secretion (GO:0050714)	76
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Chemotaxis (GO:0050922)	31
+GO_Biological_Process_2023_sample1000	Natural Killer Cell Degranulation (GO:0043320)	5
+GO_Biological_Process_2023_sample1000	Leukocyte Cell-Cell Adhesion (GO:0007159)	31
+GO_Biological_Process_2023_sample1000	Lipid Phosphorylation (GO:0046834)	9
+GO_Biological_Process_2023_sample1000	Post-Transcriptional Gene Silencing (GO:0016441)	11
+GO_Biological_Process_2023_sample1000	Protein Insertion Into ER Membrane By Stop-Transfer Membrane-Anchor Sequence (GO:0045050)	9
+GO_Biological_Process_2023_sample1000	Aorta Morphogenesis (GO:0035909)	17
+GO_Biological_Process_2023_sample1000	Early Endosome To Late Endosome Transport (GO:0045022)	24
+GO_Biological_Process_2023_sample1000	Regulation Of Histone Deacetylase Activity (GO:1901725)	5
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Lamellipodium Organization (GO:1902745)	31
+GO_Biological_Process_2023_sample1000	Glucosamine-Containing Compound Metabolic Process (GO:1901071)	14
+GO_Biological_Process_2023_sample1000	Hematopoietic Stem Cell Proliferation (GO:0071425)	10
+GO_Biological_Process_2023_sample1000	Regulation Of Interleukin-5 Production (GO:0032674)	12
+GO_Biological_Process_2023_sample1000	Regulation Of Macrophage Chemotaxis (GO:0010758)	20
+GO_Biological_Process_2023_sample1000	Endoplasmic Reticulum Organization (GO:0007029)	54
+GO_Biological_Process_2023_sample1000	Regulation Of Activin Receptor Signaling Pathway (GO:0032925)	15
+GO_Biological_Process_2023_sample1000	Positive Regulation Of T-helper 17 Cell Differentiation (GO:2000321)	6
+GO_Biological_Process_2023_sample1000	Regulation Of Presynapse Assembly (GO:1905606)	16
+GO_Biological_Process_2023_sample1000	Mitochondrial Electron Transport, NADH To Ubiquinone (GO:0006120)	34
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Protein Localization To Cell Periphery (GO:1904377)	51
+GO_Biological_Process_2023_sample1000	Intestinal Epithelial Cell Differentiation (GO:0060575)	8
+GO_Biological_Process_2023_sample1000	Negative Regulation Of CD8-positive, Alpha-Beta T Cell Activation (GO:2001186)	7
+GO_Biological_Process_2023_sample1000	Regulation Of Release Of Sequestered Calcium Ion Into Cytosol By Sarcoplasmic Reticulum (GO:0010880)	22
+GO_Biological_Process_2023_sample1000	Regulation Of Microvillus Organization (GO:0032530)	7
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cell Division (GO:0051781)	43
+GO_Biological_Process_2023_sample1000	Adenylate Cyclase-Activating G Protein-Coupled Receptor Signaling Pathway (GO:0007189)	110
+GO_Biological_Process_2023_sample1000	Catecholamine Metabolic Process (GO:0006584)	13
+GO_Biological_Process_2023_sample1000	Regulation Of Cytosolic Calcium Ion Concentration (GO:0051480)	40
+GO_Biological_Process_2023_sample1000	Regulation Of Osteoblast Proliferation (GO:0033688)	16
+GO_Biological_Process_2023_sample1000	Regulation Of Monocyte Chemotactic Protein-1 Production (GO:0071637)	11
+GO_Biological_Process_2023_sample1000	Vesicle-Mediated Transport In Synapse (GO:0099003)	18
+GO_Biological_Process_2023_sample1000	Intracellular Glucose Homeostasis (GO:0001678)	43
+GO_Biological_Process_2023_sample1000	Response To Lipopolysaccharide (GO:0032496)	159
+GO_Biological_Process_2023_sample1000	Muscle Tissue Development (GO:0060537)	37
+GO_Biological_Process_2023_sample1000	Anterograde Synaptic Vesicle Transport (GO:0048490)	15
+GO_Biological_Process_2023_sample1000	Intestinal Cholesterol Absorption (GO:0030299)	9
+GO_Biological_Process_2023_sample1000	Regulation Of Feeding Behavior (GO:0060259)	14
+GO_Biological_Process_2023_sample1000	Regulation Of Nucleotide-Binding Oligomerization Domain Containing 2 Signaling Pathway (GO:0070432)	6
+GO_Biological_Process_2023_sample1000	COPII-coated Vesicle Cargo Loading (GO:0090110)	14
+GO_Biological_Process_2023_sample1000	U4 snRNA 3'-End Processing (GO:0034475)	7
+GO_Biological_Process_2023_sample1000	Regulation Of Double-Strand Break Repair Via Homologous Recombination (GO:0010569)	71
+GO_Biological_Process_2023_sample1000	snRNA 3'-End Processing (GO:0034472)	22
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Delayed Rectifier Potassium Channel Activity (GO:1902260)	9
+GO_Biological_Process_2023_sample1000	Regulation Of Hyaluronan Biosynthetic Process (GO:1900125)	5
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cell-Cell Adhesion (GO:0022409)	46
+GO_Biological_Process_2023_sample1000	Regulation Of DNA Replication (GO:0006275)	75
+GO_Biological_Process_2023_sample1000	Monocarboxylic Acid Biosynthetic Process (GO:0072330)	65
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Cell Junction Assembly (GO:1901889)	24
+GO_Biological_Process_2023_sample1000	Chaperone Cofactor-Dependent Protein Refolding (GO:0051085)	27
+GO_Biological_Process_2023_sample1000	Regulation Of Cellular Response To Growth Factor Stimulus (GO:0090287)	19
+GO_Biological_Process_2023_sample1000	Regulation Of Gene Expression (GO:0010468)	1127
+GO_Biological_Process_2023_sample1000	Hemostasis (GO:0007599)	6
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Insulin Secretion (GO:0032024)	40
+GO_Biological_Process_2023_sample1000	Myelination (GO:0042552)	48
+GO_Biological_Process_2023_sample1000	Modification-Dependent Macromolecule Catabolic Process (GO:0043632)	8
+GO_Biological_Process_2023_sample1000	Nuclear Body Organization (GO:0030575)	12
+GO_Biological_Process_2023_sample1000	Monoatomic Anion Homeostasis (GO:0055081)	9
+GO_Biological_Process_2023_sample1000	Regulation Of DNA-directed DNA Polymerase Activity (GO:1900262)	12
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Myeloid Cell Apoptotic Process (GO:0033033)	5
+GO_Biological_Process_2023_sample1000	Protein Peptidyl-Prolyl Isomerization (GO:0000413)	22
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Protein Localization To Membrane (GO:1905476)	25
+GO_Biological_Process_2023_sample1000	Regulated Exocytosis (GO:0045055)	51
+GO_Biological_Process_2023_sample1000	Lipopolysaccharide-Mediated Signaling Pathway (GO:0031663)	20
+GO_Biological_Process_2023_sample1000	Heterophilic Cell-Cell Adhesion Via Plasma Membrane Cell Adhesion Molecules (GO:0007157)	49
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Double-Strand Break Repair (GO:2000781)	84
+GO_Biological_Process_2023_sample1000	Negative Regulation Of T Cell Differentiation (GO:0045581)	13
+GO_Biological_Process_2023_sample1000	Homologous Chromosome Pairing At Meiosis (GO:0007129)	30
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Neurogenesis (GO:0050769)	75
+GO_Biological_Process_2023_sample1000	Maintenance Of Protein Localization In Organelle (GO:0072595)	18
+GO_Biological_Process_2023_sample1000	Synaptic Vesicle Transport Along Microtubule (GO:0099517)	15
+GO_Biological_Process_2023_sample1000	Response To Epinephrine (GO:0071871)	7
+GO_Biological_Process_2023_sample1000	Cardiac Conduction (GO:0061337)	46
+GO_Biological_Process_2023_sample1000	Regulation Of TORC2 Signaling (GO:1903939)	6
+GO_Biological_Process_2023_sample1000	Response To Muramyl Dipeptide (GO:0032495)	12
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Neuron Death (GO:1901216)	34
+GO_Biological_Process_2023_sample1000	Regulation Of Phosphatase Activity (GO:0010921)	20
+GO_Biological_Process_2023_sample1000	Protein Modification By Small Protein Removal (GO:0070646)	114
+GO_Biological_Process_2023_sample1000	Response To Molecule Of Bacterial Origin (GO:0002237)	69
+GO_Biological_Process_2023_sample1000	Pigment Granule Transport (GO:0051904)	15
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Hemostasis (GO:1900048)	11
+GO_Biological_Process_2023_sample1000	Postsynaptic Neurotransmitter Receptor Diffusion Trapping (GO:0098970)	7
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Substrate Adhesion-Dependent Cell Spreading (GO:1900025)	12
+GO_Biological_Process_2023_sample1000	protein-DNA Complex Assembly (GO:0065004)	59
+GO_Biological_Process_2023_sample1000	Multinuclear Osteoclast Differentiation (GO:0072674)	5
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Gliogenesis (GO:0014015)	6
+GO_Biological_Process_2023_sample1000	Ventricular Trabecula Myocardium Morphogenesis (GO:0003222)	7
+GO_Biological_Process_2023_sample1000	Immune Response-Regulating Cell Surface Receptor Signaling Pathway (GO:0002768)	13
+GO_Biological_Process_2023_sample1000	Detection Of Muscle Stretch (GO:0035995)	6
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Mesenchymal Cell Proliferation (GO:0002053)	9
+GO_Biological_Process_2023_sample1000	Protein Localization To Nuclear Envelope (GO:0090435)	9
+GO_Biological_Process_2023_sample1000	Neuron Projection Development (GO:0031175)	192
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Lamellipodium Assembly (GO:0010592)	23
+GO_Biological_Process_2023_sample1000	Regulation Of Histamine Secretion By Mast Cell (GO:1903593)	6
+GO_Biological_Process_2023_sample1000	Quaternary Ammonium Group Transport (GO:0015697)	12
+GO_Biological_Process_2023_sample1000	Transmembrane Receptor Protein Serine/Threonine Kinase Signaling Pathway (GO:0007178)	130
+GO_Biological_Process_2023_sample1000	Ventricular Compact Myocardium Morphogenesis (GO:0003223)	5
+GO_Biological_Process_2023_sample1000	Cellular Response To Light Stimulus (GO:0071482)	65
+GO_Biological_Process_2023_sample1000	Organelle Disassembly (GO:1903008)	54
+GO_Biological_Process_2023_sample1000	Sphingomyelin Biosynthetic Process (GO:0006686)	5
+GO_Biological_Process_2023_sample1000	Interleukin-2-Mediated Signaling Pathway (GO:0038110)	7
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Rho Protein Signal Transduction (GO:0035025)	31
+GO_Biological_Process_2023_sample1000	Nuclear Migration (GO:0007097)	16
+GO_Biological_Process_2023_sample1000	Limb Morphogenesis (GO:0035108)	20
+GO_Biological_Process_2023_sample1000	Cellular Response To ATP (GO:0071318)	14
+GO_Biological_Process_2023_sample1000	Regulation Of ATP Biosynthetic Process (GO:2001169)	14
+GO_Biological_Process_2023_sample1000	Endothelial Cell Chemotaxis (GO:0035767)	8
+GO_Biological_Process_2023_sample1000	Aerobic Respiration (GO:0009060)	59
+GO_Biological_Process_2023_sample1000	Regulation Of Retinoic Acid Receptor Signaling Pathway (GO:0048385)	12
+GO_Biological_Process_2023_sample1000	Somatic Recombination Of Immunoglobulin Gene Segments (GO:0016447)	8
+GO_Biological_Process_2023_sample1000	Endonucleolytic Cleavage Of Tricistronic rRNA Transcript (SSU-rRNA, 5.8S rRNA, LSU-rRNA) (GO:0000479)	13
+GO_Biological_Process_2023_sample1000	Sensory Perception (GO:0007600)	51
+GO_Biological_Process_2023_sample1000	Glutamine Metabolic Process (GO:0006541)	13
+GO_Biological_Process_2023_sample1000	Defense Response To Protozoan (GO:0042832)	15
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Protein Localization To Early Endosome (GO:1902966)	8
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Arp2/3 Complex-Mediated Actin Nucleation (GO:2000601)	7
+GO_Biological_Process_2023_sample1000	Regulation Of pre-miRNA Processing (GO:2000631)	5
+GO_Biological_Process_2023_sample1000	Constitutive Heterochromatin Formation (GO:0140719)	8
+GO_Biological_Process_2023_sample1000	Cellular Response To Misfolded Protein (GO:0071218)	19
+GO_Biological_Process_2023_sample1000	Regulation Of Endothelial Cell Migration (GO:0010594)	88
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Type 2 Immune Response (GO:0002830)	13
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Vascular Permeability (GO:0043116)	11
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Developmental Process (GO:0051094)	233
+GO_Biological_Process_2023_sample1000	Cilium Disassembly (GO:0061523)	5
+GO_Biological_Process_2023_sample1000	Axonal Transport (GO:0098930)	39
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Cardiac Muscle Tissue Growth (GO:0055022)	5
+GO_Biological_Process_2023_sample1000	Response To Muscle Stretch (GO:0035994)	14
+GO_Biological_Process_2023_sample1000	Innate Immune Response Activating Cell Surface Receptor Signaling Pathway (GO:0002220)	30
+GO_Biological_Process_2023_sample1000	Alpha-Amino Acid Biosynthetic Process (GO:1901607)	10
+GO_Biological_Process_2023_sample1000	snRNA Metabolic Process (GO:0016073)	21
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Fibroblast Migration (GO:0010763)	7
+GO_Biological_Process_2023_sample1000	Placenta Development (GO:0001890)	22
+GO_Biological_Process_2023_sample1000	Maintenance Of Lens Transparency (GO:0036438)	6
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Lipid Storage (GO:0010884)	20
+GO_Biological_Process_2023_sample1000	Regulation Of Actin Nucleation (GO:0051125)	24
+GO_Biological_Process_2023_sample1000	Acidic Amino Acid Transport (GO:0015800)	10
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Mitotic Cell Cycle Spindle Assembly Checkpoint (GO:0090267)	11
+GO_Biological_Process_2023_sample1000	Regulation Of Interferon-Alpha Production (GO:0032647)	26
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Pseudopodium Assembly (GO:0031274)	11
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Lipoprotein Lipase Activity (GO:0051005)	5
+GO_Biological_Process_2023_sample1000	cAMP Biosynthetic Process (GO:0006171)	9
+GO_Biological_Process_2023_sample1000	Microtubule Anchoring At Centrosome (GO:0034454)	10
+GO_Biological_Process_2023_sample1000	Regulation Of Isotype Switching (GO:0045191)	15
+GO_Biological_Process_2023_sample1000	Mitotic G1 DNA Damage Checkpoint Signaling (GO:0031571)	26
+GO_Biological_Process_2023_sample1000	Regulation Of Actin Cytoskeleton Organization (GO:0032956)	91
+GO_Biological_Process_2023_sample1000	Regulation Of CD4-positive, Alpha-Beta T Cell Proliferation (GO:2000561)	9
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Nuclear Cell Cycle DNA Replication (GO:0010571)	5
+GO_Biological_Process_2023_sample1000	Respiratory Electron Transport Chain (GO:0022904)	14
+GO_Biological_Process_2023_sample1000	Receptor Internalization (GO:0031623)	51
+GO_Biological_Process_2023_sample1000	Peptidyl-Serine Phosphorylation (GO:0018105)	158
+GO_Biological_Process_2023_sample1000	acetyl-CoA Biosynthetic Process From Pyruvate (GO:0006086)	5
+GO_Biological_Process_2023_sample1000	Cellular Response To Prostaglandin E Stimulus (GO:0071380)	6
+GO_Biological_Process_2023_sample1000	Cranial Nerve Development (GO:0021545)	13
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Calcium Ion Transmembrane Transport (GO:1903170)	19
+GO_Biological_Process_2023_sample1000	Regulation Of Transferase Activity (GO:0051338)	21
+GO_Biological_Process_2023_sample1000	Termination Of RNA Polymerase II Transcription (GO:0006369)	7
+GO_Biological_Process_2023_sample1000	Platelet Activating Factor Metabolic Process (GO:0046469)	7
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Nuclear-Transcribed mRNA Catabolic Process, Nonsense-Mediated Decay (GO:2000623)	5
+GO_Biological_Process_2023_sample1000	Peptidyl-Tyrosine Dephosphorylation Involved In Inactivation Of Protein Kinase Activity (GO:1990264)	7
+GO_Biological_Process_2023_sample1000	Adenylate Cyclase-Inhibiting G Protein-Coupled Acetylcholine Receptor Signaling Pathway (GO:0007197)	7
+GO_Biological_Process_2023_sample1000	Synaptonemal Complex Organization (GO:0070193)	14
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Interleukin-6 Production (GO:0032715)	34
+GO_Biological_Process_2023_sample1000	Sulfur Compound Catabolic Process (GO:0044273)	20
+GO_Biological_Process_2023_sample1000	Cellular Glucuronidation (GO:0052695)	15
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cilium Movement (GO:0003353)	6
+GO_Biological_Process_2023_sample1000	Regulation Of Leukocyte Proliferation (GO:0070663)	7
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Epithelial Cell Apoptotic Process (GO:1904036)	38
+GO_Biological_Process_2023_sample1000	Tetrapyrrole Metabolic Process (GO:0033013)	9
+GO_Biological_Process_2023_sample1000	Actomyosin Structure Organization (GO:0031032)	77
+GO_Biological_Process_2023_sample1000	Dendritic Spine Morphogenesis (GO:0060997)	15
+GO_Biological_Process_2023_sample1000	Maintenance Of Epithelial Cell Apical/Basal Polarity (GO:0045199)	8
+GO_Biological_Process_2023_sample1000	Regulation Of Epidermal Cell Differentiation (GO:0045604)	18
+GO_Biological_Process_2023_sample1000	Phosphate Ion Homeostasis (GO:0055062)	12
+GO_Biological_Process_2023_sample1000	Mitochondrion Distribution (GO:0048311)	11
+GO_Biological_Process_2023_sample1000	Regulation Of Endocytosis (GO:0030100)	66
+GO_Biological_Process_2023_sample1000	N-acetylneuraminate Catabolic Process (GO:0019262)	6
+GO_Biological_Process_2023_sample1000	Tetrahydrofolate Metabolic Process (GO:0046653)	11
+GO_Biological_Process_2023_sample1000	Double-Strand Break Repair Via Nonhomologous End Joining (GO:0006303)	41
+GO_Biological_Process_2023_sample1000	NADH Dehydrogenase Complex Assembly (GO:0010257)	53
+GO_Biological_Process_2023_sample1000	Regulation Of Protein Binding (GO:0043393)	118
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Monocyte Differentiation (GO:0045657)	9
+GO_Biological_Process_2023_sample1000	Cell Junction Organization (GO:0034330)	62
+GO_Biological_Process_2023_sample1000	Regulation Of Cardiac Muscle Cell Differentiation (GO:2000725)	9
+GO_Biological_Process_2023_sample1000	Somatic Hypermutation Of Immunoglobulin Genes (GO:0016446)	7
+GO_Biological_Process_2023_sample1000	Purine Ribonucleotide Transport (GO:0015868)	19
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Spindle Checkpoint (GO:0090232)	11
+GO_Biological_Process_2023_sample1000	Kidney Mesenchyme Development (GO:0072074)	7
+GO_Biological_Process_2023_sample1000	Determination Of Bilateral Symmetry (GO:0009855)	28
+GO_Biological_Process_2023_sample1000	Sensory Organ Morphogenesis (GO:0090596)	8
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Vesicle Fusion (GO:0031340)	5
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Apoptotic Process (GO:0043066)	482
+GO_Biological_Process_2023_sample1000	Retrograde Protein Transport, ER To Cytosol (GO:0030970)	17
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Neuron Projection Regeneration (GO:0070571)	6
+GO_Biological_Process_2023_sample1000	Embryonic Digit Morphogenesis (GO:0042733)	17
+GO_Biological_Process_2023_sample1000	Vesicle Fusion With Vacuole (GO:0051469)	9
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Stem Cell Differentiation (GO:2000737)	12
+GO_Biological_Process_2023_sample1000	Glycoprotein Biosynthetic Process (GO:0009101)	80
+GO_Biological_Process_2023_sample1000	Dosage Compensation (GO:0007549)	9
+GO_Biological_Process_2023_sample1000	Vitamin D Metabolic Process (GO:0042359)	11
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Phospholipase Activity (GO:0010519)	7
+GO_Biological_Process_2023_sample1000	Peptide Hormone Secretion (GO:0030072)	25
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Vascular Permeability (GO:0043117)	11
+GO_Biological_Process_2023_sample1000	Kidney Morphogenesis (GO:0060993)	5
+GO_Biological_Process_2023_sample1000	Chromosome Condensation (GO:0030261)	32
+GO_Biological_Process_2023_sample1000	Ear Morphogenesis (GO:0042471)	24
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Developmental Process (GO:0051093)	109
+GO_Biological_Process_2023_sample1000	Dopamine Uptake (GO:0090494)	7
+GO_Biological_Process_2023_sample1000	Epidermis Development (GO:0008544)	85
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Chondrocyte Differentiation (GO:0032332)	10
+GO_Biological_Process_2023_sample1000	Cellular Response To Growth Hormone Stimulus (GO:0071378)	11
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Transcription Regulatory Region DNA Binding (GO:2000678)	14
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Myeloid Leukocyte Cytokine Production Involved In Immune Response (GO:0061081)	16
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Macrophage Chemotaxis (GO:0010759)	13
+GO_Biological_Process_2023_sample1000	Cellular Response To Ionizing Radiation (GO:0071479)	52
+GO_Biological_Process_2023_sample1000	Cytosolic Transport (GO:0016482)	127
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Intrinsic Apoptotic Signaling Pathway (GO:2001244)	39
+GO_Biological_Process_2023_sample1000	Adenine Nucleotide Transport (GO:0051503)	20
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Epidermal Growth Factor Receptor Signaling Pathway (GO:0045742)	33
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cell-Cell Adhesion Mediated By Integrin (GO:0033634)	5
+GO_Biological_Process_2023_sample1000	Regulation Of Microtubule Polymerization Or Depolymerization (GO:0031110)	27
+GO_Biological_Process_2023_sample1000	Cellular Response To Superoxide (GO:0071451)	11
+GO_Biological_Process_2023_sample1000	Regulation Of Acute Inflammatory Response (GO:0002673)	19
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Phagocytosis (GO:0050765)	15
+GO_Biological_Process_2023_sample1000	Alpha-Linolenic Acid Metabolic Process (GO:0036109)	9
+GO_Biological_Process_2023_sample1000	Regulation Of Mesenchymal Stem Cell Differentiation (GO:2000739)	7
+GO_Biological_Process_2023_sample1000	Insulin Processing (GO:0030070)	5
+GO_Biological_Process_2023_sample1000	Galactose Metabolic Process (GO:0006012)	6
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Focal Adhesion Assembly (GO:0051895)	15
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Calcineurin-Mediated Signaling (GO:0106058)	19
+GO_Biological_Process_2023_sample1000	Response To Lithium Ion (GO:0010226)	5
+GO_Biological_Process_2023_sample1000	Ammonium Transmembrane Transport (GO:0072488)	10
+GO_Biological_Process_2023_sample1000	Phagocytosis, Engulfment (GO:0006911)	30
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Cell Migration (GO:0030336)	163
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Viral Genome Replication (GO:0045070)	29
+GO_Biological_Process_2023_sample1000	Regulation Of Adiponectin Secretion (GO:0070163)	6
+GO_Biological_Process_2023_sample1000	Maturation Of 5.8S rRNA From Tricistronic rRNA Transcript (SSU-rRNA, 5.8S rRNA, LSU-rRNA) (GO:0000466)	21
+GO_Biological_Process_2023_sample1000	DNA-templated DNA Replication Maintenance Of Fidelity (GO:0045005)	43
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Erythrocyte Differentiation (GO:0045648)	26
+GO_Biological_Process_2023_sample1000	Cardiolipin Biosynthetic Process (GO:0032049)	7
+GO_Biological_Process_2023_sample1000	Cytoplasmic Sequestering Of Protein (GO:0051220)	13
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Biosynthetic Process (GO:0009890)	16
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Protein Localization To Endosome (GO:1905668)	8
+GO_Biological_Process_2023_sample1000	Protein Sumoylation (GO:0016925)	46
+GO_Biological_Process_2023_sample1000	Nuclear Pore Organization (GO:0006999)	14
+GO_Biological_Process_2023_sample1000	Regulation Of Plasma Membrane Bounded Cell Projection Organization (GO:0120035)	28
+GO_Biological_Process_2023_sample1000	Regulation Of Mitotic Cell Cycle Phase Transition (GO:1901990)	86
+GO_Biological_Process_2023_sample1000	Regulation Of Extracellular Matrix Constituent Secretion (GO:0003330)	7
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cysteine-Type Endopeptidase Activity (GO:2001056)	64
+GO_Biological_Process_2023_sample1000	Embryonic Organ Morphogenesis (GO:0048562)	44
+GO_Biological_Process_2023_sample1000	Response To Interleukin-4 (GO:0070670)	9
+GO_Biological_Process_2023_sample1000	Neurotransmitter Secretion (GO:0007269)	43
+GO_Biological_Process_2023_sample1000	Mitochondrial RNA Processing (GO:0000963)	9
+GO_Biological_Process_2023_sample1000	Pyrimidine Nucleotide-Sugar Transmembrane Transport (GO:0090481)	6
+GO_Biological_Process_2023_sample1000	Ruffle Assembly (GO:0097178)	5
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Hydrolase Activity (GO:0051346)	47
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Cell Size (GO:0045792)	5
+GO_Biological_Process_2023_sample1000	Regulation Of T Cell Activation (GO:0050863)	62
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Transcription Initiation By RNA Polymerase II (GO:0060261)	52
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Calcineurin-Mediated Signaling (GO:0106057)	11
+GO_Biological_Process_2023_sample1000	Organic Substance Transport (GO:0071702)	201
+GO_Biological_Process_2023_sample1000	Nuclear-Transcribed mRNA Catabolic Process, Nonsense-Mediated Decay (GO:0000184)	28
+GO_Biological_Process_2023_sample1000	Cyclic Nucleotide Biosynthetic Process (GO:0009190)	19
+GO_Biological_Process_2023_sample1000	Regulation Of Actin Filament Organization (GO:0110053)	12
+GO_Biological_Process_2023_sample1000	Actin-Mediated Cell Contraction (GO:0070252)	9
+GO_Biological_Process_2023_sample1000	Transcription-Dependent Tethering Of RNA Polymerase II Gene DNA At Nuclear Periphery (GO:0000972)	6
+GO_Biological_Process_2023_sample1000	Spliceosomal Complex Assembly (GO:0000245)	62
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Protein Processing (GO:0010955)	15
+GO_Biological_Process_2023_sample1000	Regulation Of Lipoprotein Lipase Activity (GO:0051004)	15
+GO_Biological_Process_2023_sample1000	Positive Regulation By Host Of Viral Genome Replication (GO:0044829)	7
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Myeloid Cell Apoptotic Process (GO:0033034)	7
+GO_Biological_Process_2023_sample1000	Regulation Of Macroautophagy (GO:0016241)	96
+GO_Biological_Process_2023_sample1000	Oogenesis (GO:0048477)	15
+GO_Biological_Process_2023_sample1000	Microtubule Polymerization (GO:0046785)	34
+GO_Biological_Process_2023_sample1000	Protein Autophosphorylation (GO:0046777)	162
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Actin Cytoskeleton Reorganization (GO:2000251)	8
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Transmembrane Transport (GO:0034764)	15
+GO_Biological_Process_2023_sample1000	Foam Cell Differentiation (GO:0090077)	7
+GO_Biological_Process_2023_sample1000	Alpha-Beta T Cell Activation (GO:0046631)	15
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Myelination (GO:0031643)	11
+GO_Biological_Process_2023_sample1000	Hexose Transmembrane Transport (GO:0008645)	22
+GO_Biological_Process_2023_sample1000	Regulation Of I-kappaB kinase/NF-kappaB Signaling (GO:0043122)	232
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Icosanoid Secretion (GO:0032305)	6
+GO_Biological_Process_2023_sample1000	Multivesicular Body-Lysosome Fusion (GO:0061763)	9
+GO_Biological_Process_2023_sample1000	Regulation Of Intracellular Protein Transport (GO:0033157)	36
+GO_Biological_Process_2023_sample1000	Actin Filament-Based Transport (GO:0099515)	20
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Cyclase Activity (GO:0031280)	11
+GO_Biological_Process_2023_sample1000	Aromatic Amino Acid Transport (GO:0015801)	7
+GO_Biological_Process_2023_sample1000	Regulation Of Necroptotic Process (GO:0060544)	20
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Cell Cycle (GO:0045786)	85
+GO_Biological_Process_2023_sample1000	Inositol Lipid-Mediated Signaling (GO:0048017)	33
+GO_Biological_Process_2023_sample1000	Protein Localization To Microtubule Cytoskeleton (GO:0072698)	9
+GO_Biological_Process_2023_sample1000	Enamel Mineralization (GO:0070166)	5
+GO_Biological_Process_2023_sample1000	White Fat Cell Differentiation (GO:0050872)	6
+GO_Biological_Process_2023_sample1000	Regulation Of Myoblast Differentiation (GO:0045661)	54
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Nuclear-Transcribed mRNA poly(A) Tail Shortening (GO:0060213)	12
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Natural Killer Cell Mediated Immunity (GO:0002716)	10
+GO_Biological_Process_2023_sample1000	Axo-Dendritic Transport (GO:0008088)	5
+GO_Biological_Process_2023_sample1000	His-Purkinje System Development (GO:0003164)	5
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Inflammatory Response (GO:0050729)	104
+GO_Biological_Process_2023_sample1000	Regulation Of Peptidyl-Threonine Phosphorylation (GO:0010799)	36
+GO_Biological_Process_2023_sample1000	Cellular Response To Platelet-Derived Growth Factor Stimulus (GO:0036120)	8
+GO_Biological_Process_2023_sample1000	Regulation Of Peptidyl-Cysteine S-nitrosylation (GO:2000169)	5
+GO_Biological_Process_2023_sample1000	Regulation Of Cell Communication (GO:0010646)	49
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Biosynthetic Process (GO:0009891)	44
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Protein Polymerization (GO:0032272)	26
+GO_Biological_Process_2023_sample1000	Histone H4-K8 Acetylation (GO:0043982)	15
+GO_Biological_Process_2023_sample1000	Regulation Of Transposition (GO:0010528)	14
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Alpha-Beta T Cell Activation (GO:0046636)	10
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Mononuclear Cell Migration (GO:0071676)	12
+GO_Biological_Process_2023_sample1000	Cilium Assembly (GO:0060271)	243
+GO_Biological_Process_2023_sample1000	Vacuole Fusion (GO:0097576)	10
+GO_Biological_Process_2023_sample1000	Response To Gonadotropin (GO:0034698)	5
+GO_Biological_Process_2023_sample1000	Histone mRNA Catabolic Process (GO:0071044)	14
+GO_Biological_Process_2023_sample1000	Regulation Of Macromolecule Metabolic Process (GO:0060255)	162
+GO_Biological_Process_2023_sample1000	Modulation By Host Of Symbiont Process (GO:0051851)	42
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Nucleocytoplasmic Transport (GO:0046824)	44
+GO_Biological_Process_2023_sample1000	N-terminal Protein Amino Acid Acetylation (GO:0006474)	15
+GO_Biological_Process_2023_sample1000	Cilium Movement (GO:0003341)	59
+GO_Biological_Process_2023_sample1000	Atrioventricular Valve Morphogenesis (GO:0003181)	19
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Receptor Binding (GO:1900122)	5
+GO_Biological_Process_2023_sample1000	Regulation Of Golgi Organization (GO:1903358)	16
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Protein Localization To Centrosome (GO:1904781)	6
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Peptidyl-Serine Phosphorylation Of STAT Protein (GO:0033141)	17
+GO_Biological_Process_2023_sample1000	Regulation Of Actin Polymerization Or Depolymerization (GO:0008064)	27
+GO_Biological_Process_2023_sample1000	Intrinsic Apoptotic Signaling Pathway In Response To Oxidative Stress (GO:0008631)	11
+GO_Biological_Process_2023_sample1000	mRNA Methylation (GO:0080009)	15
+GO_Biological_Process_2023_sample1000	Glycosylceramide Metabolic Process (GO:0006677)	5
+GO_Biological_Process_2023_sample1000	Spinal Cord Dorsal/Ventral Patterning (GO:0021513)	6
+GO_Biological_Process_2023_sample1000	Embryonic Hemopoiesis (GO:0035162)	13
+GO_Biological_Process_2023_sample1000	Response To Misfolded Protein (GO:0051788)	8
+GO_Biological_Process_2023_sample1000	Regulation Of IRE1-mediated Unfolded Protein Response (GO:1903894)	13
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Intracellular Steroid Hormone Receptor Signaling Pathway (GO:0033145)	7
+GO_Biological_Process_2023_sample1000	Limb Development (GO:0060173)	28
+GO_Biological_Process_2023_sample1000	Smooth Muscle Cell Differentiation (GO:0051145)	11
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Biomineral Tissue Development (GO:0070168)	21
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Wnt Signaling Pathway, Planar Cell Polarity Pathway (GO:2000096)	5
+GO_Biological_Process_2023_sample1000	Melanosome Localization (GO:0032400)	18
+GO_Biological_Process_2023_sample1000	Regulation Of Lipid Kinase Activity (GO:0043550)	11
+GO_Biological_Process_2023_sample1000	Negative Regulation Of PERK-mediated Unfolded Protein Response (GO:1903898)	5
+GO_Biological_Process_2023_sample1000	Regulation Of Intracellular Signal Transduction (GO:1902531)	297
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cell Adhesion Mediated By Integrin (GO:0033630)	17
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Coagulation (GO:0050820)	11
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Type I Interferon-Mediated Signaling Pathway (GO:0060340)	14
+GO_Biological_Process_2023_sample1000	Regulation Of ER To Golgi Vesicle-Mediated Transport (GO:0060628)	9
+GO_Biological_Process_2023_sample1000	Myofibril Assembly (GO:0030239)	46
+GO_Biological_Process_2023_sample1000	Calcium Ion Transmembrane Transport (GO:0070588)	80
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Proteolysis Involved In Protein Catabolic Process (GO:1903052)	31
+GO_Biological_Process_2023_sample1000	Vascular Process In Circulatory System (GO:0003018)	12
+GO_Biological_Process_2023_sample1000	Regulation Of Alpha-Beta T Cell Proliferation (GO:0046640)	7
+GO_Biological_Process_2023_sample1000	Purine-Containing Compound Metabolic Process (GO:0072521)	7
+GO_Biological_Process_2023_sample1000	mRNA Destabilization (GO:0061157)	43
+GO_Biological_Process_2023_sample1000	Pulmonary Valve Morphogenesis (GO:0003184)	18
+GO_Biological_Process_2023_sample1000	Response To Hepatocyte Growth Factor (GO:0035728)	6
+GO_Biological_Process_2023_sample1000	Synaptic Vesicle Membrane Organization (GO:0048499)	14
+GO_Biological_Process_2023_sample1000	Anoikis (GO:0043276)	8
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Phospholipase Activity (GO:0010518)	20
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Transcription Elongation By RNA Polymerase II (GO:0034244)	14
+GO_Biological_Process_2023_sample1000	Regulation Of DNA Methylation-Dependent Heterochromatin Formation (GO:0090308)	17
+GO_Biological_Process_2023_sample1000	Nucleobase Biosynthetic Process (GO:0046112)	6
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Glycogen Biosynthetic Process (GO:0045719)	5
+GO_Biological_Process_2023_sample1000	Positive Regulation Of MAPK Cascade (GO:0043410)	310
+GO_Biological_Process_2023_sample1000	Activation Of Cysteine-Type Endopeptidase Activity Involved In Apoptotic Process By Cytochrome C (GO:0008635)	5
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Osteoblast Differentiation (GO:0045669)	44
+GO_Biological_Process_2023_sample1000	Autophagosome-Lysosome Fusion (GO:0061909)	8
+GO_Biological_Process_2023_sample1000	Response To Prostaglandin E (GO:0034695)	10
+GO_Biological_Process_2023_sample1000	Regulation Of Response To Endoplasmic Reticulum Stress (GO:1905897)	13
+GO_Biological_Process_2023_sample1000	Heart Process (GO:0003015)	16
+GO_Biological_Process_2023_sample1000	Regulation Of Protein Phosphorylation (GO:0001932)	265
+GO_Biological_Process_2023_sample1000	Lipid Transport (GO:0006869)	108
+GO_Biological_Process_2023_sample1000	Chitin Catabolic Process (GO:0006032)	5
+GO_Biological_Process_2023_sample1000	Nuclear Polyadenylation-Dependent rRNA Catabolic Process (GO:0071035)	6
+GO_Biological_Process_2023_sample1000	Insulin Receptor Signaling Pathway (GO:0008286)	47
+GO_Biological_Process_2023_sample1000	Monoubiquitinated Protein Deubiquitination (GO:0035520)	33
+GO_Biological_Process_2023_sample1000	Myeloid Cell Activation Involved In Immune Response (GO:0002275)	17
+GO_Biological_Process_2023_sample1000	Presynaptic Membrane Organization (GO:0097090)	9
+GO_Biological_Process_2023_sample1000	Mitochondrial Transport (GO:0006839)	53
+GO_Biological_Process_2023_sample1000	Regulation Of Muscle System Process (GO:0090257)	11
+GO_Biological_Process_2023_sample1000	Neuron Cell-Cell Adhesion (GO:0007158)	14
+GO_Biological_Process_2023_sample1000	Vacuole Organization (GO:0007033)	6
+GO_Biological_Process_2023_sample1000	Regulation Of Cardiac Muscle Hypertrophy (GO:0010611)	23
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Programmed Cell Death (GO:0043069)	381
+GO_Biological_Process_2023_sample1000	Presynaptic Membrane Assembly (GO:0097105)	8
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Kidney Development (GO:0090184)	6
+GO_Biological_Process_2023_sample1000	Positive Regulation Of TORC1 Signaling (GO:1904263)	27
+GO_Biological_Process_2023_sample1000	Cellular Response To Molecule Of Bacterial Origin (GO:0071219)	117
+GO_Biological_Process_2023_sample1000	Protein Targeting To ER (GO:0045047)	23
+GO_Biological_Process_2023_sample1000	Cellular Response To Hydroxyurea (GO:0072711)	8
+GO_Biological_Process_2023_sample1000	Base-Excision Repair, Gap-Filling (GO:0006287)	12
+GO_Biological_Process_2023_sample1000	Long-Chain fatty-acyl-CoA Metabolic Process (GO:0035336)	23
+GO_Biological_Process_2023_sample1000	Negative Regulation Of NLRP3 Inflammasome Complex Assembly (GO:1900226)	13
+GO_Biological_Process_2023_sample1000	Regulation Of Apoptotic Process (GO:0042981)	705
+GO_Biological_Process_2023_sample1000	Regulation Of Cellular Response To Heat (GO:1900034)	15
+GO_Biological_Process_2023_sample1000	Regulation Of T Cell Migration (GO:2000404)	23
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Leukocyte Degranulation (GO:0043301)	8
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cardiac Muscle Hypertrophy (GO:0010613)	17
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Neutrophil Migration (GO:1902624)	23
+GO_Biological_Process_2023_sample1000	Muscle Cell Differentiation (GO:0042692)	37
+GO_Biological_Process_2023_sample1000	Focal Adhesion Assembly (GO:0048041)	21
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Hemoglobin Biosynthetic Process (GO:0046985)	5
+GO_Biological_Process_2023_sample1000	Membrane Repolarization (GO:0086009)	18
+GO_Biological_Process_2023_sample1000	mRNA Modification (GO:0016556)	27
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Heart Contraction (GO:0045823)	21
+GO_Biological_Process_2023_sample1000	Ruffle Organization (GO:0031529)	16
+GO_Biological_Process_2023_sample1000	Regulation Of T Cell Differentiation (GO:0045580)	47
+GO_Biological_Process_2023_sample1000	Protein Targeting To Lysosome (GO:0006622)	26
+GO_Biological_Process_2023_sample1000	Thiamine-Containing Compound Metabolic Process (GO:0042723)	5
+GO_Biological_Process_2023_sample1000	DNA Methylation-Dependent Heterochromatin Formation (GO:0006346)	11
+GO_Biological_Process_2023_sample1000	Cellular Response To Bacterial Lipopeptide (GO:0071221)	6
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Calcium Ion Transport (GO:0051928)	29
+GO_Biological_Process_2023_sample1000	Pteridine-Containing Compound Metabolic Process (GO:0042558)	5
+GO_Biological_Process_2023_sample1000	Response To Steroid Hormone (GO:0048545)	29
+GO_Biological_Process_2023_sample1000	Regulation Of Blood Vessel Remodeling (GO:0060312)	5
+GO_Biological_Process_2023_sample1000	Postsynapse Organization (GO:0099173)	7
+GO_Biological_Process_2023_sample1000	Establishment Of Skin Barrier (GO:0061436)	19
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Phosphatidylinositol 3-Kinase Activity (GO:0043552)	26
+GO_Biological_Process_2023_sample1000	Heparan Sulfate Proteoglycan Biosynthetic Process (GO:0015012)	23
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Macrophage Migration (GO:1905522)	7
+GO_Biological_Process_2023_sample1000	Mitochondrial RNA Metabolic Process (GO:0000959)	20
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Telomere Maintenance Via Telomerase (GO:0032212)	32
+GO_Biological_Process_2023_sample1000	Muscle Contraction (GO:0006936)	94
+GO_Biological_Process_2023_sample1000	Hexose Biosynthetic Process (GO:0019319)	35
+GO_Biological_Process_2023_sample1000	Cellular Response To Type III Interferon (GO:0071358)	10
+GO_Biological_Process_2023_sample1000	Heart Trabecula Formation (GO:0060347)	6
+GO_Biological_Process_2023_sample1000	Regulation Of Interleukin-10 Production (GO:0032653)	46
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Nitrogen Compound Metabolic Process (GO:0051172)	11
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Peptidyl-Tyrosine Phosphorylation (GO:0050732)	30
+GO_Biological_Process_2023_sample1000	protein-RNA Complex Disassembly (GO:0032988)	7
+GO_Biological_Process_2023_sample1000	Catecholamine Catabolic Process (GO:0042424)	7
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Single Stranded Viral RNA Replication Via Double Stranded DNA Intermediate (GO:0045869)	14
+GO_Biological_Process_2023_sample1000	Positive Regulation Of TOR Signaling (GO:0032008)	47
+GO_Biological_Process_2023_sample1000	Box C/D snoRNP Assembly (GO:0000492)	8
+GO_Biological_Process_2023_sample1000	Cell Surface Pattern Recognition Receptor Signaling Pathway (GO:0002752)	8
+GO_Biological_Process_2023_sample1000	Monoatomic Cation Transmembrane Transport (GO:0098655)	281
+GO_Biological_Process_2023_sample1000	Myeloid Leukocyte Mediated Immunity (GO:0002444)	7
+GO_Biological_Process_2023_sample1000	Protein Retention In ER Lumen (GO:0006621)	7
+GO_Biological_Process_2023_sample1000	Vacuolar Acidification (GO:0007035)	29
+GO_Biological_Process_2023_sample1000	Regulation Of Macrophage Cytokine Production (GO:0010935)	13
+GO_Biological_Process_2023_sample1000	Intracellular Estrogen Receptor Signaling Pathway (GO:0030520)	17
+GO_Biological_Process_2023_sample1000	Regulation Of ATPase-coupled Calcium Transmembrane Transporter Activity (GO:1901894)	7
+GO_Biological_Process_2023_sample1000	Regulation Of Protein-Containing Complex Disassembly (GO:0043244)	19
+GO_Biological_Process_2023_sample1000	Defense Response To Gram-negative Bacterium (GO:0050829)	75
+GO_Biological_Process_2023_sample1000	Cleavage Furrow Formation (GO:0036089)	6
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Epithelial Cell Migration (GO:0010634)	95
+GO_Biological_Process_2023_sample1000	Regulation Of Early Endosome To Late Endosome Transport (GO:2000641)	19
+GO_Biological_Process_2023_sample1000	Sodium Ion Import Across Plasma Membrane (GO:0098719)	21
+GO_Biological_Process_2023_sample1000	ncRNA Processing (GO:0034470)	100
+GO_Biological_Process_2023_sample1000	Cellular Hyperosmotic Response (GO:0071474)	6
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cell Motility (GO:2000147)	221
+GO_Biological_Process_2023_sample1000	Transcription By RNA Polymerase III (GO:0006383)	28
+GO_Biological_Process_2023_sample1000	Megakaryocyte Development (GO:0035855)	10
+GO_Biological_Process_2023_sample1000	Mitochondrial Electron Transport, Ubiquinol To Cytochrome C (GO:0006122)	12
+GO_Biological_Process_2023_sample1000	C-terminal Protein Amino Acid Modification (GO:0018410)	12
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Signal Transduction By P53 Class Mediator (GO:1901798)	21
+GO_Biological_Process_2023_sample1000	Myoblast Differentiation (GO:0045445)	20
+GO_Biological_Process_2023_sample1000	Morphogenesis Of An Epithelium (GO:0002009)	29
+GO_Biological_Process_2023_sample1000	Cellular Response To Magnesium Ion (GO:0071286)	5
+GO_Biological_Process_2023_sample1000	V(D)J Recombination (GO:0033151)	12
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Double-Strand Break Repair Via Homologous Recombination (GO:1905168)	36
+GO_Biological_Process_2023_sample1000	Regulation Of Megakaryocyte Differentiation (GO:0045652)	19
+GO_Biological_Process_2023_sample1000	DNA-templated Transcription Elongation (GO:0006354)	26
+GO_Biological_Process_2023_sample1000	Adrenergic Receptor Signaling Pathway (GO:0071875)	18
+GO_Biological_Process_2023_sample1000	Long-Chain Fatty Acid Metabolic Process (GO:0001676)	78
+GO_Biological_Process_2023_sample1000	Lytic Vacuole Organization (GO:0080171)	36
+GO_Biological_Process_2023_sample1000	Inorganic Cation Transmembrane Transport (GO:0098662)	284
+GO_Biological_Process_2023_sample1000	Very Long-Chain Fatty Acid Biosynthetic Process (GO:0042761)	12
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Platelet Activation (GO:0010572)	9
+GO_Biological_Process_2023_sample1000	Regulation Of Androgen Receptor Signaling Pathway (GO:0060765)	27
+GO_Biological_Process_2023_sample1000	Regulation Of Mitochondrial Membrane Permeability (GO:0046902)	18
+GO_Biological_Process_2023_sample1000	Folic Acid Metabolic Process (GO:0046655)	12
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Synaptic Transmission, GABAergic (GO:0032230)	7
+GO_Biological_Process_2023_sample1000	Regulation Of Monoatomic Ion Transmembrane Transport (GO:0034765)	29
+GO_Biological_Process_2023_sample1000	Leucine Transport (GO:0015820)	9
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Response To Endoplasmic Reticulum Stress (GO:1905898)	18
+GO_Biological_Process_2023_sample1000	Calcium Ion-Regulated Exocytosis Of Neurotransmitter (GO:0048791)	14
+GO_Biological_Process_2023_sample1000	Mitotic Cell Cycle Checkpoint Signaling (GO:0007093)	25
+GO_Biological_Process_2023_sample1000	Leukotriene D4 Biosynthetic Process (GO:1901750)	9
+GO_Biological_Process_2023_sample1000	Regulation Of Centrosome Duplication (GO:0010824)	31
+GO_Biological_Process_2023_sample1000	Regulation Of Type I Interferon Production (GO:0032479)	59
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cyclin-Dependent Protein Serine/Threonine Kinase Activity (GO:0045737)	15
+GO_Biological_Process_2023_sample1000	N-terminal Peptidyl-Methionine Acetylation (GO:0017196)	7
+GO_Biological_Process_2023_sample1000	Glomerular Filtration (GO:0003094)	13
+GO_Biological_Process_2023_sample1000	Regulation Of Serine-Type Endopeptidase Activity (GO:1900003)	5
+GO_Biological_Process_2023_sample1000	Regulation Of Cell Cycle Process (GO:0010564)	130
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Fibroblast Migration (GO:0010764)	5
+GO_Biological_Process_2023_sample1000	Receptor Guanylyl Cyclase Signaling Pathway (GO:0007168)	9
+GO_Biological_Process_2023_sample1000	Contact Inhibition (GO:0060242)	5
+GO_Biological_Process_2023_sample1000	Regulation Of Neuron Apoptotic Process (GO:0043523)	105
+GO_Biological_Process_2023_sample1000	Notochord Development (GO:0030903)	5
+GO_Biological_Process_2023_sample1000	Hexose Import Across Plasma Membrane (GO:0140271)	5
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Lymphocyte Activation (GO:0051250)	23
+GO_Biological_Process_2023_sample1000	Pyrimidine Ribonucleotide Biosynthetic Process (GO:0009220)	6
+GO_Biological_Process_2023_sample1000	Glycerol Transmembrane Transport (GO:0015793)	8
+GO_Biological_Process_2023_sample1000	T-helper 1 Cell Differentiation (GO:0045063)	5
+GO_Biological_Process_2023_sample1000	Regulation Of Intestinal Cholesterol Absorption (GO:0030300)	6
+GO_Biological_Process_2023_sample1000	tRNA Wobble Base Modification (GO:0002097)	15
+GO_Biological_Process_2023_sample1000	Axonemal Dynein Complex Assembly (GO:0070286)	37
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cholesterol Efflux (GO:0010875)	22
+GO_Biological_Process_2023_sample1000	Macrophage Migration (GO:1905517)	12
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Type II Interferon Production (GO:0032729)	58
+GO_Biological_Process_2023_sample1000	RNA Phosphodiester Bond Hydrolysis (GO:0090501)	28
+GO_Biological_Process_2023_sample1000	Response To Peptide Hormone (GO:0043434)	55
+GO_Biological_Process_2023_sample1000	Gland Development (GO:0048732)	74
+GO_Biological_Process_2023_sample1000	Immunoglobulin Mediated Immune Response (GO:0016064)	30
+GO_Biological_Process_2023_sample1000	Photoreceptor Cell Differentiation (GO:0046530)	5
+GO_Biological_Process_2023_sample1000	Histone Arginine Methylation (GO:0034969)	5
+GO_Biological_Process_2023_sample1000	Protein K29-linked Ubiquitination (GO:0035519)	8
+GO_Biological_Process_2023_sample1000	Neuronal Ion Channel Clustering (GO:0045161)	8
+GO_Biological_Process_2023_sample1000	Regulation Of Chromosome Condensation (GO:0060623)	7
+GO_Biological_Process_2023_sample1000	snoRNA Localization (GO:0048254)	5
+GO_Biological_Process_2023_sample1000	Regulation Of Stem Cell Population Maintenance (GO:2000036)	56
+GO_Biological_Process_2023_sample1000	Regulation Of Cellular Response To Hypoxia (GO:1900037)	6
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Muscle Cell Differentiation (GO:0051148)	7
+GO_Biological_Process_2023_sample1000	Diacylglycerol Biosynthetic Process (GO:0006651)	7
+GO_Biological_Process_2023_sample1000	IMP Biosynthetic Process (GO:0006188)	7
+GO_Biological_Process_2023_sample1000	Bundle Of His Cell To Purkinje Myocyte Communication (GO:0086069)	8
+GO_Biological_Process_2023_sample1000	Regulation Of Dendritic Cell Chemotaxis (GO:2000508)	7
+GO_Biological_Process_2023_sample1000	Negative Regulation Of DNA Replication (GO:0008156)	15
+GO_Biological_Process_2023_sample1000	Intracellular Protein Transport (GO:0006886)	325
+GO_Biological_Process_2023_sample1000	Ubiquitin-Dependent Protein Catabolic Process (GO:0006511)	367
+GO_Biological_Process_2023_sample1000	RNA Modification (GO:0009451)	51
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Endothelial Cell Proliferation (GO:0001938)	77
+GO_Biological_Process_2023_sample1000	Cellular Response To Heat (GO:0034605)	40
+GO_Biological_Process_2023_sample1000	Regulation Of Long-Term Synaptic Depression (GO:1900452)	9
+GO_Biological_Process_2023_sample1000	Regulation Of Establishment Of Cell Polarity (GO:2000114)	17
+GO_Biological_Process_2023_sample1000	Mitochondrial Respirasome Assembly (GO:0097250)	10
+GO_Biological_Process_2023_sample1000	Intrinsic Apoptotic Signaling Pathway By P53 Class Mediator (GO:0072332)	35
+GO_Biological_Process_2023_sample1000	Natural Killer Cell Activation (GO:0030101)	45
+GO_Biological_Process_2023_sample1000	Inorganic Anion Transmembrane Transport (GO:0098661)	63
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cellular Senescence (GO:2000774)	10
+GO_Biological_Process_2023_sample1000	Regulation Of Vitamin D Biosynthetic Process (GO:0060556)	5
+GO_Biological_Process_2023_sample1000	Establishment Of Planar Polarity (GO:0001736)	7
+GO_Biological_Process_2023_sample1000	Regulatory ncRNA Processing (GO:0070918)	35
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Axonogenesis (GO:0050772)	38
+GO_Biological_Process_2023_sample1000	Pseudouridine Synthesis (GO:0001522)	12
+GO_Biological_Process_2023_sample1000	TRAIL-activated Apoptotic Signaling Pathway (GO:0036462)	6
+GO_Biological_Process_2023_sample1000	Modulation By Symbiont Of Entry Into Host (GO:0052372)	21
+GO_Biological_Process_2023_sample1000	Cell Morphogenesis Involved In Differentiation (GO:0000904)	24
+GO_Biological_Process_2023_sample1000	Heart Trabecula Morphogenesis (GO:0061384)	18
+GO_Biological_Process_2023_sample1000	Protein Quality Control For Misfolded Or Incompletely Synthesized Proteins (GO:0006515)	27
+GO_Biological_Process_2023_sample1000	Barbed-End Actin Filament Capping (GO:0051016)	18
+GO_Biological_Process_2023_sample1000	Regulation Of Tooth Mineralization (GO:0070170)	5
+GO_Biological_Process_2023_sample1000	Complement Activation, Lectin Pathway (GO:0001867)	8
+GO_Biological_Process_2023_sample1000	Transcription By RNA Polymerase I (GO:0006360)	17
+GO_Biological_Process_2023_sample1000	Receptor-Mediated Endocytosis (GO:0006898)	122
+GO_Biological_Process_2023_sample1000	Immune Response-Activating Cell Surface Receptor Signaling Pathway (GO:0002429)	23
+GO_Biological_Process_2023_sample1000	N-acetylneuraminate Metabolic Process (GO:0006054)	10
+GO_Biological_Process_2023_sample1000	Iron Ion Transport (GO:0006826)	24
+GO_Biological_Process_2023_sample1000	Protein Polyubiquitination (GO:0000209)	226
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Receptor Internalization (GO:0002092)	22
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Peptidyl-Lysine Acetylation (GO:2000758)	17
+GO_Biological_Process_2023_sample1000	Protein Localization To Centrosome (GO:0071539)	17
+GO_Biological_Process_2023_sample1000	B Cell Activation (GO:0042113)	92
+GO_Biological_Process_2023_sample1000	AMP Metabolic Process (GO:0046033)	11
+GO_Biological_Process_2023_sample1000	RNA Polyadenylation (GO:0043631)	25
+GO_Biological_Process_2023_sample1000	Pyrimidine Deoxyribonucleotide Catabolic Process (GO:0009223)	12
+GO_Biological_Process_2023_sample1000	Sphingosine-1-Phosphate Receptor Signaling Pathway (GO:0003376)	8
+GO_Biological_Process_2023_sample1000	tRNA Surveillance (GO:0106354)	7
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Interferon-Beta Production (GO:0032688)	10
+GO_Biological_Process_2023_sample1000	Regulation Of Opsonization (GO:1903027)	10
+GO_Biological_Process_2023_sample1000	Sequestering Of Actin Monomers (GO:0042989)	8
+GO_Biological_Process_2023_sample1000	Mitochondrial Fusion (GO:0008053)	18
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Meiotic Cell Cycle (GO:0051447)	5
+GO_Biological_Process_2023_sample1000	RNA Transport (GO:0050658)	39
+GO_Biological_Process_2023_sample1000	Mucosal Immune Response (GO:0002385)	28
+GO_Biological_Process_2023_sample1000	COPII Vesicle Coating (GO:0048208)	19
+GO_Biological_Process_2023_sample1000	Regulation Of Mitophagy (GO:1901524)	7
+GO_Biological_Process_2023_sample1000	Endoplasmic Reticulum Calcium Ion Homeostasis (GO:0032469)	20
+GO_Biological_Process_2023_sample1000	Protein Localization To Synapse (GO:0035418)	13
+GO_Biological_Process_2023_sample1000	Mesodermal Cell Differentiation (GO:0048333)	8
+GO_Biological_Process_2023_sample1000	Cell Junction Assembly (GO:0034329)	95
+GO_Biological_Process_2023_sample1000	Blood Vessel Diameter Maintenance (GO:0097746)	36
+GO_Biological_Process_2023_sample1000	Mitotic Spindle Checkpoint Signaling (GO:0071174)	26
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Myeloid Leukocyte Mediated Immunity (GO:0002887)	5
+GO_Biological_Process_2023_sample1000	Activation Of Cysteine-Type Endopeptidase Activity Involved In Apoptotic Process (GO:0006919)	67
+GO_Biological_Process_2023_sample1000	Regulation Of Fat Cell Proliferation (GO:0070344)	5
+GO_Biological_Process_2023_sample1000	Neuron Projection Guidance (GO:0097485)	124
+GO_Biological_Process_2023_sample1000	Cellular Response To Ketone (GO:1901655)	44
+GO_Biological_Process_2023_sample1000	Regulation Of Glucose Import (GO:0046324)	36
+GO_Biological_Process_2023_sample1000	Cellular Response To Estrogen Stimulus (GO:0071391)	15
+GO_Biological_Process_2023_sample1000	Protein Targeting To Membrane (GO:0006612)	72
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Lipid Kinase Activity (GO:0090219)	7
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Protein Maturation (GO:1903318)	9
+GO_Biological_Process_2023_sample1000	Detection Of Chemical Stimulus Involved In Sensory Perception Of Bitter Taste (GO:0001580)	41
+GO_Biological_Process_2023_sample1000	Neuroblast Proliferation (GO:0007405)	5
+GO_Biological_Process_2023_sample1000	Calcium Import Into The Mitochondrion (GO:0036444)	9
+GO_Biological_Process_2023_sample1000	Phospholipid Catabolic Process (GO:0009395)	28
+GO_Biological_Process_2023_sample1000	Homologous Chromosome Segregation (GO:0045143)	22
+GO_Biological_Process_2023_sample1000	Regulation Of Calcium Ion-Dependent Exocytosis (GO:0017158)	28
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Voltage-Gated Potassium Channel Activity (GO:1903817)	11
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cell Migration Involved In Sprouting Angiogenesis (GO:0090050)	16
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Receptor Recycling (GO:0001921)	9
+GO_Biological_Process_2023_sample1000	Histone H3 Acetylation (GO:0043966)	36
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Endocytosis (GO:0045807)	79
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Exocytosis (GO:0045920)	10
+GO_Biological_Process_2023_sample1000	Copper Ion Transport (GO:0006825)	10
+GO_Biological_Process_2023_sample1000	Postreplication Repair (GO:0006301)	22
+GO_Biological_Process_2023_sample1000	Epithelial Cell Migration (GO:0010631)	46
+GO_Biological_Process_2023_sample1000	Mitotic Sister Chromatid Segregation (GO:0000070)	111
+GO_Biological_Process_2023_sample1000	Protein Homooligomerization (GO:0051260)	129
+GO_Biological_Process_2023_sample1000	Regulation Of Heterotypic Cell-Cell Adhesion (GO:0034114)	24
+GO_Biological_Process_2023_sample1000	ATP Transport (GO:0015867)	13
+GO_Biological_Process_2023_sample1000	Photoperiodism (GO:0009648)	24
+GO_Biological_Process_2023_sample1000	Cellular Response To Organic Substance (GO:0071310)	82
+GO_Biological_Process_2023_sample1000	Regulation Of Interleukin-18 Production (GO:0032661)	8
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Neuroinflammatory Response (GO:0150079)	13
+GO_Biological_Process_2023_sample1000	Gliogenesis (GO:0042063)	24
+GO_Biological_Process_2023_sample1000	Histone Lysine Demethylation (GO:0070076)	7
+GO_Biological_Process_2023_sample1000	Modulation Of Chemical Synaptic Transmission (GO:0050804)	123
+GO_Biological_Process_2023_sample1000	Mitochondrial Fragmentation Involved In Apoptotic Process (GO:0043653)	8
+GO_Biological_Process_2023_sample1000	Anterograde Dendritic Transport (GO:0098937)	6
+GO_Biological_Process_2023_sample1000	Positive Regulation Of calcineurin-NFAT Signaling Cascade (GO:0070886)	19
+GO_Biological_Process_2023_sample1000	TORC1 Signaling (GO:0038202)	10
+GO_Biological_Process_2023_sample1000	Synapse Assembly (GO:0007416)	71
+GO_Biological_Process_2023_sample1000	Regulation Of Proteolysis (GO:0030162)	52
+GO_Biological_Process_2023_sample1000	Regulation Of Autophagy (GO:0010506)	241
+GO_Biological_Process_2023_sample1000	Entrainment Of Circadian Clock By Photoperiod (GO:0043153)	23
+GO_Biological_Process_2023_sample1000	Negative Regulation Of T Cell Cytokine Production (GO:0002725)	8
+GO_Biological_Process_2023_sample1000	Cellular Response To Organic Cyclic Compound (GO:0071407)	152
+GO_Biological_Process_2023_sample1000	Protein-Containing Complex Assembly (GO:0065003)	328
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Protein Kinase B Signaling (GO:0051898)	36
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Protein Binding (GO:0032091)	71
+GO_Biological_Process_2023_sample1000	Nuclear Membrane Reassembly (GO:0031468)	23
+GO_Biological_Process_2023_sample1000	Regulation Of Glial Cell Proliferation (GO:0060251)	8
+GO_Biological_Process_2023_sample1000	ESCRT III Complex Disassembly (GO:1904903)	9
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Telomerase RNA Localization To Cajal Body (GO:1904874)	14
+GO_Biological_Process_2023_sample1000	Wound Healing (GO:0042060)	80
+GO_Biological_Process_2023_sample1000	Axon Regeneration (GO:0031103)	9
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Proteolysis Involved In Protein Catabolic Process (GO:1903051)	25
+GO_Biological_Process_2023_sample1000	Regulation Of Mitotic Cell Cycle Spindle Assembly Checkpoint (GO:0090266)	17
+GO_Biological_Process_2023_sample1000	Dendritic Cell Migration (GO:0036336)	18
+GO_Biological_Process_2023_sample1000	Regulation Of Systemic Arterial Blood Pressure (GO:0003073)	15
+GO_Biological_Process_2023_sample1000	Regulation Of Granulocyte Macrophage Colony-Stimulating Factor Production (GO:0032645)	15
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cell Activation (GO:0050867)	15
+GO_Biological_Process_2023_sample1000	Regulation Of Mitotic Spindle Checkpoint (GO:1903504)	5
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cellular Response To Insulin Stimulus (GO:1900078)	13
+GO_Biological_Process_2023_sample1000	Regulation Of Transport (GO:0051049)	44
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Neuron Migration (GO:2001224)	12
+GO_Biological_Process_2023_sample1000	Sulfate Transport (GO:0008272)	11
+GO_Biological_Process_2023_sample1000	Lipoprotein Biosynthetic Process (GO:0042158)	14
+GO_Biological_Process_2023_sample1000	Sodium Ion Export Across Plasma Membrane (GO:0036376)	12
+GO_Biological_Process_2023_sample1000	Zymogen Activation (GO:0031638)	45
+GO_Biological_Process_2023_sample1000	Regulation Of Proteasomal Protein Catabolic Process (GO:0061136)	53
+GO_Biological_Process_2023_sample1000	NADH Metabolic Process (GO:0006734)	7
+GO_Biological_Process_2023_sample1000	Detection Of Mechanical Stimulus (GO:0050982)	18
+GO_Biological_Process_2023_sample1000	Regulation Of Blood Coagulation (GO:0030193)	29
+GO_Biological_Process_2023_sample1000	Fatty Acid Elongation (GO:0030497)	12
+GO_Biological_Process_2023_sample1000	Negative Regulation Of ERK1 And ERK2 Cascade (GO:0070373)	48
+GO_Biological_Process_2023_sample1000	Serine Family Amino Acid Biosynthetic Process (GO:0009070)	10
+GO_Biological_Process_2023_sample1000	Regulation Of Dephosphorylation (GO:0035303)	15
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Ion Transmembrane Transporter Activity (GO:0032414)	33
+GO_Biological_Process_2023_sample1000	Cell Projection Organization (GO:0030030)	20
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Smooth Muscle Cell Differentiation (GO:0051151)	8
+GO_Biological_Process_2023_sample1000	Carbohydrate Derivative Catabolic Process (GO:1901136)	17
+GO_Biological_Process_2023_sample1000	Glucan Catabolic Process (GO:0009251)	6
+GO_Biological_Process_2023_sample1000	Histone Deubiquitination (GO:0016578)	34
+GO_Biological_Process_2023_sample1000	Regulation Of Melanin Biosynthetic Process (GO:0048021)	10
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Immunoglobulin Production (GO:0002639)	34
+GO_Biological_Process_2023_sample1000	Regulation Of Glucose Metabolic Process (GO:0010906)	28
+GO_Biological_Process_2023_sample1000	Extrinsic Apoptotic Signaling Pathway (GO:0097191)	67
+GO_Biological_Process_2023_sample1000	Homologous Recombination (GO:0035825)	9
+GO_Biological_Process_2023_sample1000	Vasoconstriction (GO:0042310)	9
+GO_Biological_Process_2023_sample1000	Regulation Of Plasminogen Activation (GO:0010755)	16
+GO_Biological_Process_2023_sample1000	Nucleotide-Sugar Biosynthetic Process (GO:0009226)	15
+GO_Biological_Process_2023_sample1000	Mammary Gland Epithelial Cell Differentiation (GO:0060644)	7
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Tumor Necrosis Factor Production (GO:0032720)	47
+GO_Biological_Process_2023_sample1000	Regulation Of Establishment Of Planar Polarity (GO:0090175)	29
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Stem Cell Population Maintenance (GO:1902459)	40
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Ubiquitin-Dependent Protein Catabolic Process (GO:2000059)	39
+GO_Biological_Process_2023_sample1000	Protein Localization To Plasma Membrane (GO:0072659)	137
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Cytokine Production Involved In Inflammatory Response (GO:1900017)	18
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Translational Initiation (GO:0045948)	21
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Alpha-Beta T Cell Proliferation (GO:0046642)	9
+GO_Biological_Process_2023_sample1000	DNA Metabolic Process (GO:0006259)	288
+GO_Biological_Process_2023_sample1000	Endoplasmic Reticulum Membrane Organization (GO:0090158)	11
+GO_Biological_Process_2023_sample1000	Store-Operated Calcium Entry (GO:0002115)	7
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Skeletal Muscle Fiber Development (GO:0048743)	5
+GO_Biological_Process_2023_sample1000	Ubiquitin-Dependent ERAD Pathway (GO:0030433)	73
+GO_Biological_Process_2023_sample1000	cGMP Biosynthetic Process (GO:0006182)	9
+GO_Biological_Process_2023_sample1000	Bleb Assembly (GO:0032060)	6
+GO_Biological_Process_2023_sample1000	Regulation Of Endocytic Recycling (GO:2001135)	11
+GO_Biological_Process_2023_sample1000	mRNA 3'-End Processing By Stem-Loop Binding And Cleavage (GO:0006398)	5
+GO_Biological_Process_2023_sample1000	Regulation Of Neutrophil Chemotaxis (GO:0090022)	25
+GO_Biological_Process_2023_sample1000	Response To Bile Acid (GO:1903412)	5
+GO_Biological_Process_2023_sample1000	Regulation Of Stress-Activated MAPK Cascade (GO:0032872)	51
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Cysteine-Type Endopeptidase Activity Involved In Apoptotic Process (GO:0043154)	49
+GO_Biological_Process_2023_sample1000	Delamination (GO:0060232)	6
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Neuron Differentiation (GO:0045666)	42
+GO_Biological_Process_2023_sample1000	Leukocyte Apoptotic Process (GO:0071887)	5
+GO_Biological_Process_2023_sample1000	Regulation Of Autophagosome Assembly (GO:2000785)	40
+GO_Biological_Process_2023_sample1000	CRD-mediated mRNA Stabilization (GO:0070934)	10
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Monocyte Chemotaxis (GO:0090026)	18
+GO_Biological_Process_2023_sample1000	L-aspartate Transmembrane Transport (GO:0070778)	5
+GO_Biological_Process_2023_sample1000	Sphingoid Metabolic Process (GO:0046519)	11
+GO_Biological_Process_2023_sample1000	Heme Catabolic Process (GO:0042167)	10
+GO_Biological_Process_2023_sample1000	Mature B Cell Differentiation Involved In Immune Response (GO:0002313)	13
+GO_Biological_Process_2023_sample1000	Nucleoside Diphosphate Metabolic Process (GO:0009132)	8
+GO_Biological_Process_2023_sample1000	Tube Closure (GO:0060606)	29
+GO_Biological_Process_2023_sample1000	Peroxisome Fission (GO:0016559)	8
+GO_Biological_Process_2023_sample1000	Regulation Of Complement-Dependent Cytotoxicity (GO:1903659)	9
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Tyrosine Phosphorylation Of STAT Protein (GO:0042531)	55
+GO_Biological_Process_2023_sample1000	Purine Nucleotide Metabolic Process (GO:0006163)	34
+GO_Biological_Process_2023_sample1000	Cyclic Nucleotide Transport (GO:0070729)	7
+GO_Biological_Process_2023_sample1000	Metanephric Nephron Tubule Development (GO:0072234)	6
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Locomotion (GO:0040013)	12
+GO_Biological_Process_2023_sample1000	Imitative Learning (GO:0098596)	5
+GO_Biological_Process_2023_sample1000	Neutrophil Degranulation (GO:0043312)	5
+GO_Biological_Process_2023_sample1000	Regulation Of Macrophage Activation (GO:0043030)	31
+GO_Biological_Process_2023_sample1000	Cellular Response To Unfolded Protein (GO:0034620)	17
+GO_Biological_Process_2023_sample1000	Regulation Of Epidermal Growth Factor-Activated Receptor Activity (GO:0007176)	26
+GO_Biological_Process_2023_sample1000	Auditory Receptor Cell Stereocilium Organization (GO:0060088)	6
+GO_Biological_Process_2023_sample1000	Regulation Of Mitochondrial Translation (GO:0070129)	22
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Bone Mineralization (GO:0030501)	38
+GO_Biological_Process_2023_sample1000	Regulation Of Response To Biotic Stimulus (GO:0002831)	31
+GO_Biological_Process_2023_sample1000	Cellular Response To Catecholamine Stimulus (GO:0071870)	19
+GO_Biological_Process_2023_sample1000	Positive Regulation Of Natural Killer Cell Cytokine Production (GO:0002729)	6
+GO_Biological_Process_2023_sample1000	Negative Regulation Of Cardiac Muscle Hypertrophy (GO:0010614)	12
+GO_Biological_Process_2023_sample1000	Negative Regulation Of T-helper Cell Differentiation (GO:0045623)	10
