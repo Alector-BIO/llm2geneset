@@ -509,7 +509,6 @@ async def gs_proposal_bench(
     n_pathways=5,
     seed=3272995,
     limiter=20.0,
-    n_retry=1,
 ):
     """Proposal-based approach to map from genes to function.
 
@@ -523,7 +522,6 @@ async def gs_proposal_bench(
        model: OpenAI model string
        n_background: number of genes in background set
        n_pathways: number of pathways to propose given a gene list
-       n_retry: number of retries to get valid parsed output
     Returns:
       A dict with tot_in_toks (input) and tot_out_toks (output)
       tokens used. A pandas data frame with the hypergeometric
@@ -635,7 +633,7 @@ async def gs_proposal_bench(
     return res
 
 
-def simple_ora(genes: List[str], set_descr, gene_sets, bgd_genes=None, n_background=19846 ):
+def simple_ora(genes: List[str], set_descr, gene_sets, bgd_genes=None, n_background=19846, top_n=None):
     """
     Run simple overrepresentation analysis on a set of genes.
 
@@ -711,7 +709,22 @@ def simple_ora(genes: List[str], set_descr, gene_sets, bgd_genes=None, n_backgro
     new_columns = df.columns.tolist()
     new_columns.insert(loc, new_columns.pop(new_columns.index("p_adj")))
     df = df[new_columns]
+    if top_n is not None:
+        df = df.head(top_n)
     return df
+
+
+def gs_ora_bench(genesets: List[List[str]], gmt: dict, top_n=5) -> List:
+    """Benchmarks simple ORA.
+
+    Args:
+        genesets: List of lists of gene symbols to analyze
+        gmt: Dictionary with descr and genes from read_gmt
+    Returns:
+        List of data frames with ORA results for each gene set
+    """
+    res_ora = [simple_ora(genes, gmt["descr"], gmt["genes"], top_n=top_n) for genes in tqdm.tqdm(genesets)]
+    return [{"ora_results": ora, "tot_in_toks": 0, "tot_out_toks":0} for ora in res_ora]
 
 
 async def gs_proposal(
