@@ -331,6 +331,7 @@ async def gsai_bench(
     limiter=20.0,
     seed=3272995,
     n_retry=3,
+    prompt_file = "gsai_prompt.txt"
 ):
     """Run GSAI from Ideker Lab.
 
@@ -349,7 +350,7 @@ async def gsai_bench(
        n_retry: number of retries to get valid parsed output
 
     """
-    prompt_file = "gsai_prompt.txt"
+    #prompt_file = "gsai_prompt.txt"
     with resources.open_text("llm2geneset.prompts", prompt_file) as file:
         prompt = file.read()
 
