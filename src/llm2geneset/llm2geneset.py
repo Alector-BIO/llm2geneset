@@ -89,8 +89,9 @@ def extract_last_code_block(markdown_text):
        Returns last code block. Raises exception if no code block
        was found.
     """
-    # Regular expression to find code blocks enclosed in triple backticks
-    pattern = r"```(?:[\w]*\n)?([\s\S]*?)```"
+    # Regular expression to find code blocks enclosed in triple backticks,
+    # allowing an optional language spec (e.g. ```json).
+    pattern = r"```(?:[\w-]+)?\n?([\s\S]*?)```"
     code_blocks = re.findall(pattern, markdown_text)
     if not code_blocks:
         raise ValueError("No code blocks found")
@@ -478,7 +479,7 @@ async def bp_from_genes(
         messages = [{"role": "user", "content": p}]
         r = await aclient.chat.completions.create(
             model=model, messages=messages, seed=seed + attempt,
-            max_completion_tokens=1000,
+            max_completion_tokens=4000,
         )
         resp = r.choices[0].message.content
         in_toks += r.usage.prompt_tokens
@@ -738,7 +739,6 @@ async def gs_proposal(
     n_pathways=5,
     seed=3272995,
     limiter=20.0,
-    n_retry=1,
 ):
     """Proposal-based approach to map from genes to function.
 
@@ -749,23 +749,21 @@ async def gs_proposal(
        model: OpenAI model string
        n_background: number of genes in background set
        n_pathways: number of pathways to propose given a gene list
-       n_retry: number of retries to get valid parsed output
     Returns:
       A dict with tot_in_toks (input) and tot_out_toks (output)
       tokens used. A pandas data frame with the hypergeometric
       overrepresentation results for each proposed gene set.
     """
     res = await gs_proposal_bench(
-        aclient,
-        [protein_lists],
-        model,
-        context,
-        n_background,
-        bgd_genes,
-        n_pathways,
-        seed,
-        limiter,
-        n_retry,
+        aclient=aclient,
+        protein_lists=[protein_lists],
+        model=model,
+        context=context,
+        n_background=n_background,
+        bgd_genes=bgd_genes,
+        n_pathways=n_pathways,
+        seed=seed,
+        limiter=limiter,
     )
     return res[0]
 

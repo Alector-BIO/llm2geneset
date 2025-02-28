@@ -15,7 +15,7 @@ nest_asyncio.apply()
 
 
 async def async_function(
-    aclient, genes, model, context, n_pathways,bgd_genes, seed
+    aclient, genes, model, context, n_pathways, n_background, bgd_genes, seed
 ):
     res = await llm2geneset.gs_proposal(
         aclient,
@@ -23,7 +23,7 @@ async def async_function(
         model=model,
         context=context,
         n_pathways=n_pathways,
-        n_background=19846,
+        n_background=n_background,
         bgd_genes = bgd_genes,
         seed=seed,
     )
@@ -36,13 +36,13 @@ with st.sidebar:
         openai_api_key = st.text_input("OpenAI API Key", value=default_key, type="password")
     else:
         openai_api_key = st.text_input("OpenAI API Key", value="", type="password")
-    "[Get an OpenAI API key](https://platform.openai.com)"
+    "[OpenAI API Key is Required](https://platform.openai.com)"
     "[View source](https://github.com/Alector-Biotech/llm2geneset)"
 
 st.title("llm2geneset")
 st.caption("Demonstration app for llm2geneset.")
 
-model_input = st.text_area("OpenAI Model", value="gpt-4o-2024-05-13")
+model_input = st.text_area("OpenAI Model", value="gpt-4o")
 
 genes_input = st.text_area("Gene List", placeholder="Enter genes here...")
 
@@ -54,6 +54,7 @@ num_gene_sets = st.number_input("# of gene sets", value=100, min_value=0)
 
 bgd_genes = st.text_area("Background Gene List", placeholder="Enter background genes here, will use default background genes if not entered...")
 
+n_background = st.number_input("Number of Background Genes (used only if background list is emtpy)", value=19846, min_value=0)
 
 seed = st.number_input("seed", value=3272995, min_value=0)
 
@@ -87,12 +88,16 @@ if st.button("Go"):
     st.write("Genes:")
     st.write(genes)
 
+    if default_key is None:
+        st.warning("No OpenAI key found. Please provide one to proceed.")
+        st.stop()
+
     with st.spinner("Running llm2geneset please wait..."):
         # Use asyncio to run the asynchronous function
         aclient = openai.AsyncClient(api_key=openai_api_key)
         loop = asyncio.get_event_loop()
         afun = async_function(
-            aclient, genes, model, context, num_gene_sets,bgd_genes, seed
+            aclient, genes, model, context, num_gene_sets, n_background, bgd_genes, seed
         )
         res = loop.run_until_complete(afun)
         in_toks = res["tot_in_toks"]
