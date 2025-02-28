@@ -50,7 +50,7 @@ context_input = st.text_area(
     "Experimental Context", placeholder="Enter experimental context here..."
 )
 
-num_gene_sets = st.number_input("# of gene sets", value=100, min_value=0)
+num_gene_sets = st.number_input("Number of gene sets", value=100, min_value=0)
 
 bgd_genes = st.text_area("Background Gene List", placeholder="Enter background genes here, will use default background genes if not entered...")
 
@@ -88,7 +88,7 @@ if st.button("Go"):
     st.write("Genes:")
     st.write(genes)
 
-    if default_key is None:
+    if openai_api_key is None:
         st.warning("No OpenAI key found. Please provide one to proceed.")
         st.stop()
 
