@@ -29,14 +29,10 @@ and gene sets themselves. The generated gene sets can also be used in tools such
 If you have an OpenAI API key, you can try out the web application
 at [https://llm2geneset.streamlit.app](https://llm2geneset.streamlit.app).
 
-## Pre-print
-
-A bioRxiv pre-print describing this work is available here:
-
-[Enhancing Gene Set Overrepresentation Analysis with Large Language Models](https://www.biorxiv.org/content/10.1101/2024.11.11.621189)
-
+## Link to the Paper
+[Enhancing Gene Set Overrepresentation Analysis with Large Language Models](https://doi.org/10.1093/bioadv/vbaf054)
 Jiqing Zhu, Rebecca Y. Wang, Xiaoting Wang, Ricardo Azevedo, Alex Moreno, Julia A. Kuhn,  Zia Khan
-doi: https://doi.org/10.1101/2024.11.11.621189
+
 
 ## OpenAI API Key Setup
 
